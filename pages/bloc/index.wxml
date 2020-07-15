@@ -1,0 +1,42 @@
+<!--集团首页-->
+<view id="type1">
+  <!-- 轮播图 -->
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{swiperConfig.indicatorDots}}"
+      autoplay="{{swiperConfig.autoplay}}" interval="{{swiperConfig.interval}}" duration="{{swiperConfig.duration}}">
+      <block wx:for="{{imgList}}" wx:key="*this">
+        <swiper-item>
+          <image class="swiper_img" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 广告位1 -->
+  <view class="banner">
+    <image src="{{bannerImg}}"></image>
+  </view>
+  <!-- 功能选项卡 -->
+  <scroll-view scroll-x class="scroll-header">
+    <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="red" class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+  </scroll-view>
+  <!-- 广告位2 -->
+  <view class="banner">
+    <image src="{{bannerImg}}"></image>
+  </view>
+  <!-- 超值套餐 -->
+  <v-listwarp></v-listwarp>
+
+
+
+
+  <!-- tabbar -->
+  <tabbar activeIdx="{{activeIdx}}"></tabbar>
+
+</view>

@@ -1,14 +1,63 @@
 {
-  "pages":[
+  "pages": [
+    "pages/bloc/index",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/city/index",
+    "pages/discounts/index",
+    "pages/buycar/index",
+    "pages/mine/index",
+    "component/navbar/index",
+    "component/swiper/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundColor": "#ff0000",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "万达酒店及度假村票券商场",
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "white",
+    "borderStyle": "white",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/city/index",
+        "text": "城市",
+        "iconPath": "",
+        "selectedIconPath": "",
+        "auth": 0
+      },
+      {
+        "pagePath": "pages/discounts/index",
+        "text": "优惠",
+        "iconPath": "",
+        "selectedIconPath": "",
+        "auth": 0
+      },
+      {
+        "pagePath": "pages/bloc/index",
+        "text": "集团",
+        "iconPath": "",
+        "selectedIconPath": "",
+        "auth": 0
+      },
+      {
+        "pagePath": "pages/buycar/index",
+        "text": "购物车",
+        "iconPath": "",
+        "selectedIconPath": "",
+        "auth": 0
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "",
+        "selectedIconPath": "",
+        "auth": 0
+      }
+    ]
+  }
 }

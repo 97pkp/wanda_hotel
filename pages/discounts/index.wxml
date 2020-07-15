@@ -1,0 +1,5 @@
+<!--pages/discounts/index.wxml-->
+<text>pages/discounts/index.wxml</text>
+
+
+<tabbar activeIdx="{{activeIdx}}"></tabbar>

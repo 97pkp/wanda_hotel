@@ -18,4 +18,18 @@
 
 .usermotto {
   margin-top: 200px;
+  position: relative;
+}
+
+.aaa::after{
+  content: '」';
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+}
+.aaa::before{
+  content: '「';
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
 }

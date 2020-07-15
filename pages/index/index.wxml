@@ -8,6 +8,11 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto">
+      超级屯游节
+      <text style="font-size: 10px;">「</text>
+      <text style="font-size: 20px;" class="aaa">哇哈哈哈</text>
+      <text style="font-size: 10px;">」</text>
+    </text>
   </view>
 </view>

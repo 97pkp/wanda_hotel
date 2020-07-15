@@ -1,0 +1,36 @@
+/* pages/bloc/index.wxss */
+.swiper_img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  padding: 32rpx;
+  text-align: center;
+}
+
+.banner image {
+  width: 686rpx;
+  height: 289rpx;
+  border-radius: 16rpx;
+}
+
+.scroll-header {
+  display: flex;
+  white-space: nowrap;
+}
+
+.scroll-header view {
+  height: 160rpx;
+  width: 140rpx;
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+}
+.scroll-header view:first-child{
+  margin-left: 32rpx;
+}
+.scroll-header view:last-child{
+  margin-right: 32rpx;
+}

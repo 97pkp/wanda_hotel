@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tabbar":"../../component/navbar",
+    "v-listwarp": "../../component/listwarp"
+  }
+}

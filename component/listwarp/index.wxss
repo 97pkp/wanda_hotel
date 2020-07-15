@@ -1,0 +1,11 @@
+/* component/listwarp/index.wxss */
+.list_warp{
+  width: 100%;
+  height: 631rpx;
+  background: pink;
+  padding: 32rpx;
+}
+.list_warp_header{
+  height: 50rpx;
+  padding: 34rpx 0 37rpx 0;
+}

@@ -1,0 +1,10 @@
+<!--component/listwarp/index.wxml-->
+<view class="list_warp">
+  <view class="list_warp_header">
+    <text>超值套餐</text>
+    <text>更多</text>
+  </view>
+  <view class="list_warp_content">
+    liebiao
+  </view>
+</view>

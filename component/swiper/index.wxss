@@ -1,0 +1,16 @@
+/* component/swiper/index.wxss */
+
+.demo-text-1 {
+  background: red;
+}
+.demo-text-2 {
+  background: yellow;
+}
+.demo-text-3 {
+  background: blue;
+}
+.swiper-item{
+  width: 100%;
+  height: 100%;
+}
+

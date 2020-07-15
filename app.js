@@ -1,6 +1,23 @@
 //app.js
 App({
   onLaunch: function () {
+    // 隐藏原生的tabbar
+    wx.hideTabBar()
+    // 监测版本更新
+    const updateManager = wx.getUpdateManager();
+    wx.getUpdateManager().onUpdateReady(function() {
+      wx.showModal({
+        title: '更新提示',
+        content: '新版本已经准备好，是否重启应用？',
+        success: function(res) {
+          if (res.confirm) {
+            // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+            updateManager.applyUpdate()
+          }
+        }
+      })
+    })
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

@@ -1,0 +1,5 @@
+<!--pages/mine/index.wxml-->
+<text>pages/mine/index.wxml</text>
+
+
+<tabbar activeIdx="{{activeIdx}}"></tabbar>
