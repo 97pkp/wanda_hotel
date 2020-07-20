@@ -19,7 +19,15 @@ Page({
       duration: 500
     },
     imgList: ['https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2255995795,3233541672&fm=26&gp=0.jpg'],
-    bannerImg: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2255995795,3233541672&fm=26&gp=0.jpg'
+    bannerImg: '../../images/img.png',
+    optionBtnImg: [
+      {url: '../../images/kfyd.png', name: '客房预订'},
+      {url: '../../images/cyyd.png', name: '餐饮预订'},
+      {url: '../../images/ktyl.png', name: '康体娱乐'},
+      {url: '../../images/xyfw.png', name: '洗衣服务'},
+      {url: '../../images/mshd.png', name: '秒杀活动'}
+    ],
+    hotBannerImg: '../../images/hot_img.png'
   },
 
   /**

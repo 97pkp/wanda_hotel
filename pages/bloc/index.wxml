@@ -17,18 +17,16 @@
   </view>
   <!-- 功能选项卡 -->
   <scroll-view scroll-x class="scroll-header">
-    <view id="green" class="scroll-view-item bc_green"></view>
-    <view id="red" class="scroll-view-item bc_red"></view>
-    <view id="yellow" class="scroll-view-item bc_yellow"></view>
-    <view id="blue" class="scroll-view-item bc_blue"></view>
-    <view id="blue" class="scroll-view-item bc_blue"></view>
-    <view id="blue" class="scroll-view-item bc_blue"></view>
-    <view id="blue" class="scroll-view-item bc_blue"></view>
-    <view id="blue" class="scroll-view-item bc_blue"></view>
+    <view class="scroll-view-item bc_green" wx:for="{{optionBtnImg}}" wx:key="index">
+      <view class="option_btn">
+         <image src="{{item.url}}" mode="heightFix"></image>
+         <text>{{item.name}}</text>
+      </view>
+    </view>
   </scroll-view>
   <!-- 广告位2 -->
   <view class="banner">
-    <image src="{{bannerImg}}"></image>
+    <image src="{{hotBannerImg}}"></image>
   </view>
   <!-- 超值套餐 -->
   <v-listwarp></v-listwarp>

@@ -1,10 +1,30 @@
 <!--component/listwarp/index.wxml-->
 <view class="list_warp">
+  <!-- 列表头 -->
   <view class="list_warp_header">
-    <text>超值套餐</text>
+    <view class="img_title">
+      <image src="../../images/banner_cztc.png"></image>
+    </view>
     <text>更多</text>
   </view>
+  <!-- 商品滚动列表 -->
   <view class="list_warp_content">
-    liebiao
+    <scroll-view scroll-x class="scroll-header">
+      <view class="scroll-view-item bc_green" wx:for="{{3}}">
+        <view class="option_btn">
+          <view class="img_warp">
+            <image src="../../images/hot_img.png"></image>
+          </view>
+          <view class="info_warp">
+            <view class="item_name_warp">
+              <text class="item_name">
+                <text class="bracket">超级屯游节</text>
+                豪华河景单 卧别墅2晚+双豪华豪华河景单 卧别墅2晚+双豪华河
+              </text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
   </view>
 </view>

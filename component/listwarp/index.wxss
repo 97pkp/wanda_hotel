@@ -3,9 +3,83 @@
   width: 100%;
   height: 631rpx;
   background: pink;
-  padding: 32rpx;
+  box-sizing: border-box;
 }
 .list_warp_header{
   height: 50rpx;
-  padding: 34rpx 0 37rpx 0;
+  padding: 34rpx 32rpx 37rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list_warp_header .img_title{
+  height: 50rpx;
+  width: 395rpx;
+  padding: 6rpx 0;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.list_warp_header image{
+  height: 100%;
+  width: 100%;
+}
+.list_warp_header text{
+  color: #191919;
+  font-size: 24rpx;
+}
+
+.scroll-header {
+  display: flex;
+  white-space: nowrap;
+}
+
+.scroll-header .scroll-view-item {
+  height: 480rpx;
+  width: 320rpx;
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+}
+.scroll-header .scroll-view-item:first-child{
+  margin-left: 32rpx;
+}
+.scroll-header .scroll-view-item:last-child{
+  margin-right: 32rpx;
+}
+.scroll-header .option_btn{
+  width: 100%;
+  height: 100%;
+}
+
+.img_warp{
+  width: 100%;
+  height: 240rpx;
+  border-radius: 16rpx 16rpx 0 0;
+  overflow: hidden;
+}
+.img_warp image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.info_warp{
+  width: 100%;
+  height: 240rpx;
+  border-radius: 0 0 16rpx 16rpx;
+  overflow: hidden;
+  border: solid #cccccc;
+  border-width: 0 1rpx 1rpx 1rpx;
+  box-sizing: border-box;
+}
+
+.item_name{
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
