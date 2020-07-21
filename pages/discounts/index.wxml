@@ -1,5 +1,5 @@
 <!--pages/discounts/index.wxml-->
 <text>pages/discounts/index.wxml</text>
-
+<view id="aaa">哈哈</view>
 
 <tabbar activeIdx="{{activeIdx}}"></tabbar>

@@ -17,10 +17,19 @@
           </view>
           <view class="info_warp">
             <view class="item_name_warp">
-              <text class="item_name">
-                <text class="bracket">超级屯游节</text>
-                豪华河景单 卧别墅2晚+双豪华豪华河景单 卧别墅2晚+双豪华河
-              </text>
+              <view class="item_name">
+                <v-bracket></v-bracket>
+                <text>豪华河景单 卧别墅2晚+双豪华豪华河景单 卧别墅2晚+双豪华河</text>
+              </view>
+              <view class="synopsis">两晚·双早·主题乐园</view>
+              <view class="hotel_name">济南xxx主题酒店</view>
+              <view class="price">
+                <view class="new_price">
+                  <text>￥ 980</text>
+                  <text class="small_txt">.00</text>
+                </view>
+                <view class="old_price small_txt">￥ 1800.00</view>
+              </view>
             </view>
           </view>
         </view>

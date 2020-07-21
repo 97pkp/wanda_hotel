@@ -1,5 +1,4 @@
 <!--pages/buycar/index.wxml-->
 <text>pages/buycar/index.wxml</text>
 
-
 <tabbar activeIdx="{{activeIdx}}"></tabbar>

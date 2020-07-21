@@ -1,1 +1,24 @@
 /* pages/discounts/index.wxss */
+#aaa{
+  color: red;
+  width: 300rpx;
+  position: relative;
+}
+#aaa::before{
+  content: '';
+  width: 50rpx;
+  height: 10rpx;
+  position: absolute;
+  left: 0;
+  border-top: 1rpx solid red;
+  border-left: 1rpx solid red;
+}
+#aaa::after{
+  content: '';
+  width: 5rpx;
+  height: 10rpx;
+  position: absolute;
+  right: 0;
+  border-bottom: 1rpx solid red;
+  border-right: 1rpx solid red;
+}
