@@ -1,1 +1,167 @@
 /* pages/discounts/index.wxss */
+.center{
+  text-align: center;
+}
+.f_s_20{
+  font-size: 20rpx;
+}
+.f_s_18{
+  font-size: 18rpx;
+}
+.m_row_40{
+  margin: 0 40rpx;
+}
+
+.banner{
+  width: 100%;
+  height: 350rpx;
+}
+
+.banner image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 优惠券领取 */
+.couponCollection{
+  width: 100%;
+  background: #fff;
+  padding: 32rpx 0;
+  margin-bottom: 32rpx;
+}
+.couponCollection .title{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32rpx;
+}
+.couponCollection .title .text{
+  font-size: 24rpx;
+}
+.couponCollection .content {
+  /* width: 100%; */
+  display: flex;
+  white-space: nowrap;
+}
+.couponCollection .content .content_item{
+  position: relative;
+  width: 306rpx;
+  height: 196rpx;
+  display: inline-block;
+  color: #fff;
+  background: #FFBE2A;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  padding:12rpx;
+}
+.couponCollection .content .content_item:first-child{
+  margin-left: 32rpx;
+}
+.couponCollection .content .content_item:last-child{
+  margin-right: 32rpx;
+}
+.couponCollection .content .content_item .left{
+  width: 222rpx;
+}
+.money{
+  font-size: 50rpx;
+}
+.moneyNum{
+  margin-bottom: 23rpx;
+}
+.time{
+  margin-top: 5rpx;
+}
+.couponCollection .content .content_item .right{
+  position: absolute;
+  top: 50%;
+  right: 17rpx;
+  margin-top: -76rpx;
+  width: 24rpx;
+  height: 132rpx;
+  writing-mode:lr-tb;
+}
+
+/* 秒杀拼团 */
+.secondKillGroup .title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  padding: 32rpx;
+  background: #fff;
+}
+.secondKillGroup .title .active{
+  color: #C39664;
+}
+.secondKillGroup .tabChange{
+  display: flex;
+  justify-content: space-around;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+.secondKillGroup .tabChange .active{
+  color: #C39664;
+}
+
+.secondKillItem {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 264rpx;
+  background: #fff;
+  border-bottom: 1px solid #C6C5C4;
+  padding: 32rpx;
+}
+.secondKillItem .left {
+  width: 200rpx;
+  height: 200rpx;
+  flex-shrink: 0;
+  border-radius: 6rpx; 
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.secondKillItem .left image{
+  width: 100%;
+  height: 100%;
+}
+.secondKillItem .right .info{
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 40rpx;
+  margin-bottom: 16rpx;
+}
+.secondKillItem .right .cu-progress-text{
+  color: #977958;
+}
+.secondKillItem .right .money{
+  color: #977958;
+  font-size: 36rpx;
+}
+.secondKillItem .right .failMoney{
+  color:#A8A8A8;
+  text-decoration:line-through;
+}
+
+.secondKillItem .right .countDownText{
+  color: #959494;
+  margin-right: 20rpx;
+}
+.secondKillItem .right .countDownTime{
+  color: #977958;
+}
+.secondKillItem .right .goShop{
+  position:absolute;
+  bottom: 45rpx;
+  right: 32rpx;
+  width: 110rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 24rpx;
+  background: #CC9C67;
+  border-radius: 6rpx;
+}

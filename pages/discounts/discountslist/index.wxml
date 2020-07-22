@@ -1,0 +1,51 @@
+<!-- 搜索部分 -->
+<view class="cu-bar bg-white search">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="请输入券名称" confirm-type="search"></input>
+  </view>
+</view>
+<!-- tab切换部分 -->
+<view class="tabChange f_s_30">
+  <view data-value="{{false}}" class="{{isUse?'':'active'}}" bindtap="isUse">未使用</view>
+  <view data-value="{{true}}" class="{{isUse?'active':''}}" bindtap="isUse">已失效</view>
+  <view class="bottomBorder {{isUse?'right':'left'}}"></view>
+</view>
+<!-- 优惠券列表部分 -->
+<view class="discountslist">
+  <view class="item {{isUse?'isUse':''}}" wx:for="{{discountslist}}">
+      <view bindtap="showDialog" data-title="{{item.name}}" data-num="{{item.num}}">
+        <view class="f_s_30 m_b_24 m_t_40">{{item.name}}</view>
+        <view class="f_s_24">{{item.startTime}}-{{item.endTime}}</view>
+      </view>
+      <view class="monenyInfo">
+        <view class="t_center m_t_20">
+          <text class="f_s_24">￥</text>
+          <text class="f_s_50">{{item.moneny}}</text>
+        </view>
+        <view class="t_center f_s_20">满{{item.discounts}}元可用</view>
+        <view wx:if="{{!isUse}}" class="btn t_center" bindtap="receive">立即领取</view>
+      </view>
+  </view>
+</view>
+<!-- 模态框 -->
+<view class="cu-modal {{showDialog?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="f_s_32 f_1 title">{{title}}</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="f_s_28 num">
+      券号：{{num}}
+    </view>
+    <view class="ruls t_l">
+      <view class="f_s_30">使用规则</view>
+      <view class="f_s_24 ruls_text">• 本券可预订自生效起2个月内的酒店房间</view>
+      <view class="f_s_24 ruls_text">• 本券仅可用于预订部分万达酒店，支持全周使用</view>
+      <view class="f_s_24 ruls_text">• 本券仅限微信小程序使用</view>
+      <view class="f_s_24 ruls_text">• 本券使用房量有限，先订先得</view>
+    </view>
+  </view>
+</view>

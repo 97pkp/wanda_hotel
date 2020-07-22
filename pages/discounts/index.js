@@ -6,6 +6,57 @@ Page({
    */
   data: {
     activeIdx: 1,
+    bannerImg: '../../images/img.png',
+    switchStatus: true,
+    tapStatus: true,
+    discountsList: [{
+      money: 50,
+      moneyNum: 100,
+      startTime:'2020.01.01',
+      endTime:'2020.06.30'
+    },{
+        money: 50,
+        moneyNum: 100,
+        startTime: '2020.01.01',
+        endTime: '2020.06.30'
+    },{
+        money: 50,
+        moneyNum: 100,
+        startTime: '2020.01.01',
+        endTime: '2020.06.30'
+    },{
+        money: 50,
+        moneyNum: 100,
+        startTime: '2020.01.01',
+        endTime: '2020.06.30'
+    }, {
+        money: 50,
+        moneyNum: 100,
+        startTime: '2020.01.01',
+        endTime: '2020.06.30'
+    }],
+    secondKillList:[{
+      imgSrc:'../../images/img.png',
+      info:'花式早餐承包你一周的幸福胃',
+      stock:70,
+      money:'1,25',
+      failMoney:'1,800',
+      time: 1596580200
+    }, {
+      imgSrc: '../../images/img.png',
+      info: '花式早餐承包你一周的幸福胃',
+      stock: 65,
+      money: '1,25',
+      failMoney: '1,800',
+      time: 1596580200
+    }, {
+      imgSrc: '../../images/img.png',
+      info: '花式早餐承包你一周的幸福胃',
+      stock: 87,
+      money: '1,25',
+      failMoney: '1,800',
+      time: 1596580200
+    }]
   },
 
   /**
@@ -13,6 +64,25 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+
+  switchChange(event){
+    // console.log(event.currentTarget.dataset.value)
+    this.switchStatus = event.currentTarget.dataset.value
+    this.setData({
+      switchStatus: event.currentTarget.dataset.value
+    })
+  },
+  tapChange(event){
+    this.tapStatus = event.currentTarget.dataset.value
+    this.setData({
+      tapStatus: event.currentTarget.dataset.value
+    })
+  },
+  goList() {
+    wx.navigateTo({
+      url: 'discountslist/index'
+    })
   },
 
   /**

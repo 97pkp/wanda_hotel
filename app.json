@@ -4,6 +4,7 @@
     "pages/index/index",
     "pages/city/index",
     "pages/discounts/index",
+    "pages/discounts/discountslist/index",
     "pages/buycar/index",
     "pages/mine/index",
     "component/navbar/index",

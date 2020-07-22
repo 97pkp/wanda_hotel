@@ -25,7 +25,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
-	"appid": "wx9683cf9df767767f",
+	"appid": "wxd9a3acc12fa0cdcd",
 	"projectname": "wanda_hodel",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -42,13 +42,43 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/buycar/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "优惠",
+					"pathName": "pages/discounts/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "优惠券",
+					"pathName": "pages/discounts/discountslist/index",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }
