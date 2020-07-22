@@ -12,3 +12,11 @@ page{
   background: #F0F0F0;
   padding-bottom: 100rpx;
 }
+
+
+/* 隐藏横向滚动条 */
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}

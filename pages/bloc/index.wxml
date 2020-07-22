@@ -29,9 +29,13 @@
     <image src="{{hotBannerImg}}"></image>
   </view>
   <!-- 超值套餐 -->
-  <v-listwarp></v-listwarp>
-
-
+  <v-listwarp titleImgUrl="/images/banner_cztc.png"></v-listwarp>
+  <!-- 安心食 -->
+  <v-listwarp titleImgUrl="/images/banner_axs.png"></v-listwarp>
+  <!-- 随心享 -->
+  <v-listwarp titleImgUrl="/images/banner_sxx.png"></v-listwarp>
+  <!-- 附近推荐 -->
+  <v-listwarp titleImgUrl="/images/banner_fjtj.png"></v-listwarp>
 
 
   <!-- tabbar -->
