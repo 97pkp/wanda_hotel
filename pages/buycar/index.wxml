@@ -1,5 +1,27 @@
 <!--pages/buycar/index.wxml-->
 <text>pages/buycar/index.wxml</text>
 
-
+<view class="operation_bar">
+  <label class="Select_all">
+    <checkbox value="selectAll" checked="false" class="radio m_r_10"/>全选
+  </label>
+  <view wx:if="true" class="button d_x">
+    <button class="cu-btn line-orange round btn_w">清空</button>
+    <button class="cu-btn round line-black">删除</button>
+  </view>
+  <view wx:else>
+    <view>
+      <view>
+        <text>合计：</text>
+        <text>￥</text>
+        <text>980.00</text>
+      </view>
+      <view>促销减：￥20</view>
+    </view>
+    <button>
+        结算（1）
+    </button>
+  </view>
+</view>
+<!-- 底部tab导航 -->
 <tabbar activeIdx="{{activeIdx}}"></tabbar>
