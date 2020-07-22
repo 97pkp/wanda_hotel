@@ -3,7 +3,7 @@
   <!-- 列表头 -->
   <view class="list_warp_header">
     <view class="img_title">
-      <image src="../../images/banner_cztc.png"></image>
+      <image mode="heightFix" src="{{titleImgUrl}}"></image>
     </view>
     <text>更多</text>
   </view>

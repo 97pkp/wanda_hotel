@@ -1,9 +1,10 @@
 /* component/listwarp/index.wxss */
 .list_warp{
   width: 100%;
-  height: 631rpx;
-  background: pink;
+  /* height: 631rpx; */
+  background: #ffffff;
   box-sizing: border-box;
+  margin-bottom: 32rpx;
 }
 .list_warp_header{
   height: 50rpx;
@@ -21,20 +22,21 @@
 }
 .list_warp_header image{
   height: 100%;
-  width: 100%;
 }
 .list_warp_header text{
   color: #191919;
   font-size: 24rpx;
 }
-
+.list_warp_content{
+  padding-bottom: 32rpx;
+}
 .scroll-header {
   display: flex;
   white-space: nowrap;
 }
 
 .scroll-header .scroll-view-item {
-  height: 480rpx;
+  /* height: 480rpx; */
   width: 320rpx;
   display: inline-block;
   background: #ffffff;
@@ -66,7 +68,7 @@
 
 .info_warp{
   width: 100%;
-  height: 240rpx;
+  /* height: 240rpx; */
   border-radius: 0 0 16rpx 16rpx;
   overflow: hidden;
   border: solid #cccccc;
