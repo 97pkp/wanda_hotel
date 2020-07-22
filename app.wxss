@@ -10,7 +10,6 @@
 } 
 page{
   background: #F0F0F0;
-  padding-bottom: 100rpx;
 }
 
 
@@ -19,4 +18,7 @@ page{
   width: 0;
   height: 0;
   color: transparent;
+}
+image{
+  display: block !important;
 }

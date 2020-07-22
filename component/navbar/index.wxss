@@ -54,6 +54,7 @@
 .tabbar-item-icon image {
   width: 56rpx;
   height: 56rpx;
+  margin: 0 auto;
 }
 
 .tabbar-item-text {

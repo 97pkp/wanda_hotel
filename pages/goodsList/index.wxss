@@ -1,0 +1,264 @@
+/* pages/goodsList/index.wxss */
+page{
+  background: #ffffff;
+  /* padding-bottom: 100rpx; */
+}
+.clear_float:after{
+  content: '';
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+swiper{
+  height: 350rpx;
+}
+.swiper_img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner {
+  padding: 32rpx;
+  text-align: center;
+}
+
+.banner image {
+  width: 686rpx;
+  height: 289rpx;
+  border-radius: 16rpx;
+}
+.swiper_search image{
+  width: 60%;
+  height: 60%;
+}
+
+.search_warp{
+  width: 690rpx;
+  height: 60rpx;
+  background: #F4F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10rpx auto;
+  border-radius: 30rpx;
+}
+.search_warp image{
+  width: 28rpx;
+  height: 28rpx;
+  margin: 0 12rpx 0 30rpx;
+}
+.search_warp text{
+  color: #C3C3C3;
+  font-size: 28rpx;
+}
+
+.sort{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around
+}
+.sort>view{
+  width: calc(100% / 3);
+  height: 26rpx;
+  box-sizing: border-box;
+  border-right: 1rpx solid #CBCBCB;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sort>view:last-child{
+  border: none
+}
+.sort .default_color{
+  color: #6B6B6B;
+}
+.sort .active_color{
+  color: #C39664;
+}
+
+.goods_type_option{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.under_line{
+  width: 30rpx;
+  height: 3rpx;
+  background: #C39664;
+  margin-top: 25rpx;
+}
+.hide_line{
+  width: 30rpx;
+  height: 3rpx;
+  background: transparent;
+  margin-top: 25rpx;
+}
+.goods_type_option>view{
+  color: #6B6B6B;
+  font-size: 30rpx;
+  width: calc(100% / 4);
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.goods_type_option>.active_type{
+  color: #C39664;
+}
+
+.list_warp{
+  padding: 32rpx;
+}
+
+.option_btn{
+  width: 333rpx;
+  float: left;
+  margin-bottom: 20rpx;
+}
+.option_btn:nth-of-type(2n){
+  margin-left: 20rpx;
+}
+.img_warp{
+  width: 100%;
+  height: 240rpx;
+  position: relative;
+}
+.img_warp .show_img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx 16rpx 0 0;
+}
+.img_warp .type_img{
+  position: absolute;
+  top: 15rpx;
+  left: -10rpx;
+  width: 91rpx;
+  height: 47rpx;
+}
+.info_warp{
+  width: 100%;
+  /* height: 240rpx; */
+  border-radius: 0 0 16rpx 16rpx;
+  overflow: hidden;
+  border: solid #cccccc;
+  border-width: 0 1rpx 1rpx 1rpx;
+  box-sizing: border-box;
+  padding: 17rpx;
+}
+
+.item_name{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  font-size: 24rpx;
+}
+.synopsis{
+  color: #888888;
+  font-size: 20rpx;
+  line-height: 28rpx;
+}
+.hotel_name{
+  font-size: 17rpx;
+  color: #888888;
+  line-height: 24rpx;
+}
+.price{
+  margin-top: 26rpx;
+}
+.new_price{
+  display: inline-block;
+  color: #977958;
+  font-size: 36rpx;
+  line-height: 41rpx;
+}
+.old_price{
+  display: inline-block;
+  color: #A8A8A8;
+  text-decoration:line-through;
+  margin-left: 10rpx;
+}
+.small_txt{
+  font-size: 20rpx;
+}
+
+.search_model{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #F0F0F0;
+  z-index: 200;
+}
+.search_box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+}
+.search_warp_model{
+  width: 600rpx;
+}
+.search_warp input{
+  font-size: 28rpx;
+  padding: 0 20rpx 0 10rpx;
+  width: 100%;
+}
+input::-webkit-input-placeholder {
+  color: #C3C3C3;
+  font-size: 28rpx;
+}
+.search_box .search_btn{
+  margin-right: 20rpx;
+  font-size: 28rpx;
+}
+
+
+.late_search{
+  padding: 0 30rpx;
+}
+.late_search_title{
+  height: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #999999;
+  padding: 38rpx 0 20rpx;
+}
+.late_search .list>.tag{
+  width: 208rpx;
+  height: 80rpx;
+  background: #ffffff;
+  padding: 10rpx;
+  box-sizing: border-box;
+  font-size: 22rpx;
+  color: #322E2A;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  float: left;
+  text-align: center;
+}
+.late_search .list>view:nth-of-type(3n){
+  margin-right: 0;
+}
+.no_data{
+  font-size: 22rpx;
+  color: #322E2A;
+}

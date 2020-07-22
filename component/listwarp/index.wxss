@@ -57,13 +57,22 @@
 .img_warp{
   width: 100%;
   height: 240rpx;
-  border-radius: 16rpx 16rpx 0 0;
-  overflow: hidden;
+  position: relative;
 }
-.img_warp image{
+.img_warp .show_img{
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: 16rpx 16rpx 0 0;
+}
+.img_warp .type_img{
+  position: absolute;
+  top: 15rpx;
+  left: -10rpx;
+  width: 91rpx;
+  height: 47rpx;
+ 
+
 }
 
 .info_warp{
@@ -74,7 +83,7 @@
   border: solid #cccccc;
   border-width: 0 1rpx 1rpx 1rpx;
   box-sizing: border-box;
-  padding: 10rpx;
+  padding: 17rpx;
 }
 
 .item_name{

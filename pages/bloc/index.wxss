@@ -1,7 +1,14 @@
 /* pages/bloc/index.wxss */
+page{
+  padding-bottom: 100rpx;
+}
+swiper{
+  height: 350rpx;
+}
 .swiper_img {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .banner {
@@ -13,6 +20,22 @@
   width: 686rpx;
   height: 289rpx;
   border-radius: 16rpx;
+}
+.swiper_search{
+  position: absolute;
+  top: 32rpx;
+  right: 32rpx;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.swiper_search image{
+  width: 60%;
+  height: 60%;
 }
 
 .scroll-header {

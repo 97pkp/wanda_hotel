@@ -21,6 +21,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    /**
+     * 查看更多
+     */
+     toMore: function(){
+       console.log(2345)
+       this.triggerEvent('toMore')
+     }
   }
 })

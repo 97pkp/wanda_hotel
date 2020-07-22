@@ -1,14 +1,10 @@
-// pages/bloc/index.js
-
-import { themeColor } from "../../config/theme.js"
- 
+// pages/goodsList/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    // tabbar标记
     activeIdx: 2,
     // 轮播图配置
     swiperConfig: {
@@ -19,15 +15,14 @@ Page({
       duration: 500
     },
     imgList: ['https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2255995795,3233541672&fm=26&gp=0.jpg'],
-    bannerImg: '../../images/img.png',
-    optionBtnImg: [
-      {url: '../../images/kfyd.png', name: '客房预订'},
-      {url: '../../images/cyyd.png', name: '餐饮预订'},
-      {url: '../../images/ktyl.png', name: '康体娱乐'},
-      {url: '../../images/xyfw.png', name: '洗衣服务'},
-      {url: '../../images/mshd.png', name: '秒杀活动'}
-    ],
-    hotBannerImg: '../../images/hot_img.png'
+    // 是否选择默认
+    isDefault: true,
+    // 是否升序排列
+    isUpOrder: true,
+    // 商品类型: 1-全部/2-客房/3-餐饮/4-娱乐
+    goodsType: 1, 
+    // 搜索弹窗
+    searchModelVisible: false
   },
 
   /**
@@ -86,12 +81,21 @@ Page({
 
   },
   /**
-   * 更多
+   * 搜索弹窗滑动
    */
-  toMore: function(){
-    console.log(4567);
-    wx.navigateTo({
-      url: '/pages/goodsList/index',
-    })
+  searchModelTouchMove: function(){
+    return
+  },
+  /**
+   * 显示搜索框
+   */
+  handleShowSearch: function(){
+    this.setData({'searchModelVisible': true})
+  },
+  /**
+   * 关闭搜索框
+   */
+  handleCloseSearch: function(){
+    this.setData({'searchModelVisible': false})
   }
 })
