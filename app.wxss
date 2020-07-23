@@ -17,11 +17,34 @@ page{
   background: #F0F0F0;
   padding-bottom: 100rpx;
 }
-
-
 /* 隐藏横向滚动条 */
 ::-webkit-scrollbar{
   width: 0;
   height: 0;
   color: transparent;
+}
+/* 字体大小 */
+.f_s_50{
+  font-size: 50rpx;
+}
+.f_s_32{
+  font-size: 32rpx;
+}
+.f_s_30{
+  font-size: 30rpx;
+}
+.f_s_28{
+  font-size: 28rpx;
+}
+.f_s_26{
+  font-size: 26rpx;
+}
+.f_s_24{
+  font-size: 24rpx;
+}
+.f_s_20{
+  font-size: 20rpx;
+}
+.f_s_18{
+  font-size: 18rpx;
 }

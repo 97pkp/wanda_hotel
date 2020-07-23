@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "tabbar":"../../component/navbar"
-  }
+  },
+  "navigationBarTitleText": "购物车"
 }

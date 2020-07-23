@@ -14,9 +14,9 @@ page {
 	/* var属性兼容性 --> https://www.caniuse.com/#feat=css-variables */
 	/* 标准色 */
 	--red: #e54d42;
-	--orange: #f37b1d;
+	--orange: #977958; /*原型多选框背景色改写 */
 	--yellow: #fbbd08;
-	--olive: #8dc63f;
+	--olive: #FF6B50; /*购物车原型多选框背景色改写 */
 	--green: #39b54a;
 	--cyan: #1cbbb4;
 	--blue: #0081ff;

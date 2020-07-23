@@ -2,27 +2,267 @@
 .d_x{
   display: flex;
 }
+.l_h_28{
+  line-height: 28rpx;
+}
+.p_t_14{
+  padding-top: 14rpx;
+}
+.p_t_24{
+  padding-top: 24rpx;
+}
 .m_r_10{
   margin-right: 10rpx;
 }
 .btn_w{
   width: 120rpx;
 }
+.m_t_20{
+  margin-top: 20rpx;
+}
+.m_t_24{
+  margin-top: 24rpx;
+}
+.m_r_30{
+  margin-right: 30rpx;
+}
+.m_b_24{
+  margin-bottom: 24rpx;
+}
+.m_t_40{
+  margin-top: 40rpx;
+}
+.m_t_20{
+  margin-top: 20rpx;
+}
+/* 购物车列表 */
+.shopCarList{
+  width: 100%;
+  padding: 0 24rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.shopCarList:first-child{
+  margin-top: 10rpx;
+}
 
+.shopCarTitle{
+  position: relative;
+  padding-top: 20rpx;
+  line-height: 37rpx;
+}
+.shopCarTitle .name{
+  margin-right: 35rpx;
+}
+.shopCarTitle .discounts{
+  position: absolute;
+  top: 26rpx;
+  right: 0;
+  width: 90rpx;
+  height: 30rpx;
+  line-height: 26rpx;
+  text-align: center;
+  border-radius: 4rpx;
+  border: 1px solid #977958;
+}
+.collect{
+  padding-left: 56rpx;
+}
+.shopCarItem{
+  position: relative;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #c6c5c4;
+}
+.shopCarItem:last-child{
+  border-bottom: 0;
+}
+.shopCarItem .check {
+  position: absolute;
+  top:80rpx;
+  left:0;
+  transform:scale(0.6,0.6);
 
+}
+.shopCarItem .right{
+  width: 180rpx;
+  height: 180rpx;
+  overflow: hidden;
+  margin-left: 56rpx;
+  border-radius: 10rpx;
+}
+.shopCarItem .right image{
+  width: 100%;
+  height: 100%;
+}
+.shopCarItem .left{
+  flex:1;
+  margin-left: 20rpx;
+}
+.shopCarItem .left .tap{
+  color: #CE9455;
+}
+
+.shopCarItem .left .info{
+  height: 60rpx;
+  line-height: 30rpx;
+  margin-bottom: 15rpx;
+}
+.shopCarItem .left .quotaInfo{
+  justify-content: space-between;
+}
+.select{
+  color: #c5c5c5;
+}
+.quota{
+  width: 93rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #fff;
+  background: #977958;
+  border-radius: 6rpx;
+  opacity: 0.6;
+  text-align: center;
+}
+.shopCarItem .left .shopInfo{
+  justify-content: space-between;
+}
+.shopCarItem .left .shopInfo .btn{
+  display: inline-block;
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  color:#fff;
+  background: #e7e7e7;
+  border-radius: 50%;
+}
+.count{
+  display: inline-block;
+  width: 50rpx;
+  text-align: center;
+}
+.kong{
+  width: 100%;
+  height: 170rpx;
+}
+
+/* 购物车操作条 */
 .operation_bar{
   position: fixed;
   bottom: 180rpx;
   right: 0;
   width: 100%;
-  height: 100rpx;
-  line-height: 100rpx;
+  height: 90rpx;
+  line-height: 90rpx;
   background: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 0 30rpx;
+  padding: 0 0 0 24rpx;
+}
+.selectAll{
+  transform:scale(0.6,0.6);
 }
 .button{
-  width: 400rpx;
-  padding-top: 20rpx;
+  width: 300rpx;
+  padding: 20rpx 0 0 24rpx;
+}
+
+.button .cu-btn {
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding:0;
+}
+.settlementInfo{
+  line-height: 36rpx;
+  margin-right: 25rpx; 
+}
+.settlementInfo .moneny{
+  font-size: 36rpx;
+}
+.settlementInfo .H{
+  color: #977958;
+}
+
+.settlementInfo .reduction{
+  font-size: 18rpx;
+  text-align: right;
+  color: #FFAC50;
+  line-height: 25rpx;
+}
+.settlement {
+  width: 310rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #fff;
+  background: #977958;
+  border-radius: 0;
+}
+
+/* 模态框样式 */
+.dialog_content{
+  padding: 24rpx;
+  background: #fff;
+}
+
+.title{
+  padding-left: 32rpx;
+}
+.dialog_content.height{
+  height: 80vh;
+}
+
+.discountsBox{
+  border-bottom: 1px solid #C6C5C4;
+  margin-bottom: 32rpx;
+}
+.discountsBox:last-child{
+  border-bottom: 0;
+}
+.discountsItem{
+  display: flex;
+  justify-content: space-between;
+  height: 196rpx;
+  color: #fff;
+  background: #FFBF2A;
+  padding: 0 32rpx;
+  border-radius: 6rpx;
+  margin-bottom: 44rpx; 
+}
+.discountsItem.isUse{
+  opacity:0.48;
+}
+.discountsItem .monenyInfo{
+  width: 139rpx;
+}
+.discountsItem .btn{
+  width: 139rpx;
+  height: 47rpx;
+  line-height: 47rpx;
+  color: #F7B419;
+  background: #fff;
+  border-radius: 30rpx;
+  margin-top: 21rpx;
+}
+.goodList{
+  display: flex;
+  text-align: left;
+  margin: 30rpx 0 38rpx;
+}
+.good{
+  position: relative;
+  width:150rpx;
+  margin-right: 20rpx;
+}
+.good image{
+  width: 150rpx;
+  height: 140rpx;
+  border-radius: 15rpx;
+  border: 1rpx solid #ccc;
+}
+.good .goodSelect {
+  position: absolute;
+  top: 5rpx;
+  left: 5rpx;
+  transform:scale(0.6,0.6);
 }

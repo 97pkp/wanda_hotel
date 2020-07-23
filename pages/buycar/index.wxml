@@ -1,26 +1,145 @@
 <!--pages/buycar/index.wxml-->
-<text>pages/buycar/index.wxml</text>
-
-<view class="operation_bar">
+<!-- 购物车列表模块部分 -->
+<view class="shopCarList" wx:for="{{shopCarList}}">
+  <view class="shopCarTitle f_s_26">
+    <checkbox value="selectAll" class="round orange selectAll"/>
+    <text class="name">{{item.name}}</text>
+    <text class="cuIcon-right text-black"></text>
+    <view class="discounts f_s_20 text-orange" 
+          bindtap="showDiscounts" 
+          wx:if="{{item.discounts}}"
+          data-discounts="{{item.discounts}}">优惠券</view>
+  </view>
+  <view class="d_x f_s_24 justify-between collect" wx:if="{{item.collectInfo}}">
+    <view>{{item.collectInfo}}</view>
+    <view class="text-yellow">
+      <text>凑单</text>
+      <text class="cuIcon-right text-yellow"></text>
+    </view>
+  </view>
+  <checkbox-group bindchange="checkboxChange">
+    <view class="d_x shopCarItem" wx:for="{{item.children}}">
+        <checkbox value="{{item.id}}" class="round orange check"/>
+        <view class="right">
+          <image src='{{item.src}}'></image>
+        </view>
+        <view class="left">
+          <view class="f_s_26 info">
+            <text class="tap">「踏青好去处」</text>
+            <text>{{item.info}}</text>
+          </view>
+          <view class="d_x quotaInfo">
+            <view class="select f_s_24" bindtap="showTypeChange" data-id="{{item.id}}">豪华大床房</view>
+            <view class="quota f_s_18">限购两份</view>
+          </view>
+          <view class="d_x shopInfo">
+            <view class="f_s_24 text-orange m_t_24">￥{{item.moneny}}.00</view>
+            <view class="m_t_20"> 
+              <text data-id="{{item.id}}" class="btn" bindtap="cut">-</text>
+              <text class="count">{{item.count}}</text>
+              <text data-id="{{item.id}}" class="btn" bindtap="add">+</text>
+            </view>
+          </view>
+        </view>
+    </view>
+  </checkbox-group>
+</view>
+<view class="kong">
+<!-- 我是占位元素 -->
+</view>
+<!-- 购物车操作条 -->
+<view class="operation_bar f_s_24">
   <label class="Select_all">
-    <checkbox value="selectAll" checked="false" class="radio m_r_10"/>全选
+    <checkbox value="selectAll" class="round orange selectAll"/>全选
   </label>
-  <view wx:if="true" class="button d_x">
+  <view wx:if="{{false}}" class="button d_x">
     <button class="cu-btn line-orange round btn_w">清空</button>
     <button class="cu-btn round line-black">删除</button>
   </view>
-  <view wx:else>
-    <view>
+  <view class="d_x" wx:else>
+    <view class="settlementInfo {{goodsDiscountsPrice>0?'p_t_14':'p_t_24'}}">
       <view>
-        <text>合计：</text>
-        <text>￥</text>
-        <text>980.00</text>
+        <text class="">合计：</text>
+        <text class="H">￥</text>
+        <text class="moneny H">{{goodsTotalPrice}}.00</text>
       </view>
-      <view>促销减：￥20</view>
+      <view wx:if="{{goodsDiscountsPrice>0}}" class="reduction">促销减：￥{{goodsDiscountsPrice}}</view>
     </view>
-    <button>
-        结算（1）
-    </button>
+    <view class="settlement f_s_32">
+        结算（{{goodsTotal}}）
+    </view>
+  </view>
+</view>
+<!-- 类型选择模态框 -->
+<view class="cu-modal bottom-modal {{isTypeShow?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+      <view class="action text-orange">确定</view>
+      <view class="action text-gray" bindtap="hideModal">取消</view>
+    </view>
+    <view class="dialog_content">
+      <radio-group class="block">
+        <view class="cu-list menu text-left">
+          <view class="cu-item" wx:for="{{typeList}}" wx:key>
+            <label class="flex justify-between align-center flex-sub">
+              <view class="flex-sub">{{item.name}}</view>
+              <radio class="round orange"></radio>
+            </label>
+          </view>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+</view>
+<!-- 购物车优惠券弹窗 -->
+<view class="cu-modal bottom-modal {{isDiscounts?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+      <view class="f_s_32 f_1 title">优惠券</view>
+      <view class="action" bindtap="hideDiscounts">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <scroll-view scroll-y class="dialog_content height">
+      <view class="discountsBox" wx:for="{{discountsList}}">
+        <view class="discountsItem {{isUse?'isUse':''}}">
+          <view>
+            <view class="f_s_30 m_b_24 m_t_40">{{item.name}}</view>
+            <view class="f_s_24">{{item.startTime}}-{{item.endTime}}</view>
+          </view>
+          <view class="monenyInfo">
+            <view class="t_center m_t_20">
+              <text class="f_s_24">￥</text>
+              <text class="f_s_50">{{item.moneny}}</text>
+            </view>
+            <view class="t_center f_s_20">满{{item.discounts}}元可用</view>
+            <!-- <view wx:if="{{!isUse}}" class="btn t_center" bindtap="receive">立即领取</view> -->
+          </view>
+        </view>
+        <view class="d_x justify-between">
+          <view wx:if="{{item.discounts-item.totalPrice>0}}">
+            <text>已选{{item.goodList.length}}件，小计{{item.totalPrice}}元，还差</text>
+            <text class="text-yellow">{{item.discounts-item.totalPrice}}元</text>
+            <text>可用</text>
+          </view>
+          <view wx:else>
+            <text>已选{{item.goodList.length}}件，小计{{item.totalPrice}}元</text>
+          </view>
+          <view wx:if="{{item.discounts-item.totalPrice>0}}" class="text-yellow">
+            <text>凑单</text>
+            <text class="cuIcon-right text-yellow"></text>
+          </view>
+        </view>
+        <view class="goodList">
+          <view class="good" wx:for="{{item.goodList}}">
+            <image src="{{item.src}}"></image>
+            <view class="text-center  text-orange f_s_24">￥{{item.moneny}}.00</view>
+            <view class="text-center f_s_20 l_h_28">X {{item.count}}</view>
+            <checkbox value="selectAll" class="round olive goodSelect" checked="{{true}}" disabled/>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
   </view>
 </view>
 <!-- 底部tab导航 -->

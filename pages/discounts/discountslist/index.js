@@ -6,7 +6,7 @@ Page({
    */
   data: {
     isUse: false,
-    showDialog:false,
+    showDialog: false,
     title: '券名',
     num: 'xxxxxxxxxxxx',
     discountslist: [{
@@ -63,7 +63,6 @@ Page({
       duration: 2000//持续的时间
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
