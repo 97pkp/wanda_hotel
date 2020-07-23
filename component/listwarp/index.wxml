@@ -5,15 +5,16 @@
     <view class="img_title">
       <image mode="heightFix" src="{{titleImgUrl}}"></image>
     </view>
-    <text>更多</text>
+    <text bindtap="toMore">更多</text>
   </view>
   <!-- 商品滚动列表 -->
   <view class="list_warp_content">
     <scroll-view scroll-x class="scroll-header">
       <view class="scroll-view-item bc_green" wx:for="{{3}}">
-        <view class="option_btn">
+        <view class="option_btn" bindtap="handleGoods">
           <view class="img_warp">
-            <image src="../../images/hot_img.png"></image>
+            <image class="show_img" src="../../images/hot_img.png"></image>
+            <image class="type_img" src="/images/seckill.png"></image>
           </view>
           <view class="info_warp">
             <view class="item_name_warp">

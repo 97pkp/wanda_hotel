@@ -15,7 +15,6 @@
 } 
 page{
   background: #F0F0F0;
-  padding-bottom: 100rpx;
 }
 /* 隐藏横向滚动条 */
 ::-webkit-scrollbar{
@@ -47,4 +46,7 @@ page{
 }
 .f_s_18{
   font-size: 18rpx;
+}
+image{
+  display: block !important;
 }
