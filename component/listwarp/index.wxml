@@ -11,7 +11,7 @@
   <view class="list_warp_content">
     <scroll-view scroll-x class="scroll-header">
       <view class="scroll-view-item bc_green" wx:for="{{3}}">
-        <view class="option_btn">
+        <view class="option_btn" bindtap="handleGoods">
           <view class="img_warp">
             <image class="show_img" src="../../images/hot_img.png"></image>
             <image class="type_img" src="/images/seckill.png"></image>

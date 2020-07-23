@@ -97,5 +97,39 @@ Page({
    */
   handleCloseSearch: function(){
     this.setData({'searchModelVisible': false})
+  },
+  /**
+   * 默认/热卖切换
+   */
+  handleSort: function(e){
+    let that = this;
+    if(e.currentTarget.dataset.type === 1){
+      that.setData({'isDefault': true})
+    }else if(e.currentTarget.dataset.type === 2){
+      that.setData({'isDefault': false})
+    }
+  },
+  /**
+   * 价格排序
+   */
+  handlePrice: function(){
+    let that = this;
+    that.setData({'isUpOrder': !that.data.isUpOrder})
+  },
+  /**
+   * 商品类型切换
+   */
+  handleTypeChange: function(e){
+    let that = this
+    that.setData({'goodsType': e.currentTarget.dataset.type})
+  },
+  /**
+   * 详情页
+   */
+  toDetail: function(){
+    console.log('详情页')
+    wx.navigateTo({
+      url: '/pages/goodsDetail/index',
+    })
   }
 })

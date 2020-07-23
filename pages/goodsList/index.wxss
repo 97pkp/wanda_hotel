@@ -36,14 +36,14 @@ swiper{
 }
 
 .search_warp{
-  width: 690rpx;
   height: 60rpx;
   background: #F4F5F5;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 10rpx auto;
+  margin: 10rpx 30rpx;
   border-radius: 30rpx;
+  box-sizing: border-box;
 }
 .search_warp image{
   width: 28rpx;
@@ -205,6 +205,7 @@ swiper{
   height: 100vh;
   background: #F0F0F0;
   z-index: 200;
+  overflow-y: auto;
 }
 .search_box{
   display: flex;
@@ -220,10 +221,7 @@ swiper{
   padding: 0 20rpx 0 10rpx;
   width: 100%;
 }
-input::-webkit-input-placeholder {
-  color: #C3C3C3;
-  font-size: 28rpx;
-}
+
 .search_box .search_btn{
   margin-right: 20rpx;
   font-size: 28rpx;

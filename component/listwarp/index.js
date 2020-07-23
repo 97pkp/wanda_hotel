@@ -27,6 +27,12 @@ Component({
      toMore: function(){
        console.log(2345)
        this.triggerEvent('toMore')
-     }
+     },
+     /**
+      * 点击商品
+      */
+     handleGoods: function(){
+       this.triggerEvent('toDetail')
+     },
   }
 })

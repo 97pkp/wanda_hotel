@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/goodsList/index",
+    "pages/goodsDetail/index",
     "pages/bloc/index",
     "pages/index/index",
     "pages/city/index",
@@ -8,7 +8,8 @@
     "pages/buycar/index",
     "pages/mine/index",
     "component/navbar/index",
-    "component/swiper/index"
+    "component/swiper/index",
+    "pages/goodsList/index"
     
   ],
   "window": {

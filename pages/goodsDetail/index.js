@@ -1,39 +1,38 @@
-// pages/bloc/index.js
-
-import { themeColor } from "../../config/theme.js"
- 
+// pages/goodsDetail/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    // tabbar标记
-    activeIdx: 2,
     // 轮播图配置
     swiperConfig: {
-      indicatorDots: true,
+      indicatorDots: false,
       vertical: false,
       autoplay: false,
       interval: 2000,
       duration: 500
     },
-    imgList: ['https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2255995795,3233541672&fm=26&gp=0.jpg'],
-    bannerImg: '../../images/img.png',
-    optionBtnImg: [
-      {url: '../../images/kfyd.png', name: '客房预订'},
-      {url: '../../images/cyyd.png', name: '餐饮预订'},
-      {url: '../../images/ktyl.png', name: '康体娱乐'},
-      {url: '../../images/xyfw.png', name: '洗衣服务'},
-      {url: '../../images/mshd.png', name: '秒杀活动'}
-    ],
-    hotBannerImg: '../../images/hot_img.png'
+    imgList: [
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2255995795,3233541672&fm=26&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2255995795,3233541672&fm=26&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2255995795,3233541672&fm=26&gp=0.jpg'],
+    // 轮播图当前位置
+    current: 0,
+    // 规格列表
+    specificationList: [
+      {name: '豪华大床', typeid: 1},
+      {name: '豪华双床', typeid: 2},
+      {name: '标准大床', typeid: 3},
+      {name: '标准双床', typeid: 4}
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that = this;
 
   },
 
@@ -84,6 +83,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 切换轮播图
+   */
+  changeSwiper: function(e){
+    let that = this;
+    that.setData({'current': e.detail.current})
   },
   /**
    * 更多

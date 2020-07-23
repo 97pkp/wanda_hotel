@@ -3,14 +3,15 @@
 	<!-- 搜索框 -->
 	<view class="search_warp" bindtap="handleShowSearch">
 		<image src="/images/search.png"></image>
-		<text>请输入商品名称</text>
+		<!-- <text>请输入商品名称</text> -->
+    <input placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入商品名称"></input>
 	</view>
   <!-- 搜索弹出页 -->
-  <view wx:if="searchModelVisible" class="search_model" catchtouchmove="searchModelTouchMove">
+  <view wx:if="{{searchModelVisible}}" class="search_model" >
     <view class="search_box">
       <view class="search_warp search_warp_model">
         <image src="/images/search.png"></image>
-        <input placeholder="请输入商品名称"></input>
+        <input focus="{{true}}" placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入商品名称"></input>
       </view>
       <view class="search_btn" bindtap="handleCloseSearch">搜索</view>
     </view>
@@ -45,6 +46,13 @@
           <van-cell title="文本" />
           <van-cell title="文本" />
           <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-index-anchor index="C" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
         </van-index-bar>
       </view>
       
@@ -55,9 +63,9 @@
   <view></view>
 	<!-- 排序操作 -->
 	<view class="sort">
-		<view class="{{isDefault?'default_color':'active_color'}}">默认</view>
-		<view class="{{isDefault?'active_color':'default_color'}}">热卖</view>
-		<view class="{{isUpOrder?'default_color':'active_color'}}">
+		<view bindtap="handleSort" data-type='{{1}}' class="{{isDefault?'active_color':'default_color'}}">默认</view>
+		<view bindtap="handleSort" data-type="{{2}}" class="{{isDefault?'default_color':'active_color'}}">热卖</view>
+		<view bindtap="handlePrice" class="{{isUpOrder?'default_color':'active_color'}}">
 			<text>价格</text>
 		</view>
 	</view>
@@ -76,26 +84,26 @@
 	<!-- 商品分类 -->
 	<view class="goods_type_option">
 		<view class="{{goodsType === 1 ? 'active_type':''}}">
-			<view>全部</view>
+			<view bindtap="handleTypeChange" data-type="{{1}}">全部</view>
 			<view class="{{goodsType === 1 ? 'under_line':'hide_line'}}"></view>
 		</view>
 		<view class="{{goodsType === 2 ? 'active_type':''}}">
-			<view>客房</view>
+			<view bindtap="handleTypeChange" data-type="{{2}}">客房</view>
 			<view class="{{goodsType === 2 ? 'under_line':'hide_line'}}"></view>
 		</view>
 		<view class="{{goodsType === 3 ? 'active_type':''}}">
-			<view>餐饮</view>
+			<view bindtap="handleTypeChange" data-type="{{3}}">餐饮</view>
 			<view class="{{goodsType === 3 ? 'under_line':'hide_line'}}"></view>
 		</view>
 		<view class="{{goodsType === 4 ? 'active_type':''}}">
-			<view>娱乐</view>
+			<view bindtap="handleTypeChange" data-type="{{4}}">娱乐</view>
 			<view class="{{goodsType === 4 ? 'under_line':'hide_line'}}"></view>
 		</view>
 	</view>
 
   <!-- 商品列表 -->
   <view class="list_warp clear_float">
-    <view class="option_btn" wx:for="{{8}}" wx:key="index">
+    <view class="option_btn" wx:for="{{8}}" wx:key="index" bindtap="toDetail">
       <view class="img_warp">
         <image class="show_img" src="/images/hot_img.png"></image>
         <image class="type_img" src="/images/seckill.png"></image>

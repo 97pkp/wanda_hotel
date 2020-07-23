@@ -1,0 +1,159 @@
+<!--pages/goodsDetail/index.wxml-->
+<view id="type1">
+	<!-- 轮播图 -->
+	<view class="page-section page-section-spacing swiper">
+		<swiper current="{{current}}" bindanimationfinish="changeSwiper" indicator-dots="{{swiperConfig.indicatorDots}}" autoplay="{{swiperConfig.autoplay}}" interval="{{swiperConfig.interval}}" duration="{{swiperConfig.duration}}">
+			<block wx:for="{{imgList}}" wx:key="*this">
+				<swiper-item>
+					<image class="swiper_img" src="{{item}}"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="swiper_search">
+			<image src="/images/search.png"></image>
+		</view>
+		<view class="swiper_num">
+			<text class="num_active">{{imgList.length ? current + 1 : 0}}</text>
+			<text class="num_all"> / {{imgList.length}}</text>
+		</view>
+	</view>
+	<!-- 商品信息 -->
+	<view class="goods">
+		<view class="goods_info">
+			<view class="goods_name">
+				<view class="name">
+					<view class="tag">专享价</view>
+					【超级游园节】1888元享豪华河景单卧别墅2晚+双早+主题乐园/雪世界/海世界双人门票/双人下午茶（四选一）/宝格丽洗漱/摇橹船入住/单次迷你吧畅饮
+				</view>
+			</view>
+			<view class="hotel">
+				<view class="hotel_name">北京万达文华酒店官方直销</view>
+				<view class="sell_num">已售 <text>300</text></view>
+			</view>
+			<view class="date">
+				有效期到
+				<text>2020-12-31</text>
+			</view>
+			<view class="price">
+				<text class="now_price">￥ 980.<text class="small_font">00</text></text>
+				<text class="qi">起</text>
+				<text class="old_price small_font">¥1,800.00</text>
+			</view>
+		</view>
+		<view class="goods_form">
+			<view class="specification clear_float">
+				<view class="title">规格</view>
+				<view class="specification_list_warp">
+					<view wx:for="{{specificationList}}" wx:key="index">{{item.name}}</view>
+				</view>
+			</view>
+			<view class="buy_num">
+				<view class="price_left">
+					<view class="title">购买数量</view>
+					<view class="tip">限购2件</view>
+				</view>
+				<view class="price_right counter">
+					<view class="cut option_btn">-</view>
+					<view class="num">99991</view>
+					<view class="add option_btn">+</view>
+				</view>
+			</view>
+		</view>
+		<view class="feature">
+			<view>
+				<image src="/images/mshd.png"></image>
+				<view>官方直销</view>
+			</view>
+			<view>
+				<image src="/images/mshd.png"></image>
+				<view>超长有效期</view>
+			</view>
+			<view>
+				<image src="/images/mshd.png"></image>
+				<view>性价比高</view>
+			</view>
+			<view>
+				<image src="/images/mshd.png"></image>
+				<view>限时抢购</view>
+			</view>
+			<view>
+				<view>···</view>
+			</view>
+		</view>
+	</view>
+  <!-- 简介 -->
+  <view class="synopsis">
+    <view class="synopsis_header">
+      <view>订购须知</view>
+      <view>图文详情</view>
+    </view>
+    <view class="synopsis_content">
+      <view class="txt_title">
+        <view>订购须知</view>
+        <view class="line"></view>
+      </view>
+      <view class="txt_content">
+        酒店共有261间客房，房间采用柔和送风模式，保证宾客舒适的体感；定制化超大床垫、高织棉纺床品、多种类型的枕头选择、柔软亲肤的浴巾浴袍，配以柔和灯光、静谧环境，为宾客营造深度睡眠体验。酒店每间客房配备智能互动电视，宾客可使用手机投屏，轻松体验影音互动乐趣；在房间通过扫描房间放置的“机器人配送”二维码，还可体验由萌趣可爱的机器人“华仔”即时速递多种物品。“薄荷+”餐吧位于酒店二层，每天早上7点-10点为宾客奉上精致的自助早餐，招牌产品“美华大包”及“秘制牛肉面”等特色美食深受欢迎；更有24小时健身房及专业自助洗衣房为宾客带来全天候便利。
+      </view>
+    </view>
+  </view>
+  <!-- 位置信息 -->
+  <view class="position">
+    <view class="position_info">
+      <view class="address">
+        <view class="icon_warp">
+          <van-icon color="#C5C5C5" size="28rpx" name="location" />
+        </view>
+        <view class="address_warp">
+          <view class="address_hotel">北京万达文华酒店</view>
+          <view>
+            <view class="address_name">朝阳区建外SOHO15号楼朝阳区建外SOHO15号楼a></view>
+            <van-icon size="28rpx" color="#888888" name="arrow" />
+          </view>
+        </view>
+      </view>
+      <view class="phone">
+        <view class="icon_warp">
+          <van-icon color="#C5C5C5" size="28rpx" name="phone" />
+        </view>
+        <view class="phone_warp">
+          <view class="phone_num">400 018 6666</view>
+          <van-icon size="28rpx" color="#888888" name="arrow" />
+        </view>
+      </view>
+    </view>
+    <view class="position_btn">
+      <text>查看\n位置</text>
+    </view>
+  </view>
+  <!-- 产品推荐 -->
+  <view class="list_warp clear_float">
+    <view class="list_warp_header">
+      <image  mode="heightFix" src="/images/banner_fjtj.png"></image>
+      <text bindtap="toMore">更多</text>
+    </view>
+    <view class="option_btn" wx:for="{{2}}" wx:key="index" bindtap="toDetail">
+      <view class="img_warp">
+        <image class="show_img" src="/images/hot_img.png"></image>
+        <image class="type_img" src="/images/seckill.png"></image>
+      </view>
+      <view class="info_warp">
+        <view class="item_name_warp">
+          <view class="item_name">
+            <v-bracket></v-bracket>
+            <text>豪华河景单 卧别墅2晚+双豪华豪华河景单 卧别墅2晚+双豪华河</text>
+          </view>
+          <view class="synopsis">两晚·双早·主题乐园</view>
+          <view class="hotel_name">济南xxx主题酒店</view>
+          <view class="price">
+            <view class="new_price">
+              <text>￥ 980</text>
+              <text class="small_txt">.00</text>
+            </view>
+            <view class="old_price small_txt">￥ 1800.00</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
