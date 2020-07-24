@@ -12,7 +12,7 @@
       <view class="late_search">
         <view class="late_search_title">
           <view>最近搜索酒店</view>
-          <text>删除</text>
+          <text class="cuIcon-delete"></text>
         </view>
         <view class="list clear_float">
           <!-- <view class="tag" wx:for="{{4}}">青岛东方影都融创万达嘉华度假酒店</view> -->
@@ -30,22 +30,51 @@
       </view>
       <view class="hotel_list">
         <van-index-bar>
-          <van-index-anchor index="A" />
-          <van-cell bindtap="toHotel" title="酒店" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-
-          <van-index-anchor index="B" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-index-anchor index="C" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
+          <view>
+            <van-index-anchor index="A" />
+            <van-cell bindtap="toHotel" title="酒店" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="B" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="C" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="D" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="E" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="F" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="G" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
         </van-index-bar>
       </view>
     </view>

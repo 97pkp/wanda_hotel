@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   background: #F0F0F0;
-  padding-bottom: 100rpx;
+  padding-bottom: 110rpx;
 }
 .search_box{
   position: fixed;
@@ -44,6 +44,7 @@
   font-size: 26rpx;
   color: #999999;
   padding: 38rpx 0 20rpx;
+  box-sizing: content-box;
 }
 .late_search .list>.tag{
   width: 208rpx;
@@ -87,4 +88,6 @@
 }
 .search_content{
   margin-top: 80rpx;
+  height: calc(100vh - 110rpx);
+  overflow-y: auto;
 }
