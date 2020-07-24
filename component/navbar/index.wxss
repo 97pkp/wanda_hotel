@@ -4,7 +4,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100rpx;
+  height: 110rpx;
   border-top: 0.5px solid #d5d5d5;
   display: flex;
   font-size: 0;
@@ -58,9 +58,9 @@
 }
 
 .tabbar-item-text {
-  font-size: 28rpx;
-  line-height: 20rpx;
-  color: #808080;
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #959494;
 }
 .active {
   color: #23ac38;

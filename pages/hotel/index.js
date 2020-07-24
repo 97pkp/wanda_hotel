@@ -1,15 +1,10 @@
-// pages/bloc/index.js
-
-import { themeColor } from "../../config/theme.js"
- 
+// pages/hotel/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    // tabbar标记
-    activeIdx: 2,
     // 轮播图配置
     swiperConfig: {
       indicatorDots: true,
@@ -19,7 +14,6 @@ Page({
       duration: 500
     },
     imgList: ['https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2255995795,3233541672&fm=26&gp=0.jpg'],
-    bannerImg: '../../images/img.png',
     optionBtnImg: [
       {url: '../../images/kfyd.png', name: '客房预订'},
       {url: '../../images/cyyd.png', name: '餐饮预订'},
@@ -27,7 +21,6 @@ Page({
       {url: '../../images/xyfw.png', name: '洗衣服务'},
       {url: '../../images/mshd.png', name: '秒杀活动'}
     ],
-    hotBannerImg: '../../images/hot_img.png'
   },
 
   /**
@@ -92,9 +85,6 @@ Page({
     wx.navigateTo({
       url: '/pages/goodsList/index',
     })
-    // wx.switchTab({
-    //   url: '/pages/goodsList/index'
-    // })
   },
   /**
    * 商品详情

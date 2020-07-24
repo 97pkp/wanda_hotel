@@ -62,5 +62,20 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 搜索
+   */
+  handleSearch: function(){
+    console.log('搜索');
+    
+  },
+  /**
+   * 查看酒店
+   */
+  toHotel: function(){
+    wx.navigateTo({
+      url: '/pages/hotel/index',
+    })
   }
 })

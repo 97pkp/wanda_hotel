@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: content-box;
 }
 .list_warp_header .img_title{
   height: 50rpx;

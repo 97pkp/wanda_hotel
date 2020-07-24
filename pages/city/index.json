@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "tabbar":"../../component/navbar"
+    "tabbar":"../../component/navbar",
+    "van-index-bar": "../../lib/vant-weapp/index-bar",
+    "van-index-anchor": "../../lib/vant-weapp/index-anchor",
+    "van-cell": "../../lib/vant-weapp/cell"
   }
 }

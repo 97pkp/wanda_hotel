@@ -2,6 +2,8 @@
   "usingComponents": {
     "van-index-bar": "../../lib/vant-weapp/index-bar",
     "van-index-anchor": "../../lib/vant-weapp/index-anchor",
-    "van-cell": "../../lib/vant-weapp/cell"
+    "van-cell": "../../lib/vant-weapp/cell",
+    "tabbar":"../../component/navbar",
+    "v-bracket": "/component/bracket"
   }
 }

@@ -1,1 +1,90 @@
 /* pages/city/index.wxss */
+
+.search_model{
+  width: 100vw;
+  height: 100vh;
+  background: #F0F0F0;
+  padding-bottom: 100rpx;
+}
+.search_box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  width: 100%;
+  z-index: 50;
+  /* box-shadow: 0px 10rpx 20rpx -10rpx rgba(0, 0, 0, 0.3); */
+}
+.search_warp_model{
+  width: 600rpx;
+}
+.search_warp input{
+  font-size: 28rpx;
+  padding: 0 20rpx 0 10rpx;
+  width: 100%;
+}
+
+.search_box .search_btn{
+  margin-right: 20rpx;
+  font-size: 28rpx;
+}
+
+
+.late_search{
+  padding: 0 30rpx;
+}
+.late_search_title{
+  height: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #999999;
+  padding: 38rpx 0 20rpx;
+}
+.late_search .list>.tag{
+  width: 208rpx;
+  height: 80rpx;
+  background: #ffffff;
+  padding: 10rpx;
+  box-sizing: border-box;
+  font-size: 22rpx;
+  color: #322E2A;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  float: left;
+  text-align: center;
+}
+.late_search .list>view:nth-of-type(3n){
+  margin-right: 0;
+}
+.no_data{
+  font-size: 22rpx;
+  color: #322E2A;
+}
+
+.search_warp{
+  height: 60rpx;
+  background: #F4F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10rpx 30rpx;
+  border-radius: 30rpx;
+  box-sizing: border-box;
+}
+.search_warp image{
+  width: 28rpx;
+  height: 28rpx;
+  margin: 0 12rpx 0 30rpx;
+}
+.search_warp text{
+  color: #C3C3C3;
+  font-size: 28rpx;
+}
+.search_content{
+  margin-top: 80rpx;
+}

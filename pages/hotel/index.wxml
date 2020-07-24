@@ -1,0 +1,73 @@
+<!--pages/hotel/index.wxml-->
+<view id="type1">
+  <!-- 轮播图 -->
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{swiperConfig.indicatorDots}}"
+      autoplay="{{swiperConfig.autoplay}}" interval="{{swiperConfig.interval}}" duration="{{swiperConfig.duration}}">
+      <block wx:for="{{imgList}}" wx:key="*this">
+        <swiper-item>
+          <image class="swiper_img" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 功能选项卡 -->
+  <scroll-view scroll-x class="scroll-header option-header">
+    <view class="scroll-view-item bc_green" wx:for="{{optionBtnImg}}" wx:key="index">
+      <view class="option_btn">
+         <image src="{{item.url}}" mode="heightFix"></image>
+         <text>{{item.name}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 优惠券领取 -->
+  <scroll-view scroll-x class="scroll-header coupon-header">
+    <view class="scroll-view-item bc_green" wx:for="{{optionBtnImg}}" wx:key="index">
+      <view class="option_btn">
+        <view class="coupon_info">
+          <view class="price">￥<text>50</text></view>
+          <view class="price_tip">满100元可用</view>
+          <view class="other">
+            <view class="coupon_type">店铺券 | 北京万达文华酒店</view>
+            <view class="coupon_date">2020.01.01-2020.06.30</view>
+          </view>
+        </view>
+        <view class="coupon_btn">
+          <text>立\n即\n领\n取</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 产品推荐 -->
+  <view class="list_warp clear_float">
+    <view class="list_warp_header">
+      <image  mode="heightFix" src="/images/banner_fjtj.png"></image>
+      <text bindtap="toMore">更多</text>
+    </view>
+    <view class="option_btn" wx:for="{{4}}" wx:key="index" bindtap="toDetail">
+      <view class="img_warp">
+        <image class="show_img" src="/images/hot_img.png"></image>
+        <image class="type_img" src="/images/seckill.png"></image>
+      </view>
+      <view class="info_warp">
+        <view class="item_name_warp">
+          <view class="item_name">
+            <v-bracket></v-bracket>
+            <text>豪华河景单 卧别墅2晚+双豪华豪华河景单 卧别墅2晚+双豪华河</text>
+          </view>
+          <view class="synopsis">两晚·双早·主题乐园</view>
+          <view class="hotel_name">济南xxx主题酒店</view>
+          <view class="price">
+            <view class="new_price">
+              <text>￥ 980</text>
+              <text class="small_txt">.00</text>
+            </view>
+            <view class="old_price small_txt">￥ 1800.00</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

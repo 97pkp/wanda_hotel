@@ -445,6 +445,7 @@ swiper{
   align-items: center;
   justify-content: space-between;
   margin-bottom: 35rpx;
+  padding: 6rpx 0;
 }
 .list_warp_header image{
   height: 100%;
