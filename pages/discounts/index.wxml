@@ -71,6 +71,7 @@
     </view>
   </view>
 </view>
-
-
+<view class="kong">
+<!-- 我是占位元素 -->
+</view>
 <tabbar activeIdx="{{activeIdx}}"></tabbar>
