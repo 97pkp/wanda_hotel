@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "van-icon": "/lib/vant-weapp/icon/index"
+    "van-icon": "/lib/vant-weapp/icon/index",
+    "default-detail-tabbar": "/component/defaultDetailTabbar/index",
+    "v-bracket": "/component/bracket"
   },
   "navigationBarTitleText": "商品详情"
 }

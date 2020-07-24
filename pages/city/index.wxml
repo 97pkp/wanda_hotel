@@ -1,5 +1,58 @@
 <!--pages/city/index.wxml-->
-<text>pages/city/index.wxml</text>
+<view id="type1">
+  <view class="search_model" >
+    <view class="search_box">
+      <view class="search_warp search_warp_model">
+        <image src="/images/search.png"></image>
+        <input focus="{{true}}" placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入商品名称"></input>
+      </view>
+      <view class="search_btn" bindtap="handleSearch">搜索</view>
+    </view>
+    <view class="search_content">
+      <view class="late_search">
+        <view class="late_search_title">
+          <view>最近搜索酒店</view>
+          <text>删除</text>
+        </view>
+        <view class="list clear_float">
+          <!-- <view class="tag" wx:for="{{4}}">青岛东方影都融创万达嘉华度假酒店</view> -->
+          <view class="no_data">暂无数据</view>
+        </view>
+      </view>
+      <view class="late_search">
+        <view class="late_search_title">
+          <view>热门搜索酒店</view>
+        </view>
+        <view class="list clear_float">
+          <!-- <view class="tag" wx:for="{{4}}">青岛东方影都融创万达嘉华度假酒店</view> -->
+          <view class="no_data">暂无数据</view>
+        </view>
+      </view>
+      <view class="hotel_list">
+        <van-index-bar>
+          <van-index-anchor index="A" />
+          <van-cell bindtap="toHotel" title="酒店" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+
+          <van-index-anchor index="B" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-index-anchor index="C" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+          <van-cell title="文本" />
+        </van-index-bar>
+      </view>
+    </view>
+  </view>
 
 
-<tabbar activeIdx="{{activeIdx}}"></tabbar>
+  <!-- tabbar -->
+  <tabbar activeIdx="{{activeIdx}}"></tabbar>
+
+</view>
