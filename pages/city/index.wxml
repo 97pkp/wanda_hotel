@@ -4,7 +4,7 @@
     <view class="search_box">
       <view class="search_warp search_warp_model">
         <image src="/images/search.png"></image>
-        <input focus="{{true}}" placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入商品名称"></input>
+        <input focus="{{true}}" placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入酒店名称"></input>
       </view>
       <view class="search_btn" bindtap="handleSearch">搜索</view>
     </view>
