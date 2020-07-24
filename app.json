@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/goodsDetail/index",
     "pages/bloc/index",
     "pages/index/index",
     "pages/city/index",
@@ -10,8 +9,8 @@
     "pages/mine/index",
     "component/navbar/index",
     "component/swiper/index",
-    "pages/goodsList/index"
-    
+    "pages/goodsList/index",
+    "pages/goodsDetail/index"
   ],
   "window": {
     "backgroundColor": "#ff0000",
