@@ -82,7 +82,34 @@
 					"id": 3,
 					"name": "立即购买",
 					"pathName": "pages/buyNow/index",
-					"query": "data = {type:1}",
+          "query": "data = {type:1}",
+          "scene": null
+        },{ 
+					"id": -1,
+					"name": "商品列表",
+					"pathName": "pages/goodsList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/goodsDetail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "城市",
+					"pathName": "pages/city/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "酒店",
+					"pathName": "pages/hotel/index",
+					"query": "",
 					"scene": null
 				}
 			]

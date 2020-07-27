@@ -1,4 +1,6 @@
 // component/listwarp/index.js
+import { number_format } from "../../utils/moneyFormat"
+
 Component({
   /**
    * 组件的属性列表
@@ -14,7 +16,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    numberFormat: number_format
   },
 
   /**

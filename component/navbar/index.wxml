@@ -4,6 +4,6 @@
     <view class='tabbar-item-icon'>
       <image src='{{activeIdx === index ? item.selectedIconPath : item.iconPath}}'></image>
     </view>
-    <view class='tabbar-item-text {{activeIdx === index ? "active" : ""}}'>{{item.text}}</view>
+    <view wx:if="{{index !== 2}}" class='tabbar-item-text {{activeIdx === index ? "active" : ""}}'>{{item.text}}</view>
   </view>
 </view>

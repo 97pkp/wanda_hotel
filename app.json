@@ -11,7 +11,8 @@
     "component/swiper/index",
     "pages/goodsList/index",
     "pages/goodsDetail/index",
-    "pages/buyNow/index"
+    "pages/buyNow/index",
+    "pages/hotel/index"
   ],
   "window": {
     "backgroundColor": "#ff0000",
@@ -23,6 +24,7 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "custom": true,
     "color": "white",
     "borderStyle": "white",
     "backgroundColor": "white",

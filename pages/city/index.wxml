@@ -1,5 +1,103 @@
 <!--pages/city/index.wxml-->
-<text>pages/city/index.wxml</text>
+<view id="type1">
+  <view class="search_model" >
+    <view class="search_box">
+      <view class="search_warp search_warp_model">
+        <image src="/images/search.png"></image>
+        <input focus="{{true}}" placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入酒店名称"></input>
+      </view>
+      <view class="search_btn" bindtap="handleSearch">搜索</view>
+    </view>
+    <view class="search_content">
+      <view class="hotel_list">
+        <!-- <van-index-bar>
+          <view>
+            <van-index-anchor index="A" />
+            <van-cell bindtap="toHotel" title="酒店" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="B" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="C" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="D" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="E" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="F" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+          <view>
+            <van-index-anchor index="G" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+            <van-cell title="文本" />
+          </view>
+        </van-index-bar> -->
+        <!-- 索引列表 -->
+        <scroll-view scroll-y class="indexes" scroll-into-view="indexes-{{listCurID}}" style="height:calc(100vh - {{CustomBar}}px - 50px)" scroll-with-animation="true" enable-back-to-top="true">
+          <block>
+            <view class="late_search">
+              <view class="late_search_title">
+                <view>最近搜索酒店</view>
+                <text class="cuIcon-delete"></text>
+              </view>
+              <view class="list clear_float">
+                <!-- <view class="tag" wx:for="{{4}}">青岛东方影都融创万达嘉华度假酒店</view> -->
+                <view class="no_data">暂无数据</view>
+              </view>
+            </view>
+            <view class="late_search">
+              <view class="late_search_title">
+                <view>热门搜索酒店</view>
+              </view>
+              <view class="list clear_float">
+                <!-- <view class="tag" wx:for="{{4}}">青岛东方影都融创万达嘉华度假酒店</view> -->
+                <view class="no_data">暂无数据</view>
+              </view>
+            </view>
+          </block>
+          <block wx:for="{{list}}" wx:key>
+            <view class="padding indexItem-{{list[index]}}" id="indexes-{{list[index]}}" data-index="{{list[index]}}">{{list[index]}}</view>
+            <view class="cu-list menu-avatar no-padding">
+              <van-cell wx:for="{{2}}" bindtap="toHotel" title="酒店" />
+            </view>
+          </block>
+        </scroll-view>
+        <view class="indexBar" style="height:calc(100vh - {{CustomBar}}px - 50px)">
+          <view class="indexBar-box" bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
+            <view class="indexBar-item" wx:for="{{list}}" wx:key id="{{index}}" bindtouchstart="getCur" bindtouchend="setCur">{{list[index]}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 
 
-<tabbar activeIdx="{{activeIdx}}"></tabbar>
+  <!-- tabbar -->
+  <tabbar activeIdx="{{activeIdx}}"></tabbar>
+
+</view>

@@ -156,4 +156,7 @@
       </view>
     </view>
   </view>
+
+	<!-- 普通商品详情页tabbar -->
+	<default-detail-tabbar></default-detail-tabbar>
 </view>
