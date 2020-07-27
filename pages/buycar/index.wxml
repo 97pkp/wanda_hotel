@@ -65,7 +65,7 @@
       </view>
       <view wx:if="{{goodsDiscountsPrice>0}}" class="reduction">促销减：￥{{goodsDiscountsPrice}}</view>
     </view>
-    <view class="settlement f_s_32">
+    <view class="settlement f_s_32" bindtap="goSettlement">
         结算（{{goodsTotal}}）
     </view>
   </view>
@@ -97,7 +97,7 @@
     <view class="cu-bar bg-white">
       <view class="f_s_32 f_1 title">优惠券</view>
       <view class="action" bindtap="hideDiscounts">
-        <text class="cuIcon-close text-red"></text>
+        <text class="cuIcon-close text-gray"></text>
       </view>
     </view>
     <scroll-view scroll-y class="dialog_content height">

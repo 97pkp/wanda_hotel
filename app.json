@@ -10,7 +10,8 @@
     "component/navbar/index",
     "component/swiper/index",
     "pages/goodsList/index",
-    "pages/goodsDetail/index"
+    "pages/goodsDetail/index",
+    "pages/buyNow/index"
   ],
   "window": {
     "backgroundColor": "#ff0000",

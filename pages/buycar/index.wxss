@@ -1,39 +1,6 @@
 /* pages/buycar/index.wxss */
-.d_x{
-  display: flex;
-}
-.l_h_28{
-  line-height: 28rpx;
-}
-.p_t_14{
-  padding-top: 14rpx;
-}
-.p_t_24{
-  padding-top: 24rpx;
-}
-.m_r_10{
-  margin-right: 10rpx;
-}
 .btn_w{
   width: 120rpx;
-}
-.m_t_20{
-  margin-top: 20rpx;
-}
-.m_t_24{
-  margin-top: 24rpx;
-}
-.m_r_30{
-  margin-right: 30rpx;
-}
-.m_b_24{
-  margin-bottom: 24rpx;
-}
-.m_t_40{
-  margin-top: 40rpx;
-}
-.m_t_20{
-  margin-top: 20rpx;
 }
 /* 购物车列表 */
 .shopCarList{
@@ -158,6 +125,8 @@
   display: flex;
   justify-content: space-between;
   padding: 0 0 0 24rpx;
+  border-top: 1rpx solid #c6c5c4;
+  border-bottom: 1rpx solid #c6c5c4;
 }
 .selectAll{
   transform:scale(0.6,0.6);

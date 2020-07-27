@@ -77,6 +77,13 @@
 					"pathName": "pages/discounts/discountslist/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "立即购买",
+					"pathName": "pages/buyNow/index",
+					"query": "data = {type:1}",
+					"scene": null
 				}
 			]
 		}

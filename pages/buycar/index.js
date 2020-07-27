@@ -82,7 +82,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) { 
+  onLoad: function (options) {
     this.disShow(this.data.shopCarList)
   },
   // 优惠券按钮显示逻辑
@@ -188,6 +188,13 @@ Page({
   hideDiscounts(e) {
     this.setData({
       isDiscounts: false
+    })
+  },
+  // 去立即购买页
+  goSettlement(e) {
+    let type = 1;
+    wx.navigateTo({
+      url: `/pages/buyNow/index?type=${type}`,
     })
   },
   /**

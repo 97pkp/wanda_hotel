@@ -66,7 +66,7 @@
           <text class="countDownText">距离结束还剩</text>
           <text class="countDownTime">20天11时15分30秒</text>
         </view>
-        <view class="goShop">去抢购</view>
+        <view class="goShop" bindtap="goShop">去抢购</view>
       </view>
     </view>
   </view>

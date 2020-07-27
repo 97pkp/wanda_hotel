@@ -84,6 +84,12 @@ Page({
       url: 'discountslist/index'
     })
   },
+  goShop(e) {
+    let type = 0
+    wx.navigateTo({
+      url: `/pages/buyNow/index?type=${type}`
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
