@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    activeIdx: 0,
     // 轮播图配置
     swiperConfig: {
       indicatorDots: true,

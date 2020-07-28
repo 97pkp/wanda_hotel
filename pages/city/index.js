@@ -1,20 +1,12 @@
-// pages/city/index.js
 const app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     activeIdx: 0,
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
+    hidden: true
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  onLoad() {
     let list = [];
     for (let i = 0; i < 26; i++) {
       list[i] = String.fromCharCode(65 + i)
@@ -37,72 +29,6 @@ Page({
       })
     }).exec()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-  /**
-   * 搜索
-   */
-  handleSearch: function(){
-    console.log('搜索');
-    
-  },
-  /**
-   * 查看酒店
-   */
-  toHotel: function(){
-    wx.navigateTo({
-      url: '/pages/hotel/index',
-    })
-  },
-
-
   //获取文字信息
   getCur(e) {
     this.setData({
@@ -124,7 +50,7 @@ Page({
       that = this;
     //判断选择区域,只有在选择区才会生效
     if (y > offsettop) {
-      let num = parseInt((y - offsettop) / 20);
+      let num = parseInt((y - offsettop) / 14);
       this.setData({
         listCur: that.data.list[num]
       })
@@ -159,5 +85,21 @@ Page({
         return false
       }
     }
-  }
-})
+  },
+  /**
+   * 搜索
+   */
+  handleSearch: function(){
+    console.log('搜索');
+    
+  },
+  /**
+   * 查看酒店
+   */
+  toHotel: function(){
+    wx.navigateTo({
+      url: '/pages/hotel/index',
+    })
+  },
+
+});
