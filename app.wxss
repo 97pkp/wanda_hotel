@@ -92,3 +92,43 @@ page{
 image{
   display: block !important;
 }
+
+/* 字体大小 */
+.f_s_50{
+  font-size: 50rpx;
+}
+.f_s_32{
+  font-size: 32rpx;
+}
+.f_s_30{
+  font-size: 30rpx;
+}
+.f_s_28{
+  font-size: 28rpx;
+}
+.f_s_24{
+  font-size: 24rpx;
+}
+.f_s_20{
+  font-size: 20rpx;
+}
+
+/* 字体大小 */
+.f_s_50{
+  font-size: 50rpx;
+}
+.f_s_32{
+  font-size: 32rpx;
+}
+.f_s_30{
+  font-size: 30rpx;
+}
+.f_s_28{
+  font-size: 28rpx;
+}
+.f_s_24{
+  font-size: 24rpx;
+}
+.f_s_20{
+  font-size: 20rpx;
+}
