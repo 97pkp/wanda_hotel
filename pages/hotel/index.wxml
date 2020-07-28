@@ -70,4 +70,6 @@
   </view>
 
 
+  <!-- tabbar -->
+  <tabbar activeIdx="{{activeIdx}}"></tabbar>
 </view>
