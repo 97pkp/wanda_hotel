@@ -4,50 +4,61 @@
   <view class="goodsTitle f_s_26">
     <text class="name">{{item.name}}</text>
     <text class="cuIcon-right text-black"></text>
-    <view class="discounts f_s_20 text-orange" 
-          bindtap="showDiscounts" 
-          wx:if="{{item.discounts}}"
-          data-discounts="{{item.discounts}}">优惠券</view>
   </view>
-  <view class="d_x f_s_24 justify-between collect" wx:if="{{item.collectInfo}}">
+  <!-- 拼团是否显示凑单信息待定 -->
+  <!-- <view class="d_x f_s_24 justify-between collect" wx:if="{{item.collectInfo}}">
     <view>{{item.collectInfo}}</view>
     <view class="text-yellow">
       <text>凑单</text>
       <text class="cuIcon-right text-yellow"></text>
     </view>
-  </view>
-    <view class="d_x goodsItem" wx:for="{{item.children}}">
-      <view class="right">
-        <image src='{{item.src}}'></image>
+  </view> -->
+  <view class="d_x goodsItem" wx:for="{{item.children}}">
+    <view class="right">
+      <image src='{{item.src}}'></image>
+    </view>
+    <view class="left">
+      <view class="f_s_26 info">
+        <text class="tap">「踏青好去处」</text>
+        <text>{{item.info}}</text>
       </view>
-      <view class="left">
-        <view class="f_s_26 info">
-          <text class="tap">「踏青好去处」</text>
-          <text>{{item.info}}</text>
-        </view>
-        <view class="d_x justify-between">
-          <view class="select f_s_24" bindtap="showTypeChange" data-id="{{item.id}}">豪华大床房</view>
-          <view class="quota f_s_18">限购两份</view>
-        </view>
-        <view class="d_x goodsInfo justify-between">
-          <view class="f_s_24 text-orange m_t_24">￥{{item.moneny}}.00</view>
-          <view class="m_t_24"> 
-            <text class="f_s_18">X</text>
-            <text class="count">{{item.count}}</text>
-          </view>
+      <view class="d_x justify-between">
+        <view class="select f_s_24" bindtap="showTypeChange" data-id="{{item.id}}">豪华大床房</view>
+        <view class="quota f_s_18">限购两份</view>
+      </view>
+      <view class="d_x goodsInfo justify-between">
+        <view class="f_s_24 text-orange m_t_24">￥{{item.moneny}}.00</view>
+        <view class="m_t_24"> 
+          <text class="f_s_18">X</text>
+          <text class="count">{{item.count}}</text>
         </view>
       </view>
     </view>
+  </view>
+  <view>
+    <view class="groupInfo f_s_24 text-gray">为您加入仅差1人的团，支付后即可拼团成功</view>
+    <view class="headGroup d_x m_b_24">
+      <view wx:for="{{headGroup}}" class="head">
+        <image src="{{item.src}}"></image>
+        <text class="role bg_orange" wx:if="{{index==0}}">团长</text>
+        <text class="status">待支付</text>
+      </view>
+    </view>
+  </view>
 </view>
 <!-- 优惠信息，备注 -->
-<view wx:if="{{pagesType == '1'}}">
+<view>
   <form>
-    <view class="cu-form-group">
+    <view class="cu-form-group" wx:if="{{pagesType == '1'}}">
       <view class="title">促销优惠</view>
       <view data-value="promoteSales" bindtap="showDialog">
         <text>已优惠￥60.00</text>
         <text class="cuIcon-right text-black"></text>
       </view>
+    </view>
+    <view class="cu-form-group" wx:else>
+      <view class="title">购买人</view>
+      <input placeholder="请输入购买人"></input>
     </view>
     <view class="cu-form-group">
       <view class="title">联系方式</view>
@@ -78,12 +89,12 @@
   </form>
   
 </view>
-<view wx:else>
+<!-- <view wx:else>
   <!-- 参团信息 -->
-  <view>参团信息</view>
+  <!-- <view>参团信息</view> -->
   <!-- 购买信息 -->
-  <view>购买信息</view>
-</view>
+  <!-- <view>购买信息</view>
+</view>  -->
 <!-- 支付信息 -->
 <view class="paymentInfo m_t_20">
   <view class="d_x justify-between item">
@@ -184,10 +195,31 @@
     </view>
     <view class="dialog_content p_row_50 height">
       <view class="d_x tabChange">
-        <view class="flex-sub text-orange">可用优惠券（2）</view>
-        <view class="flex-sub">不可用优惠券（5）</view>
-        <view class="border"></view>
+        <view class="flex-sub {{disChange?'text-orange':''}}" bindtap="disChange" data-value="{{true}}">可用优惠券（2）</view>
+        <view class="flex-sub {{disChange?'':'text-orange'}}" bindtap="disChange" data-value="{{false}}">不可用优惠券（5）</view>
+        <view class="border {{disChange?'left':'right'}} "> </view>
       </view>
+      <scroll-view scroll-y class="discountslist">
+        <radio-group class="block">
+          <view class="itembox" wx:for="{{discountslist}}">
+            <view class="item {{isUse?'isUse':''}}">
+                <view bindtap="showDialog" data-title="{{item.name}}" data-num="{{item.num}}">
+                  <view class="f_s_30 m_b_24 m_t_40">{{item.name}}</view>
+                  <view class="f_s_24">{{item.startTime}}-{{item.endTime}}</view>
+                </view>
+                <view class="monenyInfo">
+                  <view class="t_center m_t_20">
+                    <text class="f_s_24">￥</text>
+                    <text class="f_s_50">{{item.moneny}}</text>
+                  </view>
+                  <view class="t_center f_s_20">满{{item.discounts}}元可用</view>
+                  <view wx:if="{{!isUse}}" class="btn t_center" bindtap="receive">立即领取</view>
+                </view>
+            </view>
+            <radio checked class="orange disr"></radio>
+          </view> 
+        </radio-group>
+      </scroll-view>
     </view>
   </view>
 </view>

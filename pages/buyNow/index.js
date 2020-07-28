@@ -6,7 +6,8 @@ Page({
    */
   data: {
     pagesType: 1,
-    diaLogValue: 'coupon',
+    disChange: true,
+    diaLogValue: '',
     goodsList: [{
       name: '库尔勒万达锦华酒店',
       collectInfo: null,
@@ -42,7 +43,40 @@ Page({
         id: 102,
         num: 'ASDFGSSFFSSFDS'
       }]
-    }]
+    }],
+    discountslist: [{
+      name: '通用券 | 全场通用',
+      startTime: '2020.05.01',
+      endTime: '2020.09.30',
+      moneny: 80,
+      discounts: 300,
+      num: 'ASDFGSSFFSSFDS'
+    }, {
+      name: '同用券 | 全场通用',
+      startTime: '2020.05.01',
+      endTime: '2020.09.30',
+      moneny: 80,
+      discounts: 300,
+      num: 'ASDFGSSFFSSFDS'
+    }, {
+      name: '店铺券 | 北京万达文华酒店',
+      startTime: '2020.05.01',
+      endTime: '2020.09.30',
+      moneny: 80,
+      discounts: 300,
+      num: 'ASDFGSSFFSSFDS'
+    }],
+    headGroup:[
+      {
+        src:'../../images/head.jpg'
+      },
+      {
+        src: '../../images/head00.jpg'
+      },
+      {
+        src: '../../images/head01.jpg'
+      },
+    ]
   },
 
   /**
@@ -72,10 +106,9 @@ Page({
     })
   },
   // 弹窗tab切换
-  tabSelect(e){
+  disChange(e){
     this.setData({
-      TabCur: e.currentTarget.dataset.id,
-      scrollLeft: (e.currentTarget.dataset.id - 1) * 60
+      disChange: e.currentTarget.dataset.value
     })
   },
   /**

@@ -121,6 +121,7 @@
 /* 底部弹窗样式 */
 .dialog_content{
   background: #fff;
+  position: relative;
 }
 .dialog_content.p_row_50{
   padding:0 50rpx;
@@ -168,7 +169,106 @@
   border: 1rpx solid #979797;
   margin: 0 20rpx;
 }
+.dialog_content .tabChange{
+  position: relative;
+  margin-bottom: 60rpx;
+}
+.tabChange .border{
+  position: absolute;
+  bottom: -20rpx;
+  z-index: 4;
+  width: 30rpx;
+  height: 4rpx;
+  background: #977958;
+}
+.tabChange .border.left{
+  left: 140rpx;
+}
+.tabChange .border.right{
+  right: 140rpx;
+}
+/* 优惠券列表样式 */
+.discountslist{
+  position: absolute;
+  top:90rpx;
+  left: 0;
+  bottom: 0;
+  padding: 0 0 80rpx;
+}
+.discountslist .itembox{
+  position: relative;
+  padding:0 30rpx 0 80rpx;
+}
+.discountslist .item {
+  display: flex;
+  justify-content: space-between;
+  height: 196rpx;
+  color: #fff;
+  background: #FFBF2A;
+  padding: 0 32rpx;
+  border-radius: 6rpx;
+  margin-bottom: 32rpx;
+}
+.discountslist .item.isUse{
+  opacity:0.48;
+}
+.discountslist .item .monenyInfo{
+  width: 139rpx;
+}
+.discountslist .item .btn{
+  width: 139rpx;
+  height: 47rpx;
+  line-height: 47rpx;
+  color: #F7B419;
+  background: #fff;
+  border-radius: 30rpx;
+  margin-top: 21rpx;
+}
+.discountslist .disr{
+  position: absolute;
+  top: 60rpx;
+  left: 25rpx;
+  transform: scale(0.6, 0.6);
+
+}
 .dialog_kong{
   height: 160rpx;
   background: #fff;
+}
+
+/* 参团购买-头像部分样式 */
+.groupInfo{
+  margin: 30rpx 0 20rpx;
+}
+.headGroup{
+  flex-wrap: wrap;
+  padding-bottom: 40rpx;
+}
+.head{
+  position: relative;
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+}
+.head image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2rpx solid #977958;
+}
+.head .role{
+  position: absolute;
+  bottom: -16rpx;
+  left: 5rpx;
+  z-index: 4;
+  width: 60rpx;
+  height: 26rpx;
+  text-align: center;
+  line-height: 26rpx;
+  font-size: 16rpx;
+  color: #fff;
+  border-radius: 13rpx;
+  background: #977958;
+  border: 2rpx solid #fff;
 }
