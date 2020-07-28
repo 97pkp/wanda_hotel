@@ -72,19 +72,13 @@
 					"scene": null
 				},
 				{
-					"id": 2,
-					"name": "优惠券",
-					"pathName": "pages/discounts/discountslist/index",
-					"query": "",
-					"scene": null
-				},
-				{
 					"id": 3,
 					"name": "立即购买",
 					"pathName": "pages/buyNow/index",
-          "query": "data = {type:1}",
-          "scene": null
-        },{ 
+					"query": "data = {type:1}",
+					"scene": null
+				},
+				{
 					"id": -1,
 					"name": "商品列表",
 					"pathName": "pages/goodsList/index",
@@ -109,6 +103,20 @@
 					"id": -1,
 					"name": "酒店",
 					"pathName": "pages/hotel/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "订单列表",
+					"pathName": "pages/orderList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "订单列表详情",
+					"pathName": "pages/orderList/details/index",
 					"query": "",
 					"scene": null
 				}

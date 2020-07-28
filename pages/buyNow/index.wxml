@@ -35,13 +35,14 @@
       </view>
     </view>
   </view>
-  <view>
+  <view wx:if="{{pagesType == '0'}}">
     <view class="groupInfo f_s_24 text-gray">为您加入仅差1人的团，支付后即可拼团成功</view>
     <view class="headGroup d_x m_b_24">
       <view wx:for="{{headGroup}}" class="head">
-        <image src="{{item.src}}"></image>
+        <image src="{{item.src}}" wx:if="{{item.src}}"></image>
+        <view class="text-gray text-center noImg" wx:else>?</view>
         <text class="role bg_orange" wx:if="{{index==0}}">团长</text>
-        <text class="status">待支付</text>
+        <text class="status" wx:if="{{item.isPayoff&&item.isPayoff==1}}">待支付</text>
       </view>
     </view>
   </view>
@@ -89,13 +90,6 @@
   </form>
   
 </view>
-<!-- <view wx:else>
-  <!-- 参团信息 -->
-  <!-- <view>参团信息</view> -->
-  <!-- 购买信息 -->
-  <!-- <view>购买信息</view>
-</view>  -->
-<!-- 支付信息 -->
 <view class="paymentInfo m_t_20">
   <view class="d_x justify-between item">
     <view class="f_s_30">商品金额</view>

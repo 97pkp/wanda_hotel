@@ -12,7 +12,9 @@
     "pages/goodsList/index",
     "pages/goodsDetail/index",
     "pages/buyNow/index",
-    "pages/hotel/index"
+    "pages/hotel/index",
+    "pages/orderList/index",
+    "pages/orderList/details/index"
   ],
   "window": {
     "backgroundColor": "#ff0000",

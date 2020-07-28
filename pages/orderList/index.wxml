@@ -1,0 +1,3 @@
+<!--pages/orderList/index.wxml-->
+<text>订单列表</text>
+<button class="bg-orange" bindtap="toDetails">详情</button>

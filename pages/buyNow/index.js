@@ -68,13 +68,19 @@ Page({
     }],
     headGroup:[
       {
-        src:'../../images/head.jpg'
+        src:'../../images/head.jpg',
+        isPayoff:0,
       },
       {
-        src: '../../images/head00.jpg'
+        src: '../../images/head00.jpg',
+        isPayoff: 0,
       },
       {
-        src: '../../images/head01.jpg'
+        src: '../../images/head01.jpg',
+        isPayoff: 0,
+      },
+      {
+        src: '',
       },
     ]
   },
