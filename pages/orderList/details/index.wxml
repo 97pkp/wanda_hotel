@@ -87,7 +87,7 @@
   <view class="order_option">
     <view class="order_left">
       <view bindtap="showQRCode" data-qrData="http://www.baidu.com">验券</view>
-      <view bindtap="givePerson">转增</view>
+      <view bindtap="givePerson">转赠</view>
     </view>
     <view class="order_right">
       <image bindtap="showQRCode" data-qrData="http://www.baidu.com" src="/images/xyfw.png"></image>
