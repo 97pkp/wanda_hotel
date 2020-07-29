@@ -108,4 +108,46 @@ Page({
       url: '/pages/goodsDetail/index',
     })
   },
+  /**
+   * 查看位置
+   */
+  showMap: function(){
+    //打开内置地图
+    wx.getLocation({
+      type: 'wgs84',
+      success: (res) => {
+        // var latitude = res.latitude
+        // var longitude = res.longitude
+        let latitude = 45
+        let longitude = 132
+        let name = '测试名称'
+        let address = '测试地址'
+        
+        wx.openLocation({
+          latitude: Number(latitude),
+          longitude: Number(longitude),
+          name: name,
+          address: address,
+          scale: 5
+        })
+      },
+      fail: (err) => {
+        wx.showToast({
+          title: '请检查您的设备是否开启定位',
+          icon: 'none'
+        })
+        console.log(err)
+      }
+    })
+  },
+  /**
+   * 打电话
+   */
+  toTalk: function(e){
+    let phone = e.currentTarget.dataset.phonenum;
+    console.log(phone)
+    wx.makePhoneCall({
+      phoneNumber: phone.toString() //仅为示例，并非真实的电话号码
+    })
+  }
 })

@@ -34,7 +34,7 @@
     <text class="name">{{item.name}}</text>
     <text class="cuIcon-right text-black"></text>
   </view>
-  <view class="d_x goodsItem" wx:for="{{item.children}}">
+  <view class="d_x flex goodsItem" wx:for="{{item.children}}">
     <view class="right">
       <image src='{{item.src}}'></image>
     </view>
@@ -63,7 +63,7 @@
   <view class="goodsTitle f_s_32">
     <text class="name">{{item.name}}</text>
   </view>
-  <view class="d_x goodsItem" >
+  <view class="d_x flex goodsItem" >
     <view class="right">
       <image src='{{item.src}}'></image>
     </view>
@@ -75,7 +75,7 @@
       <view class="d_x justify-between">
         <view class="select f_s_24" bindtap="showTypeChange" data-id="{{item.id}}">有效期到 <text class=" time">2020-12-31</text></view>
       </view>
-      <view class="d_x goodsInfo justify-between">
+      <view class="d_x flex goodsInfo justify-between">
         <view class="f_s_24 text-orange m_t_24">￥{{item.moneny}}.00</view>
         <view class="m_t_24"> 
           <text class="f_s_18">X</text>

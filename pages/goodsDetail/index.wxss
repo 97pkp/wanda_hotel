@@ -117,6 +117,7 @@ swiper{
   font-size: 18rpx;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 31rpx;
 }
 .price .now_price{
@@ -133,6 +134,14 @@ swiper{
 }
 .price .qi{
   margin: 0 15rpx 0 5rpx;
+}
+.remain{
+  font-size: 20rpx;
+  line-height: 28rpx;
+  color: #322E2A;
+}
+.remain text{
+  color: #CC9C67;
 }
 
 .goods_form{

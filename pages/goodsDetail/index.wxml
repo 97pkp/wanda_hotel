@@ -35,9 +35,14 @@
 				<text>2020-12-31</text>
 			</view>
 			<view class="price">
-				<text class="now_price">￥ 980.<text class="small_font">00</text></text>
-				<text class="qi">起</text>
-				<text class="old_price small_font">¥1,800.00</text>
+				<view>
+					<text class="now_price">￥ 980.<text class="small_font">00</text></text>
+					<text class="qi">起</text>
+					<text class="old_price small_font">¥1,800.00</text>
+				</view>
+				<view class="remain">
+					已售 <text>{{13}}</text>
+				</view>
 			</view>
 		</view>
 		<view class="goods_form">
@@ -106,7 +111,7 @@
         </view>
         <view class="address_warp">
           <view class="address_hotel">北京万达文华酒店</view>
-          <view>
+          <view bindtap="showMap">
             <view class="address_name">朝阳区建外SOHO15号楼朝阳区建外SOHO15号楼a></view>
             <van-icon size="28rpx" color="#888888" name="arrow" />
           </view>
@@ -116,13 +121,13 @@
         <view class="icon_warp">
           <van-icon color="#C5C5C5" size="28rpx" name="phone" />
         </view>
-        <view class="phone_warp">
+        <view class="phone_warp" bindtap="toTalk" data-phoneNum="17865353357">
           <view class="phone_num">400 018 6666</view>
           <van-icon size="28rpx" color="#888888" name="arrow" />
         </view>
       </view>
     </view>
-    <view class="position_btn">
+    <view class="position_btn" bindtap="showMap">
       <text>查看\n位置</text>
     </view>
   </view>
