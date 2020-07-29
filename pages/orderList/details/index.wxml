@@ -197,7 +197,7 @@
 <!-- 电话 -->
 <view class="phone_btn">
   <view class="pbone">
-    <image mode="heightFix" src="/images/kfyd.png"></image>
+    <image mode="heightFix" src="/images/phone.png"></image>
     <view bindtap="tallKF" data-phoneNum="17865353357">客服电话</view>
   </view>
   <view class="pbone" wx:if="{{payStatus === -1}}">

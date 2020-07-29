@@ -1,27 +1,11 @@
-// pages/hotel/index.js
+// pages/payOk/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    activeIdx: 0,
-    // 轮播图配置
-    swiperConfig: {
-      indicatorDots: true,
-      vertical: false,
-      autoplay: false,
-      interval: 2000,
-      duration: 500
-    },
-    imgList: ['https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2255995795,3233541672&fm=26&gp=0.jpg'],
-    optionBtnImg: [
-      {url: '../../images/kfyd.png', name: '客房预订'},
-      {url: '../../images/cyyd.png', name: '餐饮预订'},
-      {url: '../../images/ktyl.png', name: '康体娱乐'},
-      {url: '../../images/xyfw.png', name: '洗衣服务'},
-      {url: '../../images/mshd.png', name: '伴手礼'}
-    ],
+
   },
 
   /**
@@ -96,4 +80,20 @@ Page({
       url: '/pages/goodsDetail/index',
     })
   },
+  /**
+   * 返回首页
+   */
+  backHome: function(){
+    wx.navigateTo({
+      url: '/pages/bloc/index',
+    })
+  },
+  /**
+   * 查看订单
+   */
+  lookOrder: function(){
+    wx.navigateTo({
+      url: '/pages/orderList/index',
+    })
+  }
 })
