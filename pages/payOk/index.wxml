@@ -1,0 +1,39 @@
+<!--pages/payOk/index.wxml-->
+<view class="ok_warp">
+  <image src="/images/home_on.png"></image>
+  <view class="pay_status">支付成功</view>
+  <view class="pay_num">订单编号：1154199796</view>
+  <view class="pay_btn back_btn" bindtap="backHome">返回首页</view>
+  <view class="pay_btn look_order" bindtap="lookOrder">查看订单</view>
+</view>
+
+<!-- 产品推荐 -->
+  <view class="list_warp clear_float">
+    <view class="list_warp_header">
+      <image  mode="heightFix" src="/images/banner_fjtj.png"></image>
+      <text bindtap="toMore">更多</text>
+    </view>
+    <view class="option_btn" wx:for="{{2}}" wx:key="index" bindtap="toDetail">
+      <view class="img_warp">
+        <image class="show_img" src="/images/hot_img.png"></image>
+        <image class="type_img" src="/images/seckill.png"></image>
+      </view>
+      <view class="info_warp">
+        <view class="item_name_warp">
+          <view class="item_name">
+            <v-bracket></v-bracket>
+            <text>豪华河景单 卧别墅2晚+双豪华豪华河景单 卧别墅2晚+双豪华河</text>
+          </view>
+          <view class="synopsis">两晚·双早·主题乐园</view>
+          <view class="hotel_name">济南xxx主题酒店</view>
+          <view class="price">
+            <view class="new_price">
+              <text>￥ 980</text>
+              <text class="small_txt">.00</text>
+            </view>
+            <view class="old_price small_txt">￥ 1800.00</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>

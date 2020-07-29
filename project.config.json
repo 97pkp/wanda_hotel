@@ -133,6 +133,13 @@
 					"id": -1,
 					"name": "赠送页面",
 					"pathName": "pages/present/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付成功",
+					"pathName": "pages/payOk/index",
 					"scene": null
 				}
 			]
