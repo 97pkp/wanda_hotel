@@ -3,6 +3,7 @@
   position: relative;
   height: 90rpx;
   line-height: 90rpx;
+  color: #6b6b6b;
   background: #fff;
   margin-top: 1rpx;
 }
