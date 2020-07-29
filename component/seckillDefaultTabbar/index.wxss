@@ -8,7 +8,7 @@
   align-items: center;
 }
 .option{
-  width: 300rpx;
+  width: 400rpx;
   height: 100%;
   display: flex;
   align-items: center;
@@ -42,7 +42,7 @@
   border-top: 1rpx solid #EAEAEA;
 }
 .to_buy{
-  width: 226rpx;
+  width: 350rpx;
   height: 100%;
   background: #977958;
   color: #ffffff;

@@ -19,7 +19,7 @@
     "pages/payOk/index"
   ],
   "window": {
-    "backgroundColor": "#ff0000",
+    "backgroundColor": "#F0F0F0",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "万达酒店及度假村票券商场",

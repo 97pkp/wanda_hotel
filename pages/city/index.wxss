@@ -104,6 +104,7 @@
   padding: 20rpx 20rpx 20rpx 60rpx;
   display: flex;
   align-items: center;
+  margin-bottom: 110rpx;
 }
 
 .indexBar .indexBar-box {

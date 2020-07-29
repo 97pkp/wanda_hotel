@@ -17,6 +17,28 @@
 			<text class="num_all"> / {{imgList.length}}</text>
 		</view>
 	</view>
+	<!-- 秒杀进度 -->
+	<view class="seckill_warp" wx:if="{{pageType === 2}}">
+		<view class="seckill_info_warp">
+			<text class="now_price">￥ 980<text class="small_text">.00</text></text>
+			<view class="seckill_info_right">
+				<view class="old_price">￥ 980.00</view>
+				<view class="seckill_num">
+					<view>已售 40 份</view>
+					<view>剩余 80 份</view>
+				</view>
+			</view>
+		</view>
+		<view class="seckill_date_warp">
+			<view class="seckill_date_text">距离结束还剩</view>
+			<view class="time_warp">
+				<view>{{timeData.day}}</view>天
+				<view>{{timeData.hour}}</view>时
+				<view>{{timeData.minute}}</view>分
+				<view>{{timeData.second}}</view>秒
+			</view>
+		</view>
+	</view>
 	<!-- 商品信息 -->
 	<view class="goods">
 		<view class="goods_info">
@@ -28,7 +50,7 @@
 			</view>
 			<view class="hotel">
 				<view class="hotel_name">北京万达文华酒店官方直销</view>
-				<view class="sell_num">已售 <text>300</text></view>
+				<view class="sell_num" wx:if="{{pageType === 0 || pageType === 1}}">已售 <text>300</text></view>
 			</view>
 			<view class="date">
 				有效期到
@@ -40,12 +62,12 @@
 					<text class="qi">起</text>
 					<text class="old_price small_font">¥1,800.00</text>
 				</view>
-				<view class="remain">
-					已售 <text>{{13}}</text>
+				<view class="remain" wx:if="{{pageType === 0}}">
+					剩余 <text>{{13}}</text>
 				</view>
 			</view>
 		</view>
-		<view class="goods_form">
+		<view class="goods_form" wx:if="{{pageType === 0}}">
 			<view class="specification clear_float">
 				<view class="title">规格</view>
 				<view class="specification_list_warp">
@@ -83,6 +105,25 @@
 			</view>
 			<view>
 				<view>···</view>
+			</view>
+		</view>
+	</view>
+	<!-- 加入拼团 -->
+	<view class="add_group_warp" wx:if="{{pageType === 1}}">
+		<view class="add_group_title">他们正在拼团，可直接参与</view>
+		<view class="group_item" wx:for="{{2}}">
+			<view class="user_content">
+				<view class="img_warp">
+					<image src="/images/head.jpg"></image>
+				</view>
+				<view class="group_name">李**约的团</view>
+			</view>
+			<view class="group_content">
+				<view class="group_num">
+					<view class="group_num_txt">5人拼，还差1人成团</view>
+					<view class="group_num_date">剩余 00:59:37</view>
+				</view>
+				<view class="add_group_btn">参团</view>
 			</view>
 		</view>
 	</view>
@@ -163,5 +204,9 @@
   </view>
 
 	<!-- 普通商品详情页tabbar -->
-	<default-detail-tabbar></default-detail-tabbar>
+	<default-detail-tabbar wx:if="{{pageType === 0}}"></default-detail-tabbar>
+	<!-- 秒杀商品详情页tabbar -->
+	<seckill-detail-tabbar wx:if="{{pageType === 1}}"></seckill-detail-tabbar>
+	<!-- 拼团商品详情页tabbar -->
+	<group-detail-tabbar wx:if="{{pageType === 2}}"></group-detail-tabbar>
 </view>

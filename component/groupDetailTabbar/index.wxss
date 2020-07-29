@@ -32,14 +32,22 @@
   margin-top: 4rpx;
 }
 .add_car{
-  width: 224rpx;
+  width: 225rpx;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 30rpx;
-  color: #0C121C;
-  border-top: 1rpx solid #EAEAEA;
+  color: #ffffff;
+  background: #CC9C67;
+}
+.add_car view:first-child{
+  font-size: 24rpx;
+  line-height: 28rpx;
+}
+.add_car view:last-child{
+  font-size: 20rpx;
+  line-height: 28rpx;
 }
 .to_buy{
   width: 226rpx;
@@ -48,6 +56,15 @@
   color: #ffffff;
   font: 30rpx;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.to_buy view:first-child{
+  font-size: 24rpx;
+  line-height: 28rpx;
+}
+.to_buy view:last-child{
+  font-size: 20rpx;
+  line-height: 28rpx;
 }
