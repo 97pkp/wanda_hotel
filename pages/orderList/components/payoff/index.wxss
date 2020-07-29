@@ -7,6 +7,9 @@
   padding: 87rpx 30rpx 20rpx;
   margin-bottom: 32rpx;
 }
+.box:first-child{
+  margin-bottom: 32rpx; 
+}
 .box:last-child{
   margin-bottom: 0; 
 }

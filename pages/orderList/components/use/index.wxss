@@ -9,9 +9,6 @@
   padding-bottom: 20rpx;
   border-radius: 8rpx;
 }
-.goodsList:first-child{
-  margin-top: 10rpx;
-}
 
 .goodsTitle{
   position: relative;

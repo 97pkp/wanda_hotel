@@ -182,18 +182,24 @@
 }
 
 .discountsBox{
+  position: relative;
   border-bottom: 1px solid #C6C5C4;
   margin-bottom: 32rpx;
+  padding-top: 240rpx;
 }
 .discountsBox:last-child{
   border-bottom: 0;
 }
 .discountsItem{
+  position: absolute;
+  top: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
+  width: 100%;
   height: 196rpx;
   color: #fff;
-  background: #FFBF2A;
+  /* background: #FFBF2A; */
   padding: 0 32rpx;
   border-radius: 6rpx;
   margin-bottom: 44rpx; 
@@ -212,6 +218,21 @@
   background: #fff;
   border-radius: 30rpx;
   margin-top: 21rpx;
+}
+ .imgbg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 196rpx;
+}
+.invalid{
+  position: absolute;
+  top: 128rpx;
+  right: 0;
+  width: 100rpx;
+  height: 100rpx;
 }
 .goodList{
   display: flex;

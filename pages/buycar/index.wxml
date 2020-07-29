@@ -116,6 +116,10 @@
             <!-- <view wx:if="{{!isUse}}" class="btn t_center" bindtap="receive">立即领取</view> -->
           </view>
         </view>
+        <!-- 优惠券背景 -->
+        <image src="/images/coupon_bg_big.png" class="imgbg"></image>
+        <!-- 失效印章 -->
+        <image wx:if="{{isUse}}" src="/images/invalid.png" class="invalid"></image>
         <view class="flex justify-between">
           <view wx:if="{{item.discounts-item.totalPrice>0}}">
             <text>已选{{item.goodList.length}}件，小计{{item.totalPrice}}元，还差</text>

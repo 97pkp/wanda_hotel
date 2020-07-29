@@ -1,5 +1,5 @@
 <!--pages/orderList/components/use/index.wxml-->
-<view class="goodsList" wx:for="{{goodsList}}">
+<view class="goodsList" wx:for="{{goodsList}}" bindtap="toDetails">
   <view class="goodsTitle f_s_26">
     <text class="name">{{item.name}}</text>
     <text class="cuIcon-right text-black"></text>
@@ -33,7 +33,7 @@
   </view>
   <view class="info flex justify-end">
     <view class="del text-center m_r_20" bindtap="del">删除</view>
-    <view class="refund text-center m_r_20" bindtap="refund">退款</view>
+    <view class="refund text-center m_r_20" wx:if="{{pagetype=='use'}}" bindtap="refund">退款</view>
     <view class="cancel text-center" bindtap="reserve">再次预订</view>
   </view>
   <view class="use-text">{{tagName}}</view>

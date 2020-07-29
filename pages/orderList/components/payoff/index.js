@@ -27,6 +27,11 @@ Component({
       this.setData({
         showDel: false
       })
+    },
+    toDetails(e){
+      wx.navigateTo({
+        url: '/pages/orderList/details/index',
+      })
     }
   }
 })

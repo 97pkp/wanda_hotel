@@ -196,7 +196,7 @@
       <scroll-view scroll-y class="discountslist">
         <radio-group class="block">
           <view class="itembox" wx:for="{{discountslist}}">
-            <view class="item {{isUse?'isUse':''}}">
+            <view class="item {{!disChange?'isUse':''}}">
                 <view bindtap="showDialog" data-title="{{item.name}}" data-num="{{item.num}}">
                   <view class="f_s_30 m_b_24 m_t_40">{{item.name}}</view>
                   <view class="f_s_24">{{item.startTime}}-{{item.endTime}}</view>
@@ -207,9 +207,13 @@
                     <text class="f_s_50">{{item.moneny}}</text>
                   </view>
                   <view class="t_center f_s_20">满{{item.discounts}}元可用</view>
-                  <view wx:if="{{!isUse}}" class="btn t_center" bindtap="receive">立即领取</view>
+                  <view wx:if="{{disChange}}" class="btn t_center" bindtap="receive">立即领取</view>
                 </view>
+                <!-- 优惠券背景 -->
+                <image src="/images/coupon_bg_big.png" class="imgbg"></image>
             </view>
+            <!-- 失效印章 -->
+            <image wx:if="{{!disChange}}" src="/images/invalid.png" class="invalid"></image>
             <radio checked class="orange disr"></radio>
           </view> 
         </radio-group>

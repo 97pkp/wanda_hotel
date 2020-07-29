@@ -70,6 +70,12 @@ Component({
         tagName: str == 'use'? '待使用':'已退款'
       })
     },
+    // 进订单详情
+    toDetails(e) {
+      wx.navigateTo({
+        url: '/pages/orderList/details/index',
+      })
+    },
     // 输入绑定原因
     inputValueChange(e) {
       this.setData({

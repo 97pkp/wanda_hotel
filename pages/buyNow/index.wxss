@@ -180,7 +180,7 @@
   width: 30rpx;
   height: 4rpx;
   background: #977958;
-  transition: all .8s;
+  transition: all .3s;
 }
 .tabChange .border.left{
   left: 140rpx;
@@ -198,17 +198,21 @@
 }
 .discountslist .itembox{
   position: relative;
-  padding:0 30rpx 0 80rpx;
+  height: 196rpx;
+   margin-bottom: 32rpx;
 }
 .discountslist .item {
+  position: absolute;
+  top: 0;
+  left: 80rpx;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
+  width: 640rpx;
   height: 196rpx;
   color: #fff;
-  background: #FFBF2A;
   padding: 0 32rpx;
   border-radius: 6rpx;
-  margin-bottom: 32rpx;
 }
 .discountslist .item.isUse{
   opacity:0.48;
@@ -232,6 +236,22 @@
   transform: scale(0.6, 0.6);
 
 }
+.invalid{
+  position: absolute;
+  bottom: -20rpx;
+  right: 32rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.imgbg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 640rpx;
+  height: 196rpx;
+}
+
 .dialog_kong{
   height: 160rpx;
   background: #fff;

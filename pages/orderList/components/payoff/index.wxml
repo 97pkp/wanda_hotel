@@ -1,5 +1,5 @@
 <!--pages/orderList/compents/payoff/index.wxml-->
-<view class="box" wx:for="{{2}}">
+<view class="box" wx:for="{{2}}" date-value="payoff" bindtap="toDetails">
   <view class="flex imgBox">
      <image src="/images/shopcar.jpg" wx:for="{{2}}"></image>
   </view>
@@ -19,7 +19,7 @@
         <text class="text-orange">￥1990,00</text>
       </view>
       <view class="flex">
-        <view class="del text-center m_r_20" wx:if="{{true}}" bindtap="del">删除</view>
+        <view class="del text-center m_r_20" wx:if="{{false}}" bindtap="del">删除</view>
         <view class="cancel text-center m_r_20" wx:else>取消订单</view>
         <view class="toPay text-center">去付款</view>
       </view>
