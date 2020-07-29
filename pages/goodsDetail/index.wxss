@@ -120,6 +120,10 @@ swiper{
   justify-content: space-between;
   margin-bottom: 31rpx;
 }
+.price>view{
+  display: flex;
+  align-items: center;
+}
 .price .now_price{
   color: #977958;
   font-size: 36rpx;
@@ -585,7 +589,7 @@ swiper{
   font-size: 20rpx;
   color: #ffffff;
 }
-.old_price{
+.seckill_info_right .old_price{
   font-size: 20rpx;
   line-height: 28rpx;
   color: #ffffff;
