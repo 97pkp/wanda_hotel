@@ -1,3 +1,224 @@
 <!--pages/orderList/details/index.wxml-->
-<text>详情页面</text>
+<!-- 支付状态-待付款 -->
+<view wx:if="{{payStatus === 0}}" class="pay_type">
+  <view class="pay_state_left">
+    <view class="pay_title">等待买家付款</view>
+    <view class="pay_date">剩 23 小时 55 分自动关闭</view>
+  </view>
+  <view class="pay_state_right">
+    <image mode="heightFix" src="/images/hot_img.png"></image>
+  </view>
+</view>
+<!-- 支付状态-待使用 -->
+<view wx:if="{{payStatus === 1}}" class="pay_type">
+  <view class="pay_state_left">
+    <view class="pay_title">待使用</view>
+  </view>
+  <view class="pay_state_right">
+    <image mode="heightFix" src="/images/hot_img.png"></image>
+  </view>
+</view>
+<!-- 支付状态-已取消 -->
+<view wx:if="{{payStatus === -1}}" class="pay_type">
+  <view class="pay_state_left">
+    <view class="pay_title">已取消</view>
+  </view>
+  <view class="pay_state_right">
+    <image mode="heightFix" src="/images/hot_img.png"></image>
+  </view>
+</view>
 
+<!-- 商品列表-待支付/已取消 -->
+<view wx:if="{{payStatus !== 1}}" class="goodsList" wx:for="{{goodsList}}">
+  <view class="goodsTitle f_s_26">
+    <text class="name">{{item.name}}</text>
+    <text class="cuIcon-right text-black"></text>
+  </view>
+  <view class="d_x goodsItem" wx:for="{{item.children}}">
+    <view class="right">
+      <image src='{{item.src}}'></image>
+    </view>
+    <view class="left">
+      <view class="f_s_26 info">
+        <!-- <text class="tap"></text> -->
+        <v-bracket></v-bracket>
+        <text>{{item.info}}</text>
+      </view>
+      <view class="d_x justify-between">
+        <view class="select f_s_24" bindtap="showTypeChange" data-id="{{item.id}}">豪华大床房</view>
+        <view class="quota f_s_18">限购两份</view>
+      </view>
+      <view class="d_x goodsInfo justify-between">
+        <view class="f_s_24 text-orange m_t_24">￥{{item.moneny}}.00</view>
+        <view class="m_t_24"> 
+          <text class="f_s_18">X</text>
+          <text class="count">{{item.count}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 商品列表-待使用 -->
+<view wx:if="{{payStatus === 1}}" class="goodsList goodsList_no_use" wx:for="{{hotelList}}">
+  <view class="goodsTitle f_s_32">
+    <text class="name">{{item.name}}</text>
+  </view>
+  <view class="d_x goodsItem" >
+    <view class="right">
+      <image src='{{item.src}}'></image>
+    </view>
+    <view class="left">
+      <view class="f_s_24 info">
+        <v-bracket></v-bracket>
+        <text>{{item.info}}</text>
+      </view>
+      <view class="d_x justify-between">
+        <view class="select f_s_24" bindtap="showTypeChange" data-id="{{item.id}}">有效期到 <text class=" time">2020-12-31</text></view>
+      </view>
+      <view class="d_x goodsInfo justify-between">
+        <view class="f_s_24 text-orange m_t_24">￥{{item.moneny}}.00</view>
+        <view class="m_t_24"> 
+          <text class="f_s_18">X</text>
+          <text class="count">{{item.count}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="order_option">
+    <view class="order_left">
+      <view bindtap="showQRCode" data-qrData="http://www.baidu.com">验券</view>
+      <view bindtap="givePerson">转增</view>
+    </view>
+    <view class="order_right">
+      <image bindtap="showQRCode" data-qrData="http://www.baidu.com" src="/images/xyfw.png"></image>
+      <text bindtap="givePerson" class="cuIcon-right text-black"></text>
+    </view>
+  </view>
+</view>
+<!-- 优惠信息 -->
+<view wx:if="{{payStatus === 1}}" class="coupon_info">
+  <view class="coupon_item">
+    <view class="coupon_title">商品总价</view>
+    <view class="coupon_price">￥ 100.00</view>
+  </view>
+  <view class="coupon_item">
+    <view class="coupon_title">满减券</view>
+    <view class="coupon_price">- ￥ 100.00</view>
+  </view>
+  <view class="coupon_item">
+    <view class="coupon_title">订单总价</view>
+    <view class="coupon_price">￥ 100.00</view>
+  </view>
+  <view class="coupon_item">
+    <view class="coupon_title">实付款</view>
+    <view class="coupon_price coupon_price_yes">￥ 100.00</view>
+  </view>
+</view>
+
+<!-- 订单信息 -->
+<view wx:if="{{payStatus !== 1}}" class="order_info">
+  <view class="order_title">订单信息</view>
+  <view class="order_content">
+    <view class="order_info_item order_num">
+      <view class="order_txt">订单号：</view>
+      <view class="order_con">
+        <view>1154199796</view>
+        <view class="copy_btn" bindtap="copyTxt" data-text="{{1154199796}}">复制</view>
+      </view>
+    </view>
+    <view class="order_info_item order_date">
+      <view class="order_txt">下单时间：</view>
+      <view class="order_con">
+        <view>2020-04-01 11:28:30</view>
+      </view>
+    </view>
+    <view class="order_info_item order_date">
+      <view class="order_txt">商品金额：</view>
+      <view class="order_con">
+        <view>￥ 1000</view>
+      </view>
+    </view>
+    <view class="order_info_item order_date">
+      <view class="order_txt">应付金额：</view>
+      <view class="order_con">
+         <view>￥ 1000</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{payStatus === 1}}" class="order_info">
+  <view class="order_title">订单信息</view>
+  <view class="order_content">
+     <view class="order_info_item order_date">
+      <view class="order_txt">获取积分：</view>
+      <view class="order_con">
+        <view>100分</view>
+      </view>
+    </view>
+    <view class="order_info_item order_date">
+      <view class="order_txt">交易快照：</view>
+      <view class="order_con">
+        <view>发生交易争议时，可作为判断依据</view>
+      </view>
+    </view>
+    <view class="order_info_item order_num">
+      <view class="order_txt">订单号：</view>
+      <view class="order_con">
+        <view>1154199796</view>
+        <view class="copy_btn" bindtap="copyTxt" data-text="{{1154199796}}">复制</view>
+      </view>
+    </view>
+    <view class="order_info_item order_date">
+      <view class="order_txt">微信交易号：</view>
+      <view class="order_con">
+        <view>123456789</view>
+      </view>
+    </view>
+    <view class="order_info_item order_date">
+      <view class="order_txt">创建时间：</view>
+      <view class="order_con">
+        <view>2020-04-01 11:28:30</view>
+      </view>
+    </view>
+    <view class="order_info_item order_date">
+      <view class="order_txt">付款时间：</view>
+      <view class="order_con">
+        <view>2020-04-01 11:28:30</view>
+      </view>
+    </view>
+    <view class="order_info_item order_date">
+      <view class="order_txt">成交时间：</view>
+      <view class="order_con">
+        <view>2020-04-01 11:28:30</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 电话 -->
+<view class="phone_btn">
+  <view class="pbone">
+    <image mode="heightFix" src="/images/kfyd.png"></image>
+    <view bindtap="tallKF" data-phoneNum="17865353357">客服电话</view>
+  </view>
+  <view class="pbone" wx:if="{{payStatus === -1}}">
+    <image mode="heightFix" src="/images/kfyd.png"></image>
+    <view>删除订单</view>
+  </view>
+</view>
+
+<!-- 底部按钮 -->
+<view class="bottom_btn" wx:if="{{payStatus === 0}}">
+  <view class="close_order">取消订单</view>
+  <view class="buy_order">去付款</view>
+</view>
+
+<!-- 验券二维码 -->
+<view wx:if="{{isShowQRCode}}" class="qr_warp" catchtap="closeQR" catchtouchmove="returnMove">
+  <view class="qr_content" catchtap="stopProp">
+    <view class="qr_title">向商家出示二维码/券码</view>
+    <view class="qr_canvas">
+      假装有二维码
+    </view>
+    <view class="qr_num">8953 2300</view>
+  </view>
+</view>

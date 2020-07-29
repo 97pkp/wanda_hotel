@@ -1,0 +1,44 @@
+<!--pages/present/index.wxml-->
+<view class="tip">礼物已备好，随时可送出</view>
+
+<!-- 主内容 -->
+<view class="goodsList goodsList_no_use" wx:for="{{hotelList}}">
+  <view class="goodsTitle f_s_32">
+    <text class="name">{{item.name}}</text>
+  </view>
+  <view class="d_x goodsItem">
+    <view class="right">
+      <image src='{{item.src}}'></image>
+    </view>
+    <view class="left">
+      <view class="f_s_24 info">
+        <v-bracket></v-bracket>
+        <text>{{item.info}}</text>
+      </view>
+      <view class="d_x justify-between">
+        <view class="select f_s_24" bindtap="showTypeChange" data-id="{{item.id}}">有效期到 <text class=" time">2020-12-31</text></view>
+      </view>
+      <view class="d_x goodsInfo justify-between">
+        <view class="f_s_24 text-orange m_t_24">1份</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="present_btn" bindtap="giveFriend">送给朋友</view>
+
+<!-- 确认框 -->
+<view class="cu-modal {{isGive ? 'show':''}}">
+  <view class="cu-dialog">
+    <view class="padding-xl">
+      <view class="text_warp">
+        <view class="question">是否确认将本券转赠给好友</view>
+        <view class="tip_txt">24小时未被领取将自动退回</view>
+      </view>
+      <view class="btn_warp">
+        <view class="cancel" bindtap="handelCancel">取消</view>
+        <view class="give" bindtap="handleGive">立即赠送</view>
+      </view>
+    </view>
+  </view>
+</view>

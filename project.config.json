@@ -121,6 +121,19 @@
 					"pathName": "pages/orderList/details/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "券码转赠",
+					"pathName": "pages/present/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "赠送页面",
+					"pathName": "pages/present/index",
+					"scene": null
 				}
 			]
 		}

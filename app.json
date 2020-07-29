@@ -14,7 +14,8 @@
     "pages/buyNow/index",
     "pages/hotel/index",
     "pages/orderList/index",
-    "pages/orderList/details/index"
+    "pages/orderList/details/index",
+    "pages/present/index"
   ],
   "window": {
     "backgroundColor": "#ff0000",

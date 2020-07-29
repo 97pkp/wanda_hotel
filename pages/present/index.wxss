@@ -1,0 +1,137 @@
+/* pages/present/index.wxss */
+page{
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.tip{
+  font-size: 36rpx;
+  line-height: 50rpx;
+  color: #454343;
+  text-align: center;
+  margin: 64rpx auto 57rpx;
+}
+.present_btn{
+  width: 686rpx;
+  height: 90rpx;
+  background: #977958;
+  font-size: 32rpx;
+  line-height: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border-radius: 8rpx;
+  margin-top: 32rpx;
+}
+
+/* 中间商品 */
+.goodsList{
+  width: 100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 0;
+  border-radius: 8rpx;
+}
+
+.goodsTitle{
+  position: relative;
+  padding-top: 20rpx;
+  line-height: 37rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.goodsTitle .name{
+  margin-right: 35rpx;
+}
+
+.goodsItem{
+  position: relative;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #c6c5c4;
+}
+.goodsItem:last-child{
+  border-bottom: 0;
+}
+.goodsItem .right{
+  width: 180rpx;
+  height: 180rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+.goodsItem .right image{
+  width: 100%;
+  height: 100%;
+}
+.goodsItem .left{
+  flex:1;
+  margin-left: 20rpx;
+}
+.goodsItem .left .tap{
+  color: #CE9455;
+}
+
+.goodsItem .left .info{
+  height: 60rpx;
+  line-height: 30rpx;
+  margin-bottom: 15rpx;
+}
+.select{
+  color: #c5c5c5;
+}
+.text-orange{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #6B6B6B;
+}
+
+/* 弹窗 */
+.cu-dialog{
+  width: 560rpx;
+  height: 380rpx;
+  background: #ffffff;
+}
+.padding-xl{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.text_warp{
+  height: 300rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text_warp .question{
+  font-size: 36rpx;
+  line-height: 50rpx;
+  color: #222222;
+}
+.text_warp .tip_txt{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #959494;
+  margin-top: 35rpx;
+}
+.btn_warp{
+  width: 100%;
+  height: 80rpx;
+  border-top: 1rpx solid #E6E6E6;
+  display: flex;
+}
+.btn_warp>view{
+  width: 50%;
+  font-size: 32rpx;
+  line-height: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.give{
+  background: #977958;
+  color: #ffffff;
+}
+.cancel{
+  color: #222222;
+}

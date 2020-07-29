@@ -2,5 +2,5 @@
   "usingComponents": {
     "v-bracket": "/component/bracket"
   },
-  "navigationBarTitleText": "订单详情"
+  "navigationBarTitleText": "券码转赠"
 }
