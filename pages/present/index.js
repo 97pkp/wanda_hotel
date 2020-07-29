@@ -27,7 +27,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
   },
 
   /**
@@ -76,7 +76,13 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    let url = '/pages/orderList/index?test="haha"';
 
+    return {
+      title: "我送你的xxx券",
+      path: url,
+      imageUrl: '/images/img.png'
+    }
   },
   /**
    * 送给朋友
@@ -94,6 +100,6 @@ Page({
    * 立即赠送
    */
   handleGive: function(){
-    
+
   }
 })

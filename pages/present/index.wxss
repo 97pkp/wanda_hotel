@@ -118,11 +118,11 @@ page{
 .btn_warp{
   width: 100%;
   height: 80rpx;
-  border-top: 1rpx solid #E6E6E6;
   display: flex;
 }
 .btn_warp>view{
   width: 50%;
+  height: 100%;
   font-size: 32rpx;
   line-height: 45rpx;
   display: flex;
@@ -135,4 +135,16 @@ page{
 }
 .cancel{
   color: #222222;
+  border-top: 1rpx solid #E6E6E6;
+}
+.give_btn{
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: normal !important;
+  font-size: 32rpx !important;
+  line-height: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: '微软雅黑';
 }

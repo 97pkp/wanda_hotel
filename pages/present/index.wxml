@@ -37,7 +37,9 @@
       </view>
       <view class="btn_warp">
         <view class="cancel" bindtap="handelCancel">取消</view>
-        <view class="give" bindtap="handleGive">立即赠送</view>
+        <view class="give" bindtap="handleGive">
+          <button class="give_btn" type="default" plain="true" open-type="share">立即赠送</button>
+        </view>
       </view>
     </view>
   </view>
