@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tabActive: 'all'
   },
 
   /**
@@ -13,6 +13,12 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  // tab切换
+  tabChange(e){
+    this.setData({
+      tabActive: e.currentTarget.dataset.value
+    })
   },
   toDetails(e){
     wx.navigateTo({

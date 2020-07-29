@@ -1,1 +1,39 @@
 /* pages/orderList/index.wxss */
+.tabChange{
+  position: relative;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fff;
+  margin-top: 1rpx;
+}
+.tabChange .border{
+  position:absolute;
+  bottom: 0;
+  width: 30rpx;
+  height: 4rpx;
+  background: #977958;
+  transition: all .8s;
+}
+.tabChange .border.all{
+  left:52rpx;
+}
+.tabChange .border.payoff{
+  left:200rpx;
+}
+ .tabChange .border.use{
+  left:362rpx;
+}
+.tabChange .border.refund{
+  left:522rpx;
+}
+.tabChange .border.Coupon{
+  left:668rpx;
+}
+.p_32{
+  padding: 32rpx 32rpx 0;
+}
+.content{
+  position: fixed;
+  top: 90rpx;
+  bottom: 0;
+}

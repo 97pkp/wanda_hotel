@@ -180,12 +180,13 @@
   width: 30rpx;
   height: 4rpx;
   background: #977958;
+  transition: all .8s;
 }
 .tabChange .border.left{
   left: 140rpx;
 }
 .tabChange .border.right{
-  right: 140rpx;
+  left: 478rpx;
 }
 /* 优惠券列表样式 */
 .discountslist{

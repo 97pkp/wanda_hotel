@@ -1,0 +1,109 @@
+/* pages/orderList/components/use/index.wxss */
+@import "/app.wxss";
+/* 商品列表 */
+.goodsList{
+  position: relative;
+  width: 100%;
+  padding: 0 30rpx;
+  background: #fff;
+  padding-bottom: 20rpx;
+}
+.goodsList:first-child{
+  margin-top: 10rpx;
+}
+
+.goodsTitle{
+  position: relative;
+  padding-top: 20rpx;
+  line-height: 37rpx;
+}
+.goodsTitle .name{
+  margin-right: 35rpx;
+}
+.goodsTitle .discounts{
+  position: absolute;
+  top: 26rpx;
+  right: 0;
+  width: 90rpx;
+  height: 30rpx;
+  line-height: 26rpx;
+  text-align: center;
+  border-radius: 4rpx;
+  border: 1px solid #977958;
+}
+.collect{
+  padding-left: 56rpx;
+}
+.goodsItem{
+  position: relative;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #c6c5c4;
+}
+.goodsItem:last-child{
+  border-bottom: 0;
+}
+.goodsItem .right{
+  width: 180rpx;
+  height: 180rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+.goodsItem .right image{
+  width: 100%;
+  height: 100%;
+}
+.goodsItem .left{
+  flex:1;
+  margin-left: 20rpx;
+}
+.goodsItem .left .tap{
+  color: #CE9455;
+}
+
+.goodsItem .left .info{
+  height: 60rpx;
+  line-height: 30rpx;
+  margin-bottom: 15rpx;
+}
+.select{
+  color: #c5c5c5;
+}
+.quota{
+  width: 93rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #fff;
+  background: #977958;
+  border-radius: 6rpx;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.info{
+  height: 55rpx;
+  line-height: 55rpx;
+  margin-top: 20rpx;
+}
+.del{
+  width: 107rpx;
+  height: 55rpx;
+  color: #f2310b;
+  border: 1rpx solid #f2310b;
+}
+.refund{
+  width: 107rpx;
+  height: 55rpx;
+  color: #929192;
+  border: 1rpx solid #929192;
+}
+.cancel{
+  width: 150rpx;
+  height: 55rpx;
+  color: #000;
+  border: 1rpx solid #000;
+}
+.use-text{
+  position: absolute;
+  top: 20rpx;
+  right: 30rpx;
+}

@@ -50,9 +50,6 @@ page{
 .f_s_18{
   font-size: 18rpx;
 }
-.d_x{
-  display: flex;
-}
 /* 行高 */
 .l_h_28{
   line-height: 28rpx;
@@ -70,6 +67,9 @@ page{
 }
 .m_r_20{
   margin-right: 20rpx;
+}
+.m_t_10{
+  margin-top: 10rpx;
 }
 .m_t_20{
   margin-top: 20rpx;

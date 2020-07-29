@@ -33,11 +33,12 @@
   position: absolute;
   bottom: -22rpx;
   width: 30rpx;
-  height: 3rpx;
+  height: 4rpx;
   background: #C39664;
+  transition: all .8s;
 }
 .tabChange .bottomBorder.right{
-  right: 174rpx;
+  left: 546rpx;
 }
 .tabChange .bottomBorder.left{
   left: 174rpx;

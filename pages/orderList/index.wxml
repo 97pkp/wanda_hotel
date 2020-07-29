@@ -1,3 +1,20 @@
 <!--pages/orderList/index.wxml-->
-<text>订单列表</text>
-<button class="bg-orange" bindtap="toDetails">详情</button>
+<!-- 第一级tab切换 -->
+<view class="flex justify-around tabChange">
+  <view data-value="all" bindtap="tabChange" class="{{tabActive=='all'?'text-orange':''}}">全部</view>
+  <view data-value="payoff" bindtap="tabChange" class="{{tabActive=='payoff'?'text-orange':''}}">待支付</view>
+  <view data-value="use" bindtap="tabChange" class="{{tabActive=='use'?'text-orange':''}}">待使用</view>
+  <view data-value="refund" bindtap="tabChange" class="{{tabActive=='refund'?'text-orange':''}}">已退款</view>
+  <view data-value="Coupon" bindtap="tabChange" class="{{tabActive=='Coupon'?'text-orange':''}}">礼券</view>
+  <view class="border {{tabActive}}"></view>
+</view>
+<scroll-view scroll-y class="content">
+  <!-- 待支付区域 -->
+  <view wx:if="{{tabActive=='all' || tabActive=='payoff'}}" class="p_32"><payoff/></view>
+  <!-- 待使用区域 -->
+  <view wx:if="{{tabActive=='all' || tabActive=='use'}}" class="p_32"><use pagetype="use"/></view>
+  <!-- 已退款区域区域 -->
+  <view wx:if="{{tabActive=='all' || tabActive=='refund'}}" class="p_32"><use pagetype="refund"/></view>
+  <!-- 礼券区域 -->
+  <view wx:if="{{tabActive=='all' || tabActive=='Coupon'}}" class="p_32"><Coupon/></view>
+</scroll-view>
