@@ -48,7 +48,8 @@ Component({
         couponType: 0, // 1 已转赠 0 已使用
         couponTypeStr: '正在等待'
       }],
-      changeValue: 'all'
+      changeValue: 'all',
+      isShowQRCode: false
   },
 
   /**
@@ -59,6 +60,23 @@ Component({
       this.setData({
         changeValue: e.currentTarget.dataset.value
       })
-    }
+    },
+    // 关闭二维码
+    closeQR (e) {
+      this.setData({ isShowQRCode: false })
+    },
+    stopProp() {
+      return
+    },
+    //  显示二维码
+    showQRCode(e) {
+      this.setData({ isShowQRCode: true })
+    },
+    // 转赠
+    givePerson() {
+      wx.navigateTo({
+        url: '/pages/present/index',
+      })
+    },
   }
 })

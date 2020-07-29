@@ -14,6 +14,12 @@ Page({
   onLoad: function (options) {
 
   },
+  // 进订单详情
+  toDetails(e) {
+    wx.navigateTo({
+      url: '/pages/orderList/index',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

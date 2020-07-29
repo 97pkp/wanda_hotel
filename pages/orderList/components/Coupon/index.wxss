@@ -5,6 +5,12 @@
 }
 
 /* 礼券列表 */
+.couponContent{
+  position:fixed;
+  top: 180rpx;
+  bottom:0;
+  padding: 0 32rpx;
+}
 .couponList{
   position: relative;
   width: 100%;
@@ -107,4 +113,45 @@
 }
 .isUse{
   text-decoration: line-through;
+}
+
+/* 二维码 */
+.qr_warp{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.qr_content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 600rpx;
+  height: 600rpx;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4rpx;
+}
+.qr_canvas{
+  margin: 46rpx 0 29rpx;
+  width: 356rpx;
+  height: 356rpx;
+  background: black;
+  color: #ffffff;
+}
+.qr_title{
+  font-size: 32rpx;
+  line-height: 36rpx;
+  color: #454343;
+}
+.qr_num{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333333;
 }

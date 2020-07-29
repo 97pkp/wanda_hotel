@@ -13,7 +13,7 @@
   width: 30rpx;
   height: 4rpx;
   background: #977958;
-  transition: all .8s;
+  transition: all .3s;
 }
 .tabChange .border.all{
   left:52rpx;
@@ -31,10 +31,16 @@
   left:668rpx;
 }
 .p_32{
-  padding: 32rpx 32rpx 0;
+  padding: 0 32rpx;
 }
 .content{
   position: fixed;
   top: 90rpx;
   bottom: 0;
+}
+.item:first-child{
+  padding-top: 32rpx;
+}
+.item:last-child{
+  padding-bottom:32rpx;
 }

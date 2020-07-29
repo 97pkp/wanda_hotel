@@ -133,6 +133,14 @@
 					"id": -1,
 					"name": "赠送页面",
 					"pathName": "pages/present/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "优惠券列表",
+					"pathName": "pages/discounts/discountslist/index",
+					"query": "data = {type:1}",
 					"scene": null
 				}
 			]

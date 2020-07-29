@@ -10,11 +10,11 @@
 </view>
 <scroll-view scroll-y class="content">
   <!-- 待支付区域 -->
-  <view wx:if="{{tabActive=='all' || tabActive=='payoff'}}" class="p_32"><payoff/></view>
+  <view wx:if="{{tabActive=='all' || tabActive=='payoff'}}" class="p_32 item"><payoff/></view>
   <!-- 待使用区域 -->
-  <view wx:if="{{tabActive=='all' || tabActive=='use'}}" class="p_32"><use pagetype="use"/></view>
+  <view wx:if="{{tabActive=='all' || tabActive=='use'}}" class="p_32 item"><use pagetype="use"/></view>
   <!-- 已退款区域区域 -->
-  <view wx:if="{{tabActive=='all' || tabActive=='refund'}}" class="p_32"><use pagetype="refund"/></view>
+  <view wx:if="{{tabActive=='all' || tabActive=='refund'}}" class="p_32 item"><use pagetype="refund"/></view>
   <!-- 礼券区域 -->
-  <view wx:if="{{tabActive=='all' || tabActive=='Coupon'}}" class="p_32"><Coupon/></view>
+  <view wx:if="{{tabActive=='Coupon'}}" class="item"><Coupon/></view>
 </scroll-view>

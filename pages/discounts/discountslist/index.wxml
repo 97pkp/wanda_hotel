@@ -13,19 +13,23 @@
 </view>
 <!-- 优惠券列表部分 -->
 <view class="discountslist">
-  <view class="item {{isUse?'isUse':''}}" wx:for="{{discountslist}}">
-      <view bindtap="showDialog" data-title="{{item.name}}" data-num="{{item.num}}">
-        <view class="f_s_30 m_b_24 m_t_40">{{item.name}}</view>
-        <view class="f_s_24">{{item.startTime}}-{{item.endTime}}</view>
-      </view>
-      <view class="monenyInfo">
-        <view class="t_center m_t_20">
-          <text class="f_s_24">￥</text>
-          <text class="f_s_50">{{item.moneny}}</text>
+  <view class="main" wx:for="{{discountslist}}">
+      <view class="item {{isUse?'isUse':''}}">
+        <view bindtap="showDialog" data-title="{{item.name}}" data-num="{{item.num}}">
+          <view class="f_s_30 m_b_24 m_t_40">{{item.name}}</view>
+          <view class="f_s_24">{{item.startTime}}-{{item.endTime}}</view>
         </view>
-        <view class="t_center f_s_20">满{{item.discounts}}元可用</view>
-        <view wx:if="{{!isUse}}" class="btn t_center" bindtap="receive">立即领取</view>
+        <view class="monenyInfo">
+          <view class="t_center m_t_20">
+            <text class="f_s_24">￥</text>
+            <text class="f_s_50">{{item.moneny}}</text>
+          </view>
+          <view class="t_center f_s_20">满{{item.discounts}}元可用</view>
+          <view wx:if="{{!isUse}}" class="btn t_center" bindtap="receive">立即领取</view>
+        </view>
+        <image src="/images/coupon_bg_big.png" class="imgbg"></image>
       </view>
+      <image wx:if="{{isUse}}" src="/images/invalid.png" class="invalid"></image>
   </view>
 </view>
 <!-- 模态框 -->
