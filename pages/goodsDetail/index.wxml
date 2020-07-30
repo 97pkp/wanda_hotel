@@ -121,7 +121,7 @@
 					<view class="group_num_txt">5人拼，还差1人成团</view>
 					<view class="group_num_date">剩余 00:59:37</view>
 				</view>
-				<view class="add_group_btn">参团</view>
+				<view class="add_group_btn" bindtap="addGroup">参团</view>
 			</view>
 		</view>
 	</view>

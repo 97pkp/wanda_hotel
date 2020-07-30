@@ -64,10 +64,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
     let that = this;
     this.setTime()
-    if(options.pageType === 0 || options.pageType === 2){
-      this.setData({'pageType': options.pageType})
+    if(options.type == 0 || options.type == 2){
+      this.setData({'pageType': Number(options.type)})
     }else{
       this.setData({'pageType': 1})
     }
@@ -318,6 +319,14 @@ Page({
    * 我要开团
    */
   toBuyGroup: function(){
+    wx.navigateTo({
+      url: '/pages/buyNow/index?type=0',
+    })
+  },
+  /**
+   * 参团
+   */
+  addGroup: function(){
     wx.navigateTo({
       url: '/pages/buyNow/index?type=0',
     })

@@ -33,7 +33,7 @@
               </view>
             </view>
           </block>
-          <block wx:for="{{list}}" wx:key="{{index}}">
+          <block wx:for="{{list}}" wx:key="index">
             <view class="padding indexItem-{{list[index]}}" id="indexes-{{list[index]}}" data-index="{{list[index]}}">{{list[index]}}</view>
             <view class="cu-list menu-avatar no-padding">
               <van-cell wx:for="{{2}}" wx:key="index" bindtap="toHotel" title="酒店" />
@@ -42,7 +42,7 @@
         </scroll-view>
         <view class="indexBar" style="height:calc(100vh - {{CustomBar}}px - 50px)">
           <view class="indexBar-box" bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
-            <view class="indexBar-item {{listCur === list[index]?'active_cur':''}}" wx:for="{{list}}"  wx:key="{{index}}" id="{{index}}" bindtouchstart="getCur" bindtouchend="setCur">{{list[index]}}</view>
+            <view class="indexBar-item {{listCur === list[index]?'active_cur':''}}" wx:for="{{list}}"  wx:key="index" id="{{index}}" bindtouchstart="getCur" bindtouchend="setCur">{{list[index]}}</view>
           </view>
         </view>
       </view>
