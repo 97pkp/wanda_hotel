@@ -96,6 +96,12 @@
 .secondKillGroup .title .active{
   color: #C39664;
 }
+.secondKillGroup .title .btn{
+  padding: 20rpx 40rpx;
+}
+.secondKillGroup .title .btn:last-child{
+  padding-right: 0;
+}
 .secondKillGroup .tabChange{
   display: flex;
   justify-content: space-around;
@@ -105,6 +111,9 @@
 }
 .secondKillGroup .tabChange .active{
   color: #C39664;
+}
+.secondKillGroup .tabChange .btn {
+  padding: 0 40rpx;
 }
 
 .secondKillItem {
@@ -157,7 +166,7 @@
   position:absolute;
   bottom: 45rpx;
   right: 32rpx;
-  width: 110rpx;
+  padding: 0 20rpx;
   height: 50rpx;
   line-height: 50rpx;
   text-align: center;
