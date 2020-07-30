@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "v-bracket": "/component/bracket",
+    "v-bracket": "/component/bracket/index",
     "tabbar":"../../component/navbar"
   }
 }

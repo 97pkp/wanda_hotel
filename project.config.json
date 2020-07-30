@@ -140,9 +140,10 @@
 					"id": -1,
 					"name": "优惠券列表",
 					"pathName": "pages/discounts/discountslist/index",
-          "query": "data = {type:1}",
-          "scene":null
-        },{
+					"query": "data = {type:1}",
+					"scene": null
+				},
+				{
 					"name": "支付成功",
 					"pathName": "pages/payOk/index",
 					"scene": null

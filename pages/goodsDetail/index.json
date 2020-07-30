@@ -4,7 +4,7 @@
     "default-detail-tabbar": "/component/defaultDetailTabbar/index",
     "seckill-detail-tabbar": "/component/seckillDefaultTabbar/index",
     "group-detail-tabbar": "/component/groupDetailTabbar/index",
-    "v-bracket": "/component/bracket"
+    "v-bracket": "/component/bracket/index"
   },
   "navigationBarTitleText": "商品详情"
 }
