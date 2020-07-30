@@ -37,6 +37,17 @@ swiper{
   width: 60%;
   height: 60%;
 }
+swiper-item{
+  position: relative;
+}
+.hotel_name{
+  position: absolute;
+  top: 32rpx;
+  left: 32rpx;
+  font-size: 32rpx;
+  line-height: 45rpx;
+  color: #ffffff;
+}
 
 .scroll-header {
   display: flex;
