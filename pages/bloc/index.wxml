@@ -10,7 +10,7 @@
         </swiper-item>
       </block>
     </swiper>
-    <view class="swiper_search">
+    <view class="swiper_search" bindtap="toHotel">
       <image src="/images/search.png"></image>
     </view>
     <view class="hotel_name">北京万达文化酒店</view>

@@ -62,12 +62,12 @@
 					<text class="qi">起</text>
 					<text class="old_price small_font">¥1,800.00</text>
 				</view>
-				<view class="remain" wx:if="{{pageType === 0}}">
+				<view class="remain" wx:if="{{pageType === 1}}">
 					剩余 <text>{{13}}</text>
 				</view>
 			</view>
 		</view>
-		<view class="goods_form" wx:if="{{pageType === 0}}">
+		<view class="goods_form" wx:if="{{pageType === 1}}">
 			<view class="specification clear_float">
 				<view class="title">规格</view>
 				<view class="specification_list_warp">
@@ -107,7 +107,7 @@
 		</view>
 	</view>
 	<!-- 加入拼团 -->
-	<view class="add_group_warp" wx:if="{{pageType === 1}}">
+	<view class="add_group_warp" wx:if="{{pageType === 0}}">
 		<view class="add_group_title">他们正在拼团，可直接参与</view>
 		<view class="group_item" wx:for="{{2}}">
 			<view class="user_content">
@@ -204,27 +204,27 @@
 
 	<!-- 普通商品详情页tabbar -->
 	<default-detail-tabbar 
-		wx:if="{{pageType === 0}}"
+		wx:if="{{pageType === 1}}"
 		bindhandlehotel="toHotel"
 		bindhandleorder="toOrder"
 		bindhandlebuycar="toBuyCar"
 		bindaddcar="addCar"
-		bindtobuy="toBuy"
+		bindtobuy="toBuyDefault"
 		></default-detail-tabbar>
-	<!-- 秒杀商品详情页tabbar -->
-	<seckill-detail-tabbar 
-		wx:if="{{pageType === 1}}"
+	<!-- 拼团商品详情页tabbar -->
+	<group-detail-tabbar 
+		wx:if="{{pageType === 0}}"
 		bindhandlehotel="toHotel"
 		bindhandleorder="toOrder"
 		bindhandlebuyonce="toBuyOnce"
 		bindhandlebuygroup="toBuyGroup"
-		></seckill-detail-tabbar>
-	<!-- 拼团商品详情页tabbar -->
-	<group-detail-tabbar 
+		></group-detail-tabbar>
+	<!-- 秒杀商品详情页tabbar -->
+	<seckill-detail-tabbar
 		wx:if="{{pageType === 2}}"
 		bindhandlehotel="toHotel"
 		bindhandleorder="toOrder"
 		bindhandlebuycar="toBuyCar"
 		bindtobuy="toBuy"
-		></group-detail-tabbar>
+		></seckill-detail-tabbar>
 </view>
