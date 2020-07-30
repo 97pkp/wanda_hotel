@@ -1,13 +1,14 @@
 /* component/bracket/index.wxss */
+@import "/app.wxss";
 .bracket_txt_elm{
   color: #CE9455;
   display: inline-block;
   position: relative;
   font-size: 24rpx;
-  padding: 0 10rpx;
+  padding: 0 14rpx;
   height: 24rpx;
   line-height: 24rpx;
-  margin-right: 10rpx;
+  margin-right: 14rpx;
 }
 
 .bracket_txt_elm::before {
@@ -17,8 +18,8 @@
   height: 15rpx;
   left: 0;
   top: 0;
-  border-left: 1rpx solid #CE9455;
-  border-top: 1rpx solid #CE9455;
+  border-left: 2rpx solid #CE9455;
+  border-top: 2rpx solid #CE9455;
 }
 .bracket_txt_elm::after{
   content: '';
@@ -27,6 +28,6 @@
   height: 15rpx;
   right: 0;
   bottom: 0;
-  border-right: 1rpx solid #CE9455;
-  border-bottom: 1rpx solid #CE9455;
+  border-right: 2rpx solid #CE9455;
+  border-bottom: 2rpx solid #CE9455;
 }

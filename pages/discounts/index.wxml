@@ -49,7 +49,7 @@
         <image src="{{item.imgSrc}}"></image>
       </view>
       <view class="right">
-        <view class="info">「万达特惠」{{item.info}}</view>
+        <view class="info"><v-bracket text="万达特惠"></v-bracket>{{item.info}}</view>
         <!-- 进度条 -->
         <view class="flex">
           <view class="cu-progress round xs">

@@ -142,8 +142,7 @@
 					"pathName": "pages/discounts/discountslist/index",
 					"query": "data = {type:1}",
 					"scene": null
-				},
-				{
+				},{
 					"name": "支付成功",
 					"pathName": "pages/payOk/index",
 					"scene": null
