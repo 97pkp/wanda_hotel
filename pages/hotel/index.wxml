@@ -24,7 +24,7 @@
   <scroll-view scroll-x class="scroll-header coupon-header">
     <view class="scroll-view-item bc_green" wx:for="{{optionBtnImg}}" wx:key="index">
       <view class="option_btn">
-        <view class="coupon_info">
+        <view class="coupon_info bg-orange">
           <view class="price">￥<text>50</text></view>
           <view class="price_tip">满100元可用</view>
           <view class="other">
@@ -32,7 +32,7 @@
             <view class="coupon_date">2020.01.01-2020.06.30</view>
           </view>
         </view>
-        <view class="coupon_btn">
+        <view class="coupon_btn bg-orange">
           <text>立\n即\n领\n取</text>
         </view>
       </view>

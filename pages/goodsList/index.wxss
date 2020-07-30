@@ -1,6 +1,6 @@
 /* pages/goodsList/index.wxss */
 page{
-  background: #ffffff;
+  background: #ffffff !important;
   padding-bottom: 110rpx;
 }
 .clear_float:after{

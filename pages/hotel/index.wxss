@@ -97,12 +97,10 @@ swiper{
 .coupon_info{
   width: 243rpx;
   height: 100%;
-  background: yellow;
 }
 .coupon-header .coupon_btn{
   width: 61rpx;
   height: 100%;
-  background: yellow;
   display: flex;
   align-items: center;
   justify-content: center;

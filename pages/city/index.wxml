@@ -55,6 +55,6 @@
 
 
 <!--选择显示-->
-<!-- <view hidden="{{hidden}}" class="indexToast">
+<view hidden="{{hidden}}" class="indexToast">
   {{listCur}}
-</view> -->
+</view>
