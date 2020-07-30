@@ -25,7 +25,7 @@
 
 .tabbar-item:nth-child(3){
   position: relative;
-  bottom: 50rpx;
+  bottom: 70rpx;
   height:150rpx;
   flex: 0.7;
 }
@@ -38,9 +38,9 @@
 }
 
 .tabbar-item:nth-child(3) .tabbar-item-icon image{
-  width: 100rpx;
-  height: 106rpx;
-  padding-top: 6rpx;
+  width: 116rpx;
+  height: 116rpx;
+  /* padding-top: 6rpx; */
 }
 
 .tabbar-item:nth-child(3) .tabbar-item-text{

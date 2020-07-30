@@ -4,7 +4,9 @@ Page({
     activeIdx: 0,
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
-    hidden: true
+    hidden: true,
+    // 文本框值
+    inputValue: ''
   },
   onLoad() {
     let list = [];
@@ -91,7 +93,19 @@ Page({
    */
   handleSearch: function(){
     console.log('搜索');
-    
+    let searchArr = JSON.parse(wx.getStorageSync('searchArr')) || []
+    console.log(searchArr)
+    if(this.data.inputValue === '') return
+    if(searchArr.indexOf(this.data.inputValue) === -1){
+      searchArr.unshift(this.data.inputValue)
+    }else{
+      searchArr.splice(searchArr.indexOf(this.data.inputValue), 1); 
+      searchArr.unshift(this.data.inputValue)
+    }
+    wx.setStorage({
+      key:"searchArr",
+      data: JSON.stringify(searchArr)
+    })
   },
   /**
    * 查看酒店
@@ -101,5 +115,13 @@ Page({
       url: '/pages/hotel/index',
     })
   },
+  /**
+   * 输入文本
+   */
+  valueChange: function(e){
+    this.setData({
+      inputValue:e.detail.value
+    })    
+  }
 
 });
