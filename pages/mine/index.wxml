@@ -1,5 +1,5 @@
 <!--pages/mine/index.wxml-->
 <text>pages/mine/index.wxml</text>
-
+<button class="bg-orange" bindtap="toDetails">订单列表临时入口</button>
 
 <tabbar activeIdx="{{activeIdx}}"></tabbar>

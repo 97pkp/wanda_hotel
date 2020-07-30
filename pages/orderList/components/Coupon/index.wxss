@@ -1,0 +1,157 @@
+/* pages/orderList/components/Coupon/index.wxss */
+@import "/app.wxss";
+.couponChange{
+  color: #454343;
+}
+
+/* 礼券列表 */
+.couponContent{
+  position:fixed;
+  top: 180rpx;
+  bottom:0;
+  padding: 0 32rpx;
+}
+.couponList{
+  position: relative;
+  width: 100%;
+  padding: 0 30rpx;
+  background: #fff;
+  padding-bottom: 20rpx;
+  border-radius: 8rpx;
+  margin-bottom: 32rpx;
+}
+.couponList:first-child{
+  margin-top: 10rpx;
+}
+
+.couponTitle{
+  position: relative;
+  padding-top: 20rpx;
+  line-height: 37rpx;
+}
+.couponTitle .name{
+  margin-right: 35rpx;
+}
+.couponTitle .discounts{
+  position: absolute;
+  top: 26rpx;
+  right: 0;
+  width: 90rpx;
+  height: 30rpx;
+  line-height: 26rpx;
+  text-align: center;
+  border-radius: 4rpx;
+  border: 1px solid #977958;
+}
+.collect{
+  padding-left: 56rpx;
+}
+.couponItem{
+  position: relative;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #c6c5c4;
+}
+.couponItem:last-child{
+  border-bottom: 0;
+}
+.couponItem .right{
+  width: 180rpx;
+  height: 180rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+.couponItem .right image{
+  width: 100%;
+  height: 100%;
+}
+.couponItem .left{
+  flex:1;
+  margin-left: 20rpx;
+}
+.couponItem .left .tap{
+  color: #CE9455;
+}
+
+.couponItem .left .info{
+  height: 60rpx;
+  line-height: 30rpx;
+  margin-bottom: 15rpx;
+}
+.select{
+  color: #c5c5c5;
+}
+.quota{
+  width: 93rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #fff;
+  background: #977958;
+  border-radius: 6rpx;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.couponListInfo{
+  line-height: 55rpx;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #c6c5c4;
+  padding-bottom: 20rpx;
+}
+.couponListInfo:last-child{
+  border-bottom: 0;
+}
+.btn{
+  width: 107rpx;
+  height: 55rpx;
+  color: #322E2A;
+  border: 1rpx solid #322E2A;
+}
+.QR_codeIcon{
+  width:40rpx;
+  height:40rpx;
+  margin: 4rpx 10rpx 0 0;
+}
+.isUse{
+  text-decoration: line-through;
+}
+
+/* 二维码 */
+.qr_warp{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.qr_content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 600rpx;
+  height: 600rpx;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4rpx;
+}
+.qr_canvas{
+  margin: 46rpx 0 29rpx;
+  width: 356rpx;
+  height: 356rpx;
+  background: black;
+  color: #ffffff;
+}
+.qr_title{
+  font-size: 32rpx;
+  line-height: 36rpx;
+  color: #454343;
+}
+.qr_num{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333333;
+}

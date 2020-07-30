@@ -1,39 +1,6 @@
 /* pages/buycar/index.wxss */
-.d_x{
-  display: flex;
-}
-.l_h_28{
-  line-height: 28rpx;
-}
-.p_t_14{
-  padding-top: 14rpx;
-}
-.p_t_24{
-  padding-top: 24rpx;
-}
-.m_r_10{
-  margin-right: 10rpx;
-}
 .btn_w{
   width: 120rpx;
-}
-.m_t_20{
-  margin-top: 20rpx;
-}
-.m_t_24{
-  margin-top: 24rpx;
-}
-.m_r_30{
-  margin-right: 30rpx;
-}
-.m_b_24{
-  margin-bottom: 24rpx;
-}
-.m_t_40{
-  margin-top: 40rpx;
-}
-.m_t_20{
-  margin-top: 20rpx;
 }
 /* 购物车列表 */
 .shopCarList{
@@ -143,7 +110,7 @@
 }
 .kong{
   width: 100%;
-  height: 170rpx;
+  height: 260rpx;
 }
 
 /* 购物车操作条 */
@@ -158,6 +125,8 @@
   display: flex;
   justify-content: space-between;
   padding: 0 0 0 24rpx;
+  border-top: 1rpx solid #c6c5c4;
+  border-bottom: 1rpx solid #c6c5c4;
 }
 .selectAll{
   transform:scale(0.6,0.6);
@@ -213,18 +182,24 @@
 }
 
 .discountsBox{
+  position: relative;
   border-bottom: 1px solid #C6C5C4;
   margin-bottom: 32rpx;
+  padding-top: 240rpx;
 }
 .discountsBox:last-child{
   border-bottom: 0;
 }
 .discountsItem{
+  position: absolute;
+  top: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
+  width: 100%;
   height: 196rpx;
   color: #fff;
-  background: #FFBF2A;
+  /* background: #FFBF2A; */
   padding: 0 32rpx;
   border-radius: 6rpx;
   margin-bottom: 44rpx; 
@@ -243,6 +218,21 @@
   background: #fff;
   border-radius: 30rpx;
   margin-top: 21rpx;
+}
+ .imgbg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 196rpx;
+}
+.invalid{
+  position: absolute;
+  top: 128rpx;
+  right: 0;
+  width: 100rpx;
+  height: 100rpx;
 }
 .goodList{
   display: flex;

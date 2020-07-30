@@ -118,6 +118,7 @@ swiper{
 
 .list_warp{
   padding: 32rpx;
+  margin-bottom: 110rpx;
 }
 
 .option_btn{

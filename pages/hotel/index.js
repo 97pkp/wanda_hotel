@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    activeIdx: 0,
     // 轮播图配置
     swiperConfig: {
       indicatorDots: true,
@@ -19,7 +20,7 @@ Page({
       {url: '../../images/cyyd.png', name: '餐饮预订'},
       {url: '../../images/ktyl.png', name: '康体娱乐'},
       {url: '../../images/xyfw.png', name: '洗衣服务'},
-      {url: '../../images/mshd.png', name: '秒杀活动'}
+      {url: '../../images/mshd.png', name: '伴手礼'}
     ],
   },
 

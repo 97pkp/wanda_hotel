@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-bracket": "/component/bracket/index"
+  },
+  "navigationBarTitleText": "订单详情"
+}

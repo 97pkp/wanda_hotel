@@ -1,0 +1,21 @@
+<!--component/defaultDetailTabbar/index.wxml-->
+<view class="detail_tabbar">
+  <view class="option">
+    <view>
+      <image mode="heightFix" src="/images/home_on.png"></image>
+      <view>酒店</view>
+    </view>
+    <view>
+      <image mode="heightFix" src="/images/home_on.png"></image>
+      <view>订单</view>
+    </view>
+  </view>
+  <view class="add_car">
+    <view>￥ 358.00</view>
+    <view>单独购买</view>
+  </view>
+  <view class="to_buy">
+    <view>￥ 358.00</view>
+    <view>我要开团</view>
+  </view>
+</view>

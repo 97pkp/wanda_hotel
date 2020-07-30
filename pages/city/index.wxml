@@ -9,50 +9,52 @@
       <view class="search_btn" bindtap="handleSearch">搜索</view>
     </view>
     <view class="search_content">
-      <view class="late_search">
-        <view class="late_search_title">
-          <view>最近搜索酒店</view>
-          <text>删除</text>
-        </view>
-        <view class="list clear_float">
-          <!-- <view class="tag" wx:for="{{4}}">青岛东方影都融创万达嘉华度假酒店</view> -->
-          <view class="no_data">暂无数据</view>
-        </view>
-      </view>
-      <view class="late_search">
-        <view class="late_search_title">
-          <view>热门搜索酒店</view>
-        </view>
-        <view class="list clear_float">
-          <!-- <view class="tag" wx:for="{{4}}">青岛东方影都融创万达嘉华度假酒店</view> -->
-          <view class="no_data">暂无数据</view>
-        </view>
-      </view>
       <view class="hotel_list">
-        <van-index-bar>
-          <van-index-anchor index="A" />
-          <van-cell bindtap="toHotel" title="酒店" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-
-          <van-index-anchor index="B" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-index-anchor index="C" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-          <van-cell title="文本" />
-        </van-index-bar>
+        <!-- 索引列表 -->
+        <scroll-view scroll-y class="indexes" scroll-into-view="indexes-{{listCurID}}" style="height:calc(100vh - {{CustomBar}}px - 50px)" scroll-with-animation="true" enable-back-to-top="true">
+          <block>
+            <view class="late_search">
+              <view class="late_search_title">
+                <view>最近搜索酒店</view>
+                <text class="cuIcon-delete"></text>
+              </view>
+              <view class="list clear_float">
+                <!-- <view class="tag" wx:for="{{4}}">青岛东方影都融创万达嘉华度假酒店</view> -->
+                <view class="no_data">暂无数据</view>
+              </view>
+            </view>
+            <view class="late_search">
+              <view class="late_search_title">
+                <view>热门搜索酒店</view>
+              </view>
+              <view class="list clear_float">
+                <!-- <view class="tag" wx:for="{{4}}">青岛东方影都融创万达嘉华度假酒店</view> -->
+                <view class="no_data">暂无数据</view>
+              </view>
+            </view>
+          </block>
+          <block wx:for="{{list}}" wx:key>
+            <view class="padding indexItem-{{list[index]}}" id="indexes-{{list[index]}}" data-index="{{list[index]}}">{{list[index]}}</view>
+            <view class="cu-list menu-avatar no-padding">
+              <van-cell wx:for="{{2}}" bindtap="toHotel" title="酒店" />
+            </view>
+          </block>
+        </scroll-view>
+        <view class="indexBar" style="height:calc(100vh - {{CustomBar}}px - 50px)">
+          <view class="indexBar-box" bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
+            <view class="indexBar-item {{listCur === list[index]?'active_cur':''}}" wx:for="{{list}}" wx:key id="{{index}}" bindtouchstart="getCur" bindtouchend="setCur">{{list[index]}}</view>
+          </view>
+        </view>
       </view>
     </view>
   </view>
 
-
   <!-- tabbar -->
   <tabbar activeIdx="{{activeIdx}}"></tabbar>
-
 </view>
+
+
+<!--选择显示-->
+<!-- <view hidden="{{hidden}}" class="indexToast">
+  {{listCur}}
+</view> -->

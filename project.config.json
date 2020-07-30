@@ -11,9 +11,11 @@
 		"newFeature": true,
 		"coverView": true,
 		"autoAudits": false,
+		"scopeDataCheck": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": false,
 		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
@@ -72,10 +74,10 @@
 					"scene": null
 				},
 				{
-					"id": 2,
-					"name": "优惠券",
-					"pathName": "pages/discounts/discountslist/index",
-					"query": "",
+					"id": 3,
+					"name": "立即购买",
+					"pathName": "pages/buyNow/index",
+					"query": "data = {type:1}",
 					"scene": null
 				},
 				{
@@ -104,6 +106,46 @@
 					"name": "酒店",
 					"pathName": "pages/hotel/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "订单列表",
+					"pathName": "pages/orderList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "订单列表详情",
+					"pathName": "pages/orderList/details/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "券码转赠",
+					"pathName": "pages/present/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "赠送页面",
+					"pathName": "pages/present/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "优惠券列表",
+					"pathName": "pages/discounts/discountslist/index",
+					"query": "data = {type:1}",
+					"scene": null
+				},
+				{
+					"name": "支付成功",
+					"pathName": "pages/payOk/index",
 					"scene": null
 				}
 			]

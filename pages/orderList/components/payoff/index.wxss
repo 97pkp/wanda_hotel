@@ -1,0 +1,57 @@
+/* pages/orderList/compents/payoff/index.wxss */
+@import "/app.wxss";
+.box{
+  position: relative;
+  background: #fff;
+  border-radius: 8rpx;
+  padding: 87rpx 30rpx 20rpx;
+  margin-bottom: 32rpx;
+}
+.box:first-child{
+  margin-bottom: 32rpx; 
+}
+.box:last-child{
+  margin-bottom: 0; 
+}
+.imgBox{
+  flex-wrap: wrap;
+  border-bottom: 1rpx solid #c6c5c4;
+}
+.imgBox image{
+  flex-shrink: 0;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 8rpx;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+}
+.imgBox image:nth-child(3n+3){
+  margin-right: 0;
+}
+.payoff-text{
+  position: absolute;
+  top: 20rpx;
+  right: 30rpx;
+}
+.info{
+  height: 55rpx;
+  line-height: 55rpx;
+}
+.del{
+  width: 107rpx;
+  height: 55rpx;
+  color: #f2310b;
+  border: 1rpx solid #f2310b;
+}
+.cancel{
+  width: 150rpx;
+  height: 55rpx;
+  color: #000;
+  border: 1rpx solid #000;
+}
+.toPay{
+  width: 136rpx;
+  height: 55rpx;
+  color: #fff;
+  background: #cc9c67;
+}

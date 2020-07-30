@@ -1,0 +1,70 @@
+/* component/defaultDetailTabbar/index.wxss */
+.detail_tabbar{
+  width: 100%;
+  height: 90rpx;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow:0px 1px 0px 0px rgba(236,236,236,1);
+  display: flex;
+  align-items: center;
+}
+.option{
+  width: 300rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-right: 1rpx solid #EAEAEA;
+  border-top: 1rpx solid #EAEAEA;
+}
+.option image{
+  height: 30rpx;
+}
+.option>view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.option>view>view{
+  color: #959494;
+  font-size: 18rpx;
+  line-height: 25rpx;
+  margin-top: 4rpx;
+}
+.add_car{
+  width: 225rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #CC9C67;
+}
+.add_car view:first-child{
+  font-size: 24rpx;
+  line-height: 28rpx;
+}
+.add_car view:last-child{
+  font-size: 20rpx;
+  line-height: 28rpx;
+}
+.to_buy{
+  width: 226rpx;
+  height: 100%;
+  background: #977958;
+  color: #ffffff;
+  font: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.to_buy view:first-child{
+  font-size: 24rpx;
+  line-height: 28rpx;
+}
+.to_buy view:last-child{
+  font-size: 20rpx;
+  line-height: 28rpx;
+}

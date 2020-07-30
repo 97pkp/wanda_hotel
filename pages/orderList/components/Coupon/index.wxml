@@ -1,0 +1,81 @@
+<!--pages/orderList/components/Coupon/index.wxml-->
+<view class="flex justify-around couponChange m_b_24 f_s_28">
+  <view data-value="all"  class="{{changeValue == 'all'? 'text-orange':''}}" bindtap="couponChange">全部</view>
+  <view data-value="isNotUse"  class="{{changeValue == 'isNotUse'? 'text-orange':''}}" bindtap="couponChange">待使用</view>
+  <view data-value="Transfer"  class="{{changeValue == 'Transfer'? 'text-orange':''}}" bindtap="couponChange">已转赠</view>
+  <view data-value="received"  class="{{changeValue == 'received'? 'text-orange':''}}" bindtap="couponChange">已收到</view>
+  <view data-value="isUse"  class="{{changeValue == 'isUse'? 'text-orange':''}}" bindtap="couponChange">已使用</view>
+</view>
+
+<!-- 礼券列表 -->
+<scroll-view scroll-y class="couponContent">
+  <view class="couponList" wx:for="{{couponList}}" wx:key="index">
+    <view class="couponTitle f_s_26">
+      <text class="name">{{item.name}}</text>
+    </view>
+    <view class="flex couponItem">
+      <view class="right">
+        <image src='{{item.src}}'></image>
+      </view>
+      <view class="left">
+        <view class="f_s_26 info">
+          <text class="tap">「踏青好去处」</text>
+          <text>{{item.info}}</text>
+        </view>
+        <view class="flex justify-between">
+          <view class="select f_s_24"  data-id="{{item.id}}">豪华大床房</view>
+        </view>
+        <view class="flex couponInfo justify-between">
+          <view class="f_s_24 text-orange m_t_24">￥{{item.moneny}}.00</view>
+          <view class="m_t_24"> 
+            <text class="f_s_18">X</text>
+            <text class="count">{{item.count}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 待使用 -->
+    <view class="couponListInfo flex justify-between"  wx:if="{{changeValue == 'isNotUse' || changeValue == 'all'}}">
+      <view class="flex">
+        <view class="btn text-center m_r_20" bindtap="showQRCode">验券</view>
+        <view class="btn text-center" bindtap="givePerson">转赠</view>
+      </view>
+      <view class="flex">
+        <image src="/images/QR_codeIcon.svg" class="QR_codeIcon" bindtap="showQRCode"></image>
+        <text class="cuIcon-right text-black"></text>
+      </view> 
+    </view>
+    <!-- 已转赠 / 已收到-->
+    <view class="couponListInfo flex justify-between"  wx:if="{{changeValue == 'Transfer' || changeValue == 'received' || changeValue == 'all'}}">
+      <view class="flex">
+        <view class="btn text-center m_r_20" bindtap="showQRCode">验券</view>
+      </view>
+      <view class="flex">
+        <view class="m_r_20 f_s_24" wx:if="{{item.couponType==1}}">
+            <text class="text-gray">{{item.couponTypeStr}}</text>
+            <text> {{item.person}} </text>
+            <text class="text-gray">接受</text>
+        </view>
+        <view class="m_r_20 f_s_24" wx:else>
+            <text class="text-gray">来自于 {{item.person}}</text>
+        </view>
+        <image src="/images/QR_codeIcon.svg" class="QR_codeIcon" bindtap="showQRCode"></image>
+        <text class="cuIcon-right text-black"></text>
+      </view> 
+    </view>
+    <!-- 已使用 -->
+    <view class="couponListInfo" wx:if="{{changeValue == 'isUse' || changeValue == 'all'}}">
+      <text class="isUse f_s_24">券码 {{item.num}}</text>
+    </view>
+  </view>
+</scroll-view>
+<!-- 验券二维码 -->
+<view wx:if="{{isShowQRCode}}" class="qr_warp" catchtap="closeQR">
+  <view class="qr_content" catchtap="stopProp">
+    <view class="qr_title">向商家出示二维码/券码</view>
+    <view class="qr_canvas">
+      假装有二维码
+    </view>
+    <view class="qr_num">8953 2300</view>
+  </view>
+</view>

@@ -1,0 +1,126 @@
+<!--pages/orderList/components/use/index.wxml-->
+<view class="goodsList" wx:for="{{goodsList}}" bindtap="toDetails">
+  <view class="goodsTitle f_s_26">
+    <text class="name">{{item.name}}</text>
+    <text class="cuIcon-right text-black"></text>
+  </view>
+  <view class="flex goodsItem" wx:for="{{item.children}}">
+    <view class="right">
+      <image src='{{item.src}}'></image>
+    </view>
+    <view class="left">
+      <view class="f_s_26 info">
+        <text class="tap">「踏青好去处」</text>
+        <text>{{item.info}}</text>
+      </view>
+      <view class="flex justify-between">
+        <view class="select f_s_24"  data-id="{{item.id}}">豪华大床房</view>
+      </view>
+      <view class="flex goodsInfo justify-between">
+        <view class="f_s_24 text-orange m_t_24">￥{{item.moneny}}.00</view>
+        <view class="m_t_24"> 
+          <text class="f_s_18">X</text>
+          <text class="count">{{item.count}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class=" info">
+    <view>
+      <text>共计2件，总计金额</text>
+      <text class="text-orange">￥1990,00</text>
+    </view>
+  </view>
+  <view class="info flex justify-end">
+    <view class="del text-center m_r_20" bindtap="del">删除</view>
+    <view class="refund text-center m_r_20" wx:if="{{pagetype=='use'}}" bindtap="refund">退款</view>
+    <view class="cancel text-center" bindtap="reserve">再次预订</view>
+  </view>
+  <view class="use-text">{{tagName}}</view>
+</view>
+<!-- 对话框 -->
+<!-- 删除 -->
+<view class="cu-modal {{showDel?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content"></view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-gray"></text>
+      </view>
+    </view>
+    <view class="padding-xl f_s_32">
+      确定后将不再展示，是否删除这个订单？
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <view class="cu-btn line-orange text-orange" bindtap="hideDel">取消</view>
+        <view class="cu-btn bg-orange margin-left" bindtap="hideDel">确定</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 退款 -->
+<view class="cu-modal {{refund?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content"></view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-gray"></text>
+      </view>
+    </view>
+    <view class="padding-xl f_s_32 bg-white">
+      是否确定退款？
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <view class="cu-btn line-orange text-orange" bindtap="hideDel">取消</view>
+        <view class="cu-btn bg-orange margin-left" bindtap="refundReason">确定</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 退款原因 -->
+<view class="cu-modal {{refundReason?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">退款原因</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-gray"></text>
+      </view>
+    </view>
+    <view class="padding-xl f_s_32 bg-white">
+      <form>
+        <view class="cu-form-group text-left">
+          <view class="title">退款原因</view>
+          <input placeholder="请输入退款原因" bindinput="inputValueChange"  value="{{reason}}"></input>
+        </view>
+      </form> 
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <view class="cu-btn line-orange text-orange" bindtap="hideDel">取消</view>
+        <view class="cu-btn bg-orange margin-left" bindtap="refundAgain">确定</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 退款原因 -->
+<view class="cu-modal {{refundAgain?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">确认退款</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-gray"></text>
+      </view>
+    </view>
+    <view class="padding-xl f_s_28 text-gray bg-white">
+        退款金额将在72小时内返还到您的账户中
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <view class="cu-btn line-orange text-orange" bindtap="hideDel">确定</view>
+        <view class="cu-btn bg-orange margin-left" bindtap="hideDel">取消</view>
+      </view>
+    </view>
+  </view>
+</view>

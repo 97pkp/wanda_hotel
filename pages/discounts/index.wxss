@@ -166,3 +166,7 @@
   background: #CC9C67;
   border-radius: 6rpx;
 }
+.kong{
+  width: 100%;
+  height: 160rpx;
+}

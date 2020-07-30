@@ -2,7 +2,9 @@
   "usingComponents": {
     "van-icon": "/lib/vant-weapp/icon/index",
     "default-detail-tabbar": "/component/defaultDetailTabbar/index",
-    "v-bracket": "/component/bracket"
+    "seckill-detail-tabbar": "/component/seckillDefaultTabbar/index",
+    "group-detail-tabbar": "/component/groupDetailTabbar/index",
+    "v-bracket": "/component/bracket/index"
   },
   "navigationBarTitleText": "商品详情"
 }

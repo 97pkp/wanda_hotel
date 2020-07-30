@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-bracket": "/component/bracket/index"
+  },
+  "navigationBarTitleText": "券码转赠"
+}
