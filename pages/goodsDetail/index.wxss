@@ -131,10 +131,12 @@ swiper{
 }
 .price .small_font{
   font-size: 20rpx;
+  line-height: 36rpx;
 }
 .price .old_price{
   color: #A8A8A8;
   text-decoration: line-through;
+  line-height: 36rpx;
 }
 .price .qi{
   margin: 0 15rpx 0 5rpx;
@@ -178,6 +180,11 @@ swiper{
 .specification_list_warp>view:nth-of-type(4n){
   margin-right: 0;
 }
+.specification_list_warp .activeSpecificatio{
+  border: 1rpx solid #CC9C67;
+  border-radius: 6rpx;
+  color: #CC9C67;
+}
 
 .buy_num{
   width: 100%;
@@ -219,6 +226,7 @@ swiper{
   min-width: 105rpx;
   box-sizing: border-box;
   padding: 0 20rpx;
+  text-align: center;
 }
 
 .feature{
@@ -271,6 +279,9 @@ swiper{
   align-items: center;
   justify-content: center;
   padding-top: 1rpx;
+}
+.synopsis_header .activeSynopsis{
+  color: #977958;
   border-bottom: 2rpx solid #977958;
 }
 .synopsis_content{
@@ -292,10 +303,11 @@ swiper{
   font-size: 32rpx;
   color: #322E2A;
 }
-.txt_title .line{
+.txt_title .under_line{
   width: 59rpx;
   height: 4rpx;
-  background: #DFDFDF;
+  /* background: #DFDFDF; */
+  border-bottom: 4rpx solid #DFDFDF;
 }
 .txt_content{
   color: #322E2A;

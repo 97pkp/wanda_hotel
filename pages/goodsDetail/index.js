@@ -27,6 +27,8 @@ Page({
       {name: '标准大床', typeid: 3},
       {name: '标准双床', typeid: 4}
     ],
+    // 选中规格
+    selectId: null,
     // 秒杀时间
     seckillTime: '2020-07-29 18:06:00',
     timeData: {
@@ -37,6 +39,24 @@ Page({
     },
     // 秒杀倒计时
     timer: null,
+    // 购买数量
+    buyNum: 1,
+    // 限购数量
+    maxNum: 2,
+    // 订购须知&图文详情选中
+    synopsisType: 1, // 1：订购须知   2：图文详情
+    // 特色列表
+    featureList: [
+      {name: '官方直销'},
+      {name: '超长有效'},
+      {name: '性价比高'},
+      {name: '限时抢购'},
+      {name: '限时抢购'},
+      {name: '限时抢购'},
+      {name: '限时抢购'}
+    ],
+    // 要显示的特色列表
+    featureShowList: []
   },
 
   /**
@@ -72,6 +92,7 @@ Page({
         })
       },1000)})
     }
+    this.setData({'featureShowList': this.data.featureList.slice(0,4)})
   },
 
   /**
@@ -187,5 +208,41 @@ Page({
     wx.makePhoneCall({
       phoneNumber: phone.toString() //仅为示例，并非真实的电话号码
     })
+  },
+  /**
+   * 减少数量
+   */
+  cutNum: function(){
+    if(this.data.buyNum <= 1){
+      return
+    }
+    this.setData({'buyNum': --this.data.buyNum})
+  },
+  /**
+   * 增加数量
+   */
+  addNum: function(){
+    if(this.data.buyNum>=this.data.maxNum){
+      return
+    }
+    this.setData({'buyNum': ++this.data.buyNum})
+  },
+  /**
+   * 规格选择
+   */
+  selectSpecification: function(e){
+    this.setData({'selectId': e.currentTarget.dataset.typeid})
+  },
+  /**
+   * 订购须知切换
+   */
+  synopsisChange: function(e){
+    this.setData({'synopsisType': e.currentTarget.dataset.type})
+  },
+  /**
+   * 查看更多特色
+   */
+  showMoreFeature: function(){
+    this.setData({'featureShowList': this.data.featureList})
   }
 })

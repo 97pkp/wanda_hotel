@@ -1,6 +1,6 @@
 /* pages/bloc/index.wxss */
 page{
-  padding-bottom: 100rpx;
+  padding-bottom: 110rpx;
 }
 swiper{
   height: 350rpx;
