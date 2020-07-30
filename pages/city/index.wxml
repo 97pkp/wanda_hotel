@@ -36,7 +36,7 @@
           <block wx:for="{{list}}" wx:key="{{index}}">
             <view class="padding indexItem-{{list[index]}}" id="indexes-{{list[index]}}" data-index="{{list[index]}}">{{list[index]}}</view>
             <view class="cu-list menu-avatar no-padding">
-              <van-cell wx:for="{{2}}" bindtap="toHotel" title="酒店" />
+              <van-cell wx:for="{{2}}" wx:key="index" bindtap="toHotel" title="酒店" />
             </view>
           </block>
         </scroll-view>

@@ -1,6 +1,6 @@
 <!--pages/buyNow/index.wxml-->
 <!-- 商品列表 -->
-<view class="goodsList" wx:for="{{goodsList}}">
+<view class="goodsList" wx:for="{{goodsList}}" wx:key="index">
   <view class="goodsTitle f_s_26">
     <text class="name">{{item.name}}</text>
     <text class="cuIcon-right text-black"></text>
@@ -13,7 +13,7 @@
       <text class="cuIcon-right text-yellow"></text>
     </view>
   </view> -->
-  <view class="flex goodsItem" wx:for="{{item.children}}">
+  <view class="flex goodsItem" wx:for="{{item.children}}" wx:key="index">
     <view class="right">
       <image src='{{item.src}}'></image>
     </view>
@@ -38,7 +38,7 @@
   <view wx:if="{{pagesType == '0'}}">
     <view class="groupInfo f_s_24 text-gray">为您加入仅差1人的团，支付后即可拼团成功</view>
     <view class="headGroup flex m_b_24">
-      <view wx:for="{{headGroup}}" class="head">
+      <view wx:for="{{headGroup}}" wx:key="index" class="head">
         <image src="{{item.src}}" wx:if="{{item.src}}"></image>
         <view class="text-gray text-center noImg" wx:else>?</view>
         <text class="role bg_orange" wx:if="{{index==0}}">团长</text>
@@ -195,7 +195,7 @@
       </view>
       <scroll-view scroll-y class="discountslist">
         <radio-group class="block">
-          <view class="itembox" wx:for="{{discountslist}}">
+          <view class="itembox" wx:for="{{discountslist}}" wx:key="index">
             <view class="item {{!disChange?'isUse':''}}">
                 <view bindtap="showDialog" data-title="{{item.name}}" data-num="{{item.num}}">
                   <view class="f_s_30 m_b_24 m_t_40">{{item.name}}</view>

@@ -1,6 +1,6 @@
 <!--pages/buycar/index.wxml-->
 <!-- 购物车列表模块部分 -->
-<view class="shopCarList" wx:for="{{shopCarList}}">
+<view class="shopCarList" wx:for="{{shopCarList}}" wx:key="index">
   <view class="shopCarTitle f_s_26">
     <checkbox value="selectAll" class="round orange selectAll"/>
     <text class="name">{{item.name}}</text>
@@ -18,7 +18,7 @@
     </view>
   </view>
   <checkbox-group bindchange="checkboxChange">
-    <view class="flex shopCarItem" wx:for="{{item.children}}">
+    <view class="flex shopCarItem" wx:for="{{item.children}}" wx:key="index">
         <checkbox value="{{item.id}}" class="round orange check"/>
         <view class="right">
           <image src='{{item.src}}'></image>
@@ -101,7 +101,7 @@
       </view>
     </view>
     <scroll-view scroll-y class="dialog_content height">
-      <view class="discountsBox" wx:for="{{discountsList}}">
+      <view class="discountsBox" wx:for="{{discountsList}}" wx:key="index">
         <view class="discountsItem {{isUse?'isUse':''}}">
           <view>
             <view class="f_s_30 m_b_24 m_t_40">{{item.name}}</view>
@@ -135,7 +135,7 @@
           </view>
         </view>
         <view class="goodList">
-          <view class="good" wx:for="{{item.goodList}}">
+          <view class="good" wx:for="{{item.goodList}}" wx:key="index">
             <image src="{{item.src}}"></image>
             <view class="text-center  text-orange f_s_24">￥{{item.moneny}}.00</view>
             <view class="text-center f_s_20 l_h_28">X {{item.count}}</view>

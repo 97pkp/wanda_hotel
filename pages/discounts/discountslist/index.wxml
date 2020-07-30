@@ -13,7 +13,7 @@
 </view>
 <!-- 优惠券列表部分 -->
 <view class="discountslist">
-  <view class="main" wx:for="{{discountslist}}">
+  <view class="main" wx:for="{{discountslist}}" wx:key="index">
       <view class="item {{isUse?'isUse':''}}">
         <view bindtap="showDialog" data-title="{{item.name}}" data-num="{{item.num}}">
           <view class="f_s_30 m_b_24 m_t_40">{{item.name}}</view>

@@ -109,7 +109,7 @@
 	<!-- 加入拼团 -->
 	<view class="add_group_warp" wx:if="{{pageType === 0}}">
 		<view class="add_group_title">他们正在拼团，可直接参与</view>
-		<view class="group_item" wx:for="{{2}}">
+		<view class="group_item" wx:for="{{2}}" wx:key="index">
 			<view class="user_content">
 				<view class="img_warp">
 					<image src="/images/head.jpg"></image>

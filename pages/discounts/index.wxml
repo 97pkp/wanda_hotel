@@ -10,7 +10,7 @@
     <view bindtap="goList">更多</view>
   </view>
   <scroll-view scroll-x class="content">
-    <view class="content_item" wx:for="{{discountsList}}">
+    <view class="content_item" wx:for="{{discountsList}}" wx:key="index">
       <view class="left">
         <view class="center">
           <text>￥</text>
@@ -44,7 +44,7 @@
     <view data-value="false" class="{{tapStatus=='true'?'':'active'}}" bindtap="tapChange">预告</view>
   </view>
   <view class="secondKillList">
-    <view wx:for="{{secondKillList}}" class="secondKillItem">
+    <view wx:for="{{secondKillList}}" wx:key="index" class="secondKillItem">
       <view class="left">
         <image src="{{item.imgSrc}}"></image>
       </view>
