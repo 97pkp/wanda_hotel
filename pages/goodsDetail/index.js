@@ -243,6 +243,58 @@ Page({
    * 查看更多特色
    */
   showMoreFeature: function(){
+    return
     this.setData({'featureShowList': this.data.featureList})
+  },
+
+  /**
+   * 酒店
+   */
+  toHotel: function(){
+    wx.switchTab({
+      url: '/pages/city/index',
+    })
+  },
+  /**
+   * 订单
+   */
+  toOrder: function(){
+    wx.navigateTo({
+      url: '/pages/orderList/index',
+    })
+  },
+  /**
+   * 购物车
+   */
+  toBuyCar: function(){
+    wx.switchTab({
+      url: '/pages/buycar/index',
+    })
+  },
+  /**
+   * 加入购物车
+   */
+  addCar: function(){
+    console.log('加入购物车')
+  },
+  /**
+   * 立即购买
+   */
+  toBuy: function(){
+    wx.navigateTo({
+      url: 'pages/buyNow/index',
+    })
+  },
+  /**
+   * 单独购买
+   */
+  toBuyOnce: function(){
+
+  },
+  /**
+   * 我要开团
+   */
+  toBuyGroup: function(){
+    
   }
 })

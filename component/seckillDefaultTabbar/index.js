@@ -18,6 +18,29 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    /**
+     * 酒店
+     */
+    handleHotel: function(){
+      this.triggerEvent('handlehotel')
+    },
+    /**
+     * 订单
+     */
+    handleOrder: function(){
+      this.triggerEvent('handleorder')
+    },
+    /**
+     * 购物车
+     */
+    handleBuyCar: function(){
+      this.triggerEvent('handlebuycar')
+    },
+    /**
+     * 立即购买
+     */
+    toBuy: function(){
+      this.triggerEvent('tobuy')
+    }
   }
 })

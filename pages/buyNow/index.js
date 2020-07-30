@@ -164,5 +164,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 立即支付
+   */
+  toBuy: function(){
+    wx.navigateTo({
+      url: '/pages/payOk/index',
+    })
   }
 })
