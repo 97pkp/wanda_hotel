@@ -1,7 +1,7 @@
 /* pages/goodsList/index.wxss */
 page{
   background: #ffffff;
-  /* padding-bottom: 100rpx; */
+  padding-bottom: 110rpx;
 }
 .clear_float:after{
   content: '';
@@ -118,7 +118,6 @@ swiper{
 
 .list_warp{
   padding: 32rpx;
-  margin-bottom: 110rpx;
 }
 
 .option_btn{

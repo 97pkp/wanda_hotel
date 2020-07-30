@@ -10,7 +10,7 @@
 			</block>
 		</swiper>
 		<view class="swiper_search">
-			<image src="/images/search.png"></image>
+			<image src="/images/home_on.png"></image>
 		</view>
 		<view class="swiper_num">
 			<text class="num_active">{{imgList.length ? current + 1 : 0}}</text>
@@ -71,39 +71,37 @@
 			<view class="specification clear_float">
 				<view class="title">规格</view>
 				<view class="specification_list_warp">
-					<view wx:for="{{specificationList}}" wx:key="index">{{item.name}}</view>
+					<view class="{{selectId === item.typeid ? 'activeSpecificatio':''}}" bindtap="selectSpecification" data-typeid="{{item.typeid}}" wx:for="{{specificationList}}" wx:key="index">{{item.name}}</view>
 				</view>
 			</view>
 			<view class="buy_num">
 				<view class="price_left">
 					<view class="title">购买数量</view>
-					<view class="tip">限购2件</view>
+					<view class="tip">限购{{maxNum}}件</view>
 				</view>
 				<view class="price_right counter">
-					<view class="cut option_btn">-</view>
-					<view class="num">99991</view>
-					<view class="add option_btn">+</view>
+					<view class="cut option_btn" bindtap="cutNum" >-</view>
+					<view class="num">{{buyNum}}</view>
+					<view class="add option_btn" bindtap="addNum">+</view>
 				</view>
 			</view>
 		</view>
 		<view class="feature">
-			<view>
+			<!-- <scroll-view scroll-x class="scroll-header">
+				<view class="scroll-view-item bc_green" wx:for="{{optionBtnImg}}" wx:key="index">
+					<view class="option_btn">
+						<image src="{{item.url}}" mode="heightFix"></image>
+						<text>{{item.name}}</text>
+					</view>
+				</view>
+			</scroll-view> -->
+
+
+			<view wx:for="{{featureShowList}}" wx:key="index">
 				<image src="/images/mshd.png"></image>
-				<view>官方直销</view>
+				<view>{{item.name}}</view>
 			</view>
-			<view>
-				<image src="/images/mshd.png"></image>
-				<view>超长有效期</view>
-			</view>
-			<view>
-				<image src="/images/mshd.png"></image>
-				<view>性价比高</view>
-			</view>
-			<view>
-				<image src="/images/mshd.png"></image>
-				<view>限时抢购</view>
-			</view>
-			<view>
+			<view bindtap="showMoreFeature">
 				<view>···</view>
 			</view>
 		</view>
@@ -130,13 +128,14 @@
   <!-- 简介 -->
   <view class="synopsis">
     <view class="synopsis_header">
-      <view>订购须知</view>
-      <view>图文详情</view>
+      <view class="{{synopsisType === 1 ? 'activeSynopsis':''}}" bindtap="synopsisChange" data-type="{{1}}">订购须知</view>
+      <view class="{{synopsisType === 2 ? 'activeSynopsis':''}}" bindtap="synopsisChange" data-type="{{2}}">图文详情</view>
     </view>
     <view class="synopsis_content">
       <view class="txt_title">
-        <view>订购须知</view>
-        <view class="line"></view>
+        <view wx:if="{{synopsisType === 1}}">订购须知</view>
+				<view wx:if="{{synopsisType === 2}}">图文详情</view>
+        <view class="under_line"></view>
       </view>
       <view class="txt_content">
         酒店共有261间客房，房间采用柔和送风模式，保证宾客舒适的体感；定制化超大床垫、高织棉纺床品、多种类型的枕头选择、柔软亲肤的浴巾浴袍，配以柔和灯光、静谧环境，为宾客营造深度睡眠体验。酒店每间客房配备智能互动电视，宾客可使用手机投屏，轻松体验影音互动乐趣；在房间通过扫描房间放置的“机器人配送”二维码，还可体验由萌趣可爱的机器人“华仔”即时速递多种物品。“薄荷+”餐吧位于酒店二层，每天早上7点-10点为宾客奉上精致的自助早餐，招牌产品“美华大包”及“秘制牛肉面”等特色美食深受欢迎；更有24小时健身房及专业自助洗衣房为宾客带来全天候便利。
