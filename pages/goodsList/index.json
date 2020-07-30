@@ -4,6 +4,6 @@
     "van-index-anchor": "../../lib/vant-weapp/index-anchor",
     "van-cell": "../../lib/vant-weapp/cell",
     "tabbar":"../../component/navbar",
-    "v-bracket": "/component/bracket"
+    "v-bracket": "/component/bracket/index"
   }
 }

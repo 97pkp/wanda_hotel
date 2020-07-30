@@ -4,14 +4,16 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    
+    text:{
+      type: String,
+      value: '超级屯游节测试'
+    } 
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    txt: '超级屯游节测试'
   },
 
   /**

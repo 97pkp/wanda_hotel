@@ -1,1 +1,3 @@
-<view class="bracket_txt_elm">{{txt}}</view>
+<view class="bracket_txt_elm">
+  <text class="text-orange">{{text}}</text>
+</view>
