@@ -119,7 +119,7 @@
     <text class="f_s_24">￥ </text>
     <text class="f_s_36">4,645.00</text>
   </view>
-  <view class="bg-orange f_s_32 btn text-center">立即支付</view>
+  <view bindtap="toBuy" class="bg-orange f_s_32 btn text-center">立即支付</view>
 </view>
 <!-- 底部弹窗部分 -->
 <view class="cu-modal bottom-modal {{diaLogValue=='promoteSales'?'show':''}}">

@@ -5,6 +5,7 @@
   height: 100vh;
   background: #F0F0F0;
   padding-bottom: 110rpx;
+  overflow: hidden;
 }
 .search_box{
   position: fixed;
@@ -88,8 +89,8 @@
 }
 .search_content{
   margin-top: 80rpx;
-  height: calc(100vh - 110rpx);
-  overflow-y: auto;
+  height: calc(100vh - 190rpx);
+  /* overflow-y: auto; */
 }
 
 /* 索引列表 */
@@ -108,24 +109,26 @@
 }
 
 .indexBar .indexBar-box {
-  width: 40rpx;
+  width: 50rpx;
   height: auto;
-  background: #fff;
+  /* background: #fff; */
   display: flex;
+  align-items: center;
   flex-direction: column;
-  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.1); */
   border-radius: 10rpx;
 }
 
 .indexBar-item {
   flex: 1;
-  width: 40rpx;
-  height: 40rpx;
+  width: 26rpx;
+  height: 26rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24rpx;
-  color: #888;
+  font-size: 18rpx;
+  line-height: 28rpx;
+  color: #977958;
 }
 
 movable-view.indexBar-item {
@@ -160,4 +163,13 @@ movable-view.indexBar-item::before {
   line-height: 100rpx;
   text-align: center;
   font-size: 48rpx;
+}
+.active_cur{
+  background: #977958;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.hotel_list{
+  height: 100%;
 }

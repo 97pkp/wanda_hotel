@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    pageType: 0, //0：普通详情  1：拼团详情   2：秒杀详情
+    pageType: 1, //0：普通详情  1：拼团详情   2：秒杀详情
+    // 0 拼图   1  普通   2 秒杀
     // 轮播图配置
     swiperConfig: {
       indicatorDots: false,
@@ -64,6 +65,19 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
+    this.setTime()
+    if(options.pageType === 0 || options.pageType === 2){
+      this.setData({'pageType': options.pageType})
+    }else{
+      this.setData({'pageType': 1})
+    }
+    this.setData({'featureShowList': this.data.featureList.slice(0,4)})
+  },
+  /**
+   * 设置倒计时
+   */
+  setTime: function(){
+    let that = this;
     if(!that.data.timer){
       console.log(that.data.seckillTime)
       let time = new Date(that.data.seckillTime).getTime()
@@ -92,7 +106,6 @@ Page({
         })
       },1000)})
     }
-    this.setData({'featureShowList': this.data.featureList.slice(0,4)})
   },
 
   /**
@@ -243,6 +256,70 @@ Page({
    * 查看更多特色
    */
   showMoreFeature: function(){
+    return
     this.setData({'featureShowList': this.data.featureList})
+  },
+
+  /**
+   * 酒店
+   */
+  toHotel: function(){
+    wx.navigateTo({
+      url: '/pages/hotel/index',
+    })
+  },
+  /**
+   * 订单
+   */
+  toOrder: function(){
+    wx.navigateTo({
+      url: '/pages/orderList/index',
+    })
+  },
+  /**
+   * 购物车
+   */
+  toBuyCar: function(){
+    wx.switchTab({
+      url: '/pages/buycar/index',
+    })
+  },
+  /**
+   * 加入购物车
+   */
+  addCar: function(){
+    console.log('加入购物车')
+  },
+  /**
+   * 普通的立即购买：1
+   */
+  toBuyDefault: function(){
+    wx.navigateTo({
+      url: '/pages/buyNow/index?type=1',
+    })
+  },
+  /**
+   * 秒杀立即购买
+   */
+  toBuy: function(){
+    wx.navigateTo({
+      url: '/pages/buyNow/index?type=2',
+    })
+  },
+  /**
+   * 单独购买
+   */
+  toBuyOnce: function(){
+    wx.navigateTo({
+      url: '/pages/buyNow/index?type=0',
+    })
+  },
+  /**
+   * 我要开团
+   */
+  toBuyGroup: function(){
+    wx.navigateTo({
+      url: '/pages/buyNow/index?type=0',
+    })
   }
 })

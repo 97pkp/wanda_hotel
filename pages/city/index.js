@@ -80,7 +80,7 @@ Page({
       if (scrollY < i + 1) {
         that.setData({
           listCur: list[i],
-          movableY: i * 20
+          movableY: i * 13
         })
         return false
       }

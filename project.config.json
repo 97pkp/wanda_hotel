@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -26,7 +26,7 @@
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.12.0",
+	"libVersion": "2.11.3",
 	"appid": "wxd9a3acc12fa0cdcd",
 	"projectname": "wanda_hodel",
 	"debugOptions": {
@@ -142,7 +142,8 @@
 					"pathName": "pages/discounts/discountslist/index",
 					"query": "data = {type:1}",
 					"scene": null
-				},{
+				},
+				{
 					"name": "支付成功",
 					"pathName": "pages/payOk/index",
 					"scene": null
