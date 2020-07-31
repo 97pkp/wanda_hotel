@@ -239,6 +239,7 @@ swiper{
   font-size: 26rpx;
   color: #999999;
   padding: 38rpx 0 20rpx;
+  box-sizing: content-box;
 }
 .late_search .list>.tag{
   width: 208rpx;
@@ -252,6 +253,15 @@ swiper{
   margin-bottom: 20rpx;
   float: left;
   text-align: center;
+}
+.late_search .list>.tag text{
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 .late_search .list>view:nth-of-type(3n){
   margin-right: 0;

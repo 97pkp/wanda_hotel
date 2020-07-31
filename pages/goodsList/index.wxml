@@ -4,14 +4,14 @@
 	<view class="search_warp" bindtap="handleShowSearch">
 		<image src="/images/search.png"></image>
 		<!-- <text>请输入商品名称</text> -->
-    <input placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入商品名称"></input>
+    <input value="{{inputValue}}" placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入商品名称"></input>
 	</view>
   <!-- 搜索弹出页 -->
   <view wx:if="{{searchModelVisible}}" class="search_model" >
     <view class="search_box">
       <view class="search_warp search_warp_model">
         <image src="/images/search.png"></image>
-        <input focus="{{true}}" placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入商品名称"></input>
+        <input value="{{inputValue}}" bindinput="valueChange" focus="{{true}}" placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入商品名称"></input>
       </view>
       <view class="search_btn" bindtap="handleCloseSearch">搜索</view>
     </view>
@@ -19,11 +19,13 @@
       <view class="late_search">
         <view class="late_search_title">
           <view>最近搜索商品</view>
-          <text class="cuIcon-delete"></text>
+          <text catchtap="clearHistorySearch" class="cuIcon-delete"></text>
         </view>
         <view class="list clear_float">
-          <!-- <view class="tag" wx:for="{{4}}">青岛东方影都融创万达嘉华度假酒店</view> -->
-          <view class="no_data">暂无数据</view>
+          <view wx:if="{{searchGoodsHistory.length}}" bindtap="useHistorySearch" data-text="{{item}}" class="tag" wx:for="{{searchGoodsHistory}}" wx:key="*this">
+            <text>{{item}}</text>
+          </view>
+          <view wx:if="{{!searchGoodsHistory.length}}" class="no_data">暂无数据</view>
         </view>
       </view>
     </view>

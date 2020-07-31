@@ -22,14 +22,18 @@ Page({
     // 商品类型: 1-全部/2-客房/3-餐饮/4-娱乐
     goodsType: 1, 
     // 搜索弹窗
-    searchModelVisible: false
+    searchModelVisible: false,
+    // 搜索框值
+    inputValue: '',
+    // 搜索历史
+    searchGoodsHistory: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({'searchGoodsHistory': wx.getStorageSync('searchGoods' || [] )})
   },
 
   /**
@@ -90,13 +94,58 @@ Page({
    * 显示搜索框
    */
   handleShowSearch: function(){
+    this.setData({'searchGoodsHistory': wx.getStorageSync('searchGoods' || [] )})
     this.setData({'searchModelVisible': true})
+  },
+  /**
+   * 输入文本
+   */
+  valueChange: function(e){
+    this.setData({
+      inputValue:e.detail.value
+    })    
   },
   /**
    * 关闭搜索框
    */
   handleCloseSearch: function(){
+    let searchGoods = wx.getStorageSync('searchGoods') || []
+    if(this.data.inputValue === '') {
+      this.setData({'searchModelVisible': false})
+      return
+    }
+    if(searchGoods.indexOf(this.data.inputValue) === -1){
+      searchGoods.unshift(this.data.inputValue)
+    }else{
+      searchGoods.splice(searchGoods.indexOf(this.data.inputValue), 1); 
+      searchGoods.unshift(this.data.inputValue)
+    }
+    if(searchGoods.length>=6){
+      searchGoods.length = 6;
+    }
+    wx.setStorage({
+      key:"searchGoods",
+      data: searchGoods
+    })
     this.setData({'searchModelVisible': false})
+  },
+  /**
+   * 清空历史搜索
+   */
+  clearHistorySearch: function(){
+    let that = this;
+    wx.removeStorage({
+      key: 'searchGoods',
+      success: function(res) {
+        that.setData({'searchGoodsHistory': []})
+      },
+    })
+  },
+  /**
+   * 点击历史
+   */
+  useHistorySearch: function(e){
+    this.setData({'inputValue': e.currentTarget.dataset.text})
   },
   /**
    * 默认/热卖切换
@@ -127,7 +176,6 @@ Page({
    * 详情页
    */
   toDetail: function(){
-    console.log('详情页')
     wx.navigateTo({
       url: '/pages/goodsDetail/index',
     })
