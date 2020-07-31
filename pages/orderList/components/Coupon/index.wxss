@@ -68,9 +68,6 @@
   flex:1;
   margin-left: 20rpx;
 }
-.couponItem .left .tap{
-  color: #CE9455;
-}
 
 .couponItem .left .info{
   height: 60rpx;

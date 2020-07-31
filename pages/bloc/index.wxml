@@ -7,13 +7,13 @@
       <block wx:for="{{imgList}}" wx:key="*this">
         <swiper-item>
           <image class="swiper_img" src="{{item}}"></image>
-          <view class="hotel_name">北京万达文化酒店</view>
         </swiper-item>
       </block>
     </swiper>
-    <view class="swiper_search">
+    <view class="swiper_search" bindtap="toHotel">
       <image src="/images/search.png"></image>
     </view>
+    <view class="hotel_name">北京万达文化酒店</view>
   </view>
   <!-- 广告位1 -->
   <view class="banner">

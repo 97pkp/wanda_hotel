@@ -84,7 +84,7 @@ Page({
    * 返回首页
    */
   backHome: function(){
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/bloc/index',
     })
   },

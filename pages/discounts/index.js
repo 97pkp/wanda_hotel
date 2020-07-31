@@ -66,15 +66,12 @@ Page({
 
   },
 
-  switchChange(event){
-    // console.log(event.currentTarget.dataset.value)
-    this.switchStatus = event.currentTarget.dataset.value
+  switchChange(e){
     this.setData({
-      switchStatus: event.currentTarget.dataset.value
+      switchStatus: e.currentTarget.dataset.value
     })
   },
   tapChange(event){
-    this.tapStatus = event.currentTarget.dataset.value
     this.setData({
       tapStatus: event.currentTarget.dataset.value
     })
@@ -85,9 +82,20 @@ Page({
     })
   },
   goShop(e) {
-    let type = 0
+    let type = 1
+    if (this.data.tapStatus){
+      type = this.data.switchStatus? 0 : 2
+    }else{
+      type = 1
+    }
     wx.navigateTo({
       url: `/pages/buyNow/index?type=${type}`
+    })
+  },
+  goDetails(e) {
+    let type = this.data.switchStatus ? 0 : 2
+    wx.navigateTo({
+      url: `/pages/goodsDetail/index?type=${type}`
     })
   },
 

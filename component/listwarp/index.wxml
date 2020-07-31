@@ -10,7 +10,7 @@
   <!-- 商品滚动列表 -->
   <view class="list_warp_content">
     <scroll-view scroll-x class="scroll-header">
-      <view class="scroll-view-item bc_green" wx:for="{{3}}">
+      <view class="scroll-view-item bc_green" wx:for="{{3}}" wx:key="index">
         <view class="option_btn" bindtap="handleGoods">
           <view class="img_warp">
             <image class="show_img" src="../../images/hot_img.png"></image>
@@ -26,10 +26,10 @@
               <view class="hotel_name">济南xxx主题酒店</view>
               <view class="price">
                 <view class="new_price">
-                  <text>￥ 980</text>
+                  <text>￥980</text>
                   <text class="small_txt">.00</text>
                 </view>
-                <view class="old_price small_txt">￥ 1800.00</view>
+                <view class="old_price small_txt">￥1800.00</view>
               </view>
             </view>
           </view>

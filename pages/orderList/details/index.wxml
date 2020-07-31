@@ -29,12 +29,12 @@
 </view>
 
 <!-- 商品列表-待支付/已取消 -->
-<view wx:if="{{payStatus !== 1}}" class="goodsList" wx:for="{{goodsList}}">
+<view wx:if="{{payStatus !== 1}}" class="goodsList" wx:for="{{goodsList}}" wx:key="index">
   <view class="goodsTitle f_s_26">
     <text class="name">{{item.name}}</text>
     <text class="cuIcon-right text-black"></text>
   </view>
-  <view class="d_x flex goodsItem" wx:for="{{item.children}}">
+  <view class="d_x flex goodsItem" wx:for="{{item.children}}" wx:key="index">
     <view class="right">
       <image src='{{item.src}}'></image>
     </view>
@@ -59,7 +59,7 @@
   </view>
 </view>
 <!-- 商品列表-待使用 -->
-<view wx:if="{{payStatus === 1}}" class="goodsList goodsList_no_use" wx:for="{{hotelList}}">
+<view wx:if="{{payStatus === 1}}" class="goodsList goodsList_no_use" wx:for="{{hotelList}}" wx:key="index">
   <view class="goodsTitle f_s_32">
     <text class="name">{{item.name}}</text>
   </view>

@@ -1,23 +1,23 @@
 <!--component/defaultDetailTabbar/index.wxml-->
 <view class="detail_tabbar">
   <view class="option">
-    <view>
+    <view bindtap="handleHotel">
       <image mode="heightFix" src="/images/home_on.png"></image>
       <view>酒店</view>
     </view>
-    <view>
+    <view bindtap="handleOrder">
       <image mode="heightFix" src="/images/home_on.png"></image>
       <view>订单</view>
     </view>
-    <view>
+    <view bindtap="handleBuyCar">
       <image mode="heightFix" src="/images/home_on.png"></image>
       <view>购物车</view>
     </view>
   </view>
-  <view class="add_car">
+  <view bindtap="addCar" class="add_car">
     加入购物车
   </view>
-  <view class="to_buy">
+  <view bindtap="toBuy" class="to_buy">
     立即购买
   </view>
 </view>

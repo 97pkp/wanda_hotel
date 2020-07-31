@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "tabbar":"../../component/navbar"
+    "tabbar":"../../component/navbar",
+    "v-bracket": "/component/bracket/index"
   },
   "navigationBarTitleText": "优惠"
 }

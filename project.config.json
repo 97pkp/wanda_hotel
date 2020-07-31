@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -26,8 +26,8 @@
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.12.0",
-	"appid": "wxd9a3acc12fa0cdcd",
+	"libVersion": "2.11.3",
+	"appid": "wxc62a80fca16ac188",
 	"projectname": "wanda_hodel",
 	"debugOptions": {
 		"hidedInDevtools": []

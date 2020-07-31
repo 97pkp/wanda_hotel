@@ -105,4 +105,12 @@ Page({
       url: '/pages/goodsDetail/index',
     })
   },
+  /**
+   * 去酒店
+   */
+  toHotel: function(){
+    wx.switchTab({
+      url: '/pages/city/index',
+    })
+  }
 })

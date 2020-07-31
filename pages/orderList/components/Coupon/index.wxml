@@ -19,7 +19,7 @@
       </view>
       <view class="left">
         <view class="f_s_26 info">
-          <text class="tap">「踏青好去处」</text>
+          <v-bracket text="踏青好去处"></v-bracket>
           <text>{{item.info}}</text>
         </view>
         <view class="flex justify-between">

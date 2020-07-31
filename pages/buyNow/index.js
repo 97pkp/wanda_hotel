@@ -89,7 +89,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //type[ 0:优惠， 1：详情，购物车 ]
+    //type[ 0:优惠， 1：详情，购物车 ]  
+    // 普通详情
+    // 开团详情：单人/拼团
+    // 秒杀详情
     console.log(options.type)
     this.initData(options)
   },
@@ -164,5 +167,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 立即支付
+   */
+  toBuy: function(){
+    wx.redirectTo({
+      url: '/pages/payOk/index',
+    })
   }
 })
