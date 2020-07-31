@@ -11,7 +11,7 @@
     <view class="search_content">
       <view class="hotel_list">
         <!-- 索引列表 -->
-        <scroll-view scroll-y bindscroll="viewScroll" class="indexes" scroll-into-view="indexes-{{listCurID}}" style="height:calc(100vh - {{CustomBar}}px - 50px)" scroll-with-animation="true" enable-back-to-top="true">
+        <scroll-view scroll-y class="indexes" scroll-into-view="indexes-{{listCurID}}" style="height:calc(100vh - {{CustomBar}}px - 50px)" scroll-with-animation="true" enable-back-to-top="true">
           <block>
             <view class="late_search">
               <view class="late_search_title">

@@ -5,19 +5,8 @@ App({
     wx.hideTabBar()
     // 监测版本更新
     this.checkUpdateVersion()
-    // const updateManager = wx.getUpdateManager();
-    // wx.getUpdateManager().onUpdateReady(function() {
-    //   wx.showModal({
-    //     title: '更新提示',
-    //     content: '新版本已经准备好，是否重启应用？',
-    //     success: function(res) {
-    //       if (res.confirm) {
-    //         // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
-    //         updateManager.applyUpdate()
-    //       }
-    //     }
-    //   })
-    // })
+    // 位置权限
+    this.getPosition()
 
     // 索引列表
     wx.getSystemInfo({
@@ -101,6 +90,33 @@ App({
       })
     }
   },
+  /**
+   * 定位授权
+   */
+  getPosition: function(){
+    wx.getSetting({
+      success(res) {
+        if (!res.authSetting['scope.userLocation']) { //位置权限未授权
+          wx.authorize({
+            scope: 'scope.userLocation',
+            success(res) { //同意位置权限授权
+              console.log('同意授权')
+            },
+            fail(res) { //不同意位置权限授权
+              console.log('拒绝授权')
+            }
+          })
+        } else { //位置权限已经授权
+          
+        }
+      },
+      fail(res) {
+        console.log(res)
+      }
+    })
+  },
+
+
   globalData: {
     userInfo: null
   }
