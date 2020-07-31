@@ -50,6 +50,7 @@ Page({
   },
   //滑动选择Item
   tMove(e) {
+    console.log(e)
     let y = e.touches[0].clientY,
       offsettop = this.data.boxTop,
       that = this;
@@ -59,6 +60,7 @@ Page({
       this.setData({
         listCur: that.data.list[num]
       })
+      console.log(num)
     };
   },
 
@@ -145,5 +147,11 @@ Page({
    */
   useHistorySearch: function(e){
     this.setData({'inputValue': e.currentTarget.dataset.text})
+  },
+  /**
+   * 滚动监听
+   */
+  viewScroll: function(e){
+    console.log(e)
   }
 });

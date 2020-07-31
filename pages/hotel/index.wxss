@@ -1,4 +1,7 @@
 /* pages/hotel/index.wxss */
+page{
+  padding-bottom: 110rpx;
+}
 .clear_float:after{
   content: '';
   height: 0;
