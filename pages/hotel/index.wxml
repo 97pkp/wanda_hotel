@@ -44,7 +44,7 @@
       <image  mode="heightFix" src="/images/banner_fjtj.png"></image>
       <text bindtap="toMore">更多</text>
     </view>
-    <view class="option_btn" wx:for="{{4}}" wx:key="index" bindtap="toDetail">
+    <view class="option_btn" wx:for="{{4}}" wx:key="index" bindtap="toDetail"> 
       <view class="img_warp">
         <image class="show_img" src="/images/hot_img.png"></image>
         <image class="type_img" src="/images/seckill.png"></image>
