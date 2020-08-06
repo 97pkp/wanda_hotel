@@ -3,7 +3,6 @@
 <view class="goodsList" wx:for="{{goodsList}}" wx:key="index">
   <view class="goodsTitle f_s_26">
     <text class="name">{{item.name}}</text>
-    <text class="cuIcon-right text-black"></text>
   </view>
   <!-- 拼团是否显示凑单信息待定 -->
   <!-- <view class="flex f_s_24 justify-between collect" wx:if="{{item.collectInfo}}">
