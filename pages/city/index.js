@@ -6,7 +6,9 @@ Page({
     CustomBar: app.globalData.CustomBar,
     hidden: true,
     // 文本框值
-    inputValue: ''
+    inputValue: '',
+    // 历史查询
+    searchHistory: []
   },
   onLoad() {
     let list = [];
@@ -17,6 +19,7 @@ Page({
       list: list,
       listCur: list[0]
     })
+    this.setData({'searchHistory': wx.getStorageSync('searchArr' || [] )})
   },
   onReady() {
     let that = this;
@@ -92,9 +95,7 @@ Page({
    * 搜索
    */
   handleSearch: function(){
-    console.log('搜索');
-    let searchArr = JSON.parse(wx.getStorageSync('searchArr')) || []
-    console.log(searchArr)
+    let searchArr = wx.getStorageSync('searchArr') || []
     if(this.data.inputValue === '') return
     if(searchArr.indexOf(this.data.inputValue) === -1){
       searchArr.unshift(this.data.inputValue)
@@ -102,10 +103,14 @@ Page({
       searchArr.splice(searchArr.indexOf(this.data.inputValue), 1); 
       searchArr.unshift(this.data.inputValue)
     }
+    if(searchArr.length>=6){
+      searchArr.length = 6;
+    }
     wx.setStorage({
       key:"searchArr",
-      data: JSON.stringify(searchArr)
+      data: searchArr
     })
+    this.setData({'searchHistory': searchArr})
   },
   /**
    * 查看酒店
@@ -122,6 +127,23 @@ Page({
     this.setData({
       inputValue:e.detail.value
     })    
+  },
+  /**
+   * 清空历史搜索
+   */
+  clearHistorySearch: function(){
+    let that = this;
+    wx.removeStorage({
+      key: 'searchArr',
+      success: function(res) {
+        that.setData({'searchHistory': []})
+      },
+    })
+  },
+  /**
+   * 点击历史
+   */
+  useHistorySearch: function(e){
+    this.setData({'inputValue': e.currentTarget.dataset.text})
   }
-
 });
