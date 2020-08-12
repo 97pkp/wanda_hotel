@@ -21,7 +21,7 @@
         <view class="f_s_18">通用券|全场通用</view>
         <view class="f_s_18 time">{{item.startTime}}-{{item.endTime}}</view>
       </view>
-      <view class="right">
+      <view class="right" bindtap="receive">
         <view>立</view>
         <view>即</view>
         <view>领</view>

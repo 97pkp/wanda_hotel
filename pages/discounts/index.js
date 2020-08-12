@@ -98,6 +98,13 @@ Page({
       url: `/pages/goodsDetail/index?type=${type}`
     })
   },
+  receive() {
+    wx.showToast({
+      title: '领取成功',
+      icon: 'success',
+      duration: 2000//持续的时间
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
