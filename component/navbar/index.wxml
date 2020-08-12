@@ -1,9 +1,13 @@
 <!--自定义tabbar-->
-<view class='tabbar' style="background-image: url('../../images/Rectangle.png')">
-  <view wx:if='{{_auth >= item.auth}}' class='tabbar-item' wx:for='{{tabbarList}}' wx:key='index' bindtap='handleItemTap' data-path='{{item.pagePath}}' data-idx='{{index}}'>
-    <view class='tabbar-item-icon'>
-      <image src='{{activeIdx === index ? item.selectedIconPath : item.iconPath}}'></image>
+<view class="tabbar_warp">
+  <view class='tabbar'>
+    <view wx:if='{{_auth >= item.auth}}' class='tabbar-item' wx:for='{{tabbarList}}' wx:key='index' bindtap='handleItemTap' data-path='{{item.pagePath}}' data-idx='{{index}}'>
+      <view class='tabbar-item-icon'>
+        <image src='{{activeIdx === index ? item.selectedIconPath : item.iconPath}}'></image>
+      </view>
+      <view wx:if="{{index !== 2}}" class='tabbar-item-text {{activeIdx === index ? "active" : ""}}'>{{item.text}}</view>
     </view>
-    <view wx:if="{{index !== 2}}" class='tabbar-item-text {{activeIdx === index ? "active" : ""}}'>{{item.text}}</view>
   </view>
+  <image class="bg" mode="widthFix" src="/images/Rectangle.png"></image>
 </view>
+

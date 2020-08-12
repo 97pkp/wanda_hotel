@@ -23,7 +23,8 @@
   <!-- 优惠券领取 -->
   <scroll-view scroll-x class="scroll-header coupon-header">
     <view class="scroll-view-item bc_green" wx:for="{{optionBtnImg}}" wx:key="index">
-      <view class="option_btn" style="background-image: url('../../images/coupon1_bg.png');background-size: 100% 100%;">
+      <image mode="widthFix" src="/images/coupon1_bg.png"></image>
+      <view class="option_btn">
         <view class="coupon_info">
           <view class="price">￥<text>50</text></view>
           <view class="price_tip">满100元可用</view>
