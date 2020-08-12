@@ -20,7 +20,7 @@ Page({
       {url: '../../images/cyyd.png', name: '餐饮预订'},
       {url: '../../images/ktyl.png', name: '康体娱乐'},
       {url: '../../images/xyfw.png', name: '洗衣服务'},
-      {url: '../../images/mshd.png', name: '伴手礼'}
+      {url: '../../images/present.png', name: '伴手礼'}
     ],
   },
 

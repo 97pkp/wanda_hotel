@@ -5,10 +5,12 @@
   left: 0;
   right: 0;
   height: 110rpx;
-  border-top: 0.5px solid #d5d5d5;
+  /* border-top: 0.5px solid #d5d5d5; */
   display: flex;
   font-size: 0;
   background: #fff;
+  background-size: 100% 100%;
+  padding-top: 16rpx;
 }
 .tabbar-item {
   flex: 1;
@@ -25,7 +27,7 @@
 
 .tabbar-item:nth-child(3){
   position: relative;
-  bottom: 70rpx;
+  bottom: 90rpx;
   height:150rpx;
   flex: 0.7;
 }
@@ -34,7 +36,7 @@
   height: 100rpx;
   background: #fff;
   border-radius: 50%;
-  border-top: solid 1px gray;
+  /* border-top: solid 1px gray; */
 }
 
 .tabbar-item:nth-child(3) .tabbar-item-icon image{

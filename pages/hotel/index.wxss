@@ -70,7 +70,7 @@ swiper{
   height: 196rpx;
   width: 306rpx;
   display: inline-block;
-  background: #ffffff;
+  /* background: #ffffff; */
   /* border-radius: 5rpx; */
   margin-right: 20rpx;
 }

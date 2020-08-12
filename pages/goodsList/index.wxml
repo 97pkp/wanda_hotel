@@ -2,7 +2,8 @@
 <view id="type1">
 	<!-- 搜索框 -->
 	<view class="search_warp" bindtap="handleShowSearch">
-		<image src="/images/search.png"></image>
+		<!-- <image src="/images/search.png"></image> -->
+    <image mode="widthFix" style="width: 28rpx;" src="/images/search_gray.png"></image>
 		<!-- <text>请输入商品名称</text> -->
     <input value="{{inputValue}}" placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入商品名称"></input>
 	</view>
@@ -36,8 +37,11 @@
 	<view class="sort">
 		<view bindtap="handleSort" data-type='{{1}}' class="{{isDefault?'active_color':'default_color'}}">默认</view>
 		<view bindtap="handleSort" data-type="{{2}}" class="{{isDefault?'default_color':'active_color'}}">热卖</view>
-		<view bindtap="handlePrice" class="{{isUpOrder?'default_color':'active_color'}}">
-			<text>价格</text>
+		<view bindtap="handlePrice" class="{{isUpOrder === null?'default_color':'active_color'}}">
+			<text style="margin-right: 20rpx;">价格</text>
+      <image wx:if="{{isUpOrder === null }}" mode="widthFix" style="width: 20rpx;" src="/images/sort.png"></image>
+      <image wx:if="{{isUpOrder === false }}" mode="widthFix" style="width: 20rpx;" src="/images/sort_down.png"></image>
+      <image wx:if="{{isUpOrder === true }}" mode="widthFix" style="width: 20rpx;" src="/images/sort_up.png"></image>
 		</view>
 	</view>
 

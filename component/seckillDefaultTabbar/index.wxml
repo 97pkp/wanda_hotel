@@ -2,15 +2,15 @@
 <view class="detail_tabbar">
   <view class="option">
     <view bindtap="handleHotel">
-      <image mode="heightFix" src="/images/home_on.png"></image>
+      <image mode="heightFix" src="/images/city.png"></image>
       <view>酒店</view>
     </view>
     <view bindtap="handleOrder">
-      <image mode="heightFix" src="/images/home_on.png"></image>
+      <image mode="heightFix" src="/images/list.png"></image>
       <view>订单</view>
     </view>
     <view bindtap="handleBuyCar">
-      <image mode="heightFix" src="/images/home_on.png"></image>
+      <image mode="heightFix" src="/images/cart.png"></image>
       <view>购物车</view>
     </view>
   </view>
