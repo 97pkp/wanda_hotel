@@ -1,5 +1,14 @@
 <!--pages/mine/index.wxml-->
 <text>pages/mine/index.wxml</text>
 <button class="bg-orange" bindtap="toDetails">订单列表临时入口</button>
+<!-- <button wx:if="{{src === ''}}" class="bg-orange" bindtap="addVideo">视频上传</button>
+<view wx:else>
+  <video src="{{src}}" class="video"></video>
+  
+</view>
+<cover-view>
+  <button class="bg-orange" bindtap="clear">清空</button>
+  <button class="bg-while" bindtap="addVideo">重选</button>
+</cover-view> -->
 
 <tabbar activeIdx="{{activeIdx}}"></tabbar>

@@ -1,49 +1,52 @@
 <!--pages/buycar/index.wxml-->
 <!-- 购物车列表模块部分 -->
-<view class="shopCarList" wx:for="{{shopCarList}}" wx:key="index">
-  <view class="shopCarTitle f_s_26">
-    <checkbox value="selectAll" class="round orange selectAll"/>
-    <text class="name">{{item.name}}</text>
-    <text class="cuIcon-right text-black"></text>
-    <view class="discounts f_s_20 text-orange" 
-          bindtap="showDiscounts" 
-          wx:if="{{item.discounts}}"
-          data-discounts="{{item.discounts}}">优惠券</view>
-  </view>
-  <view class="flex f_s_24 justify-between collect" wx:if="{{item.collectInfo}}">
-    <view>{{item.collectInfo}}</view>
-    <view class="text-yellow">
-      <text>凑单</text>
-      <text class="cuIcon-right text-yellow"></text>
+<checkbox-group bindchange="goodsChange">
+  <view class="shopCarList" wx:for="{{shopCarList}}" wx:key="index">
+    <view class="shopCarTitle f_s_26">
+      <checkbox value="{{item.name}}" class="round orange selectAll"/>
+      <text class="name">{{item.name}}</text>
+      <text class="cuIcon-right text-black"></text>
+      <view class="discounts f_s_20 text-orange" 
+            bindtap="showDiscounts" 
+            wx:if="{{item.discounts}}"
+            data-discounts="{{item.discounts}}">优惠券</view>
     </view>
-  </view>
-  <checkbox-group bindchange="checkboxChange">
-    <view class="flex shopCarItem" wx:for="{{item.children}}" wx:key="index">
-        <checkbox value="{{item.id}}" class="round orange check"/>
-        <view class="right">
-          <image src='{{item.src}}'></image>
-        </view>
-        <view class="left">
-          <view class="f_s_26 info">
-            <text class="tap">「踏青好去处」</text>
-            <text>{{item.info}}</text>
+    <view class="flex f_s_24 justify-between collect" wx:if="{{item.collectInfo}}">
+      <view>{{item.collectInfo}}</view>
+      <view class="text-yellow">
+        <text>凑单</text>
+        <text class="cuIcon-right text-yellow"></text>
+      </view>
+    </view>
+    <checkbox-group bindchange="childrenChange">
+      <view class="flex shopCarItem" wx:for="{{item.children}}" wx:key="index">
+          <checkbox value="{{item.id}}" class="round orange check"/>
+          <view class="right">
+            <image src='{{item.src}}'></image>
           </view>
-          <view class="flex quotaInfo">
-            <view class="select f_s_24" bindtap="showTypeChange" data-id="{{item.id}}">豪华大床房</view>
-            <view class="quota f_s_18">限购两份</view>
-          </view>
-          <view class="flex shopInfo">
-            <view class="f_s_24 text-orange m_t_24">￥{{item.moneny}}.00</view>
-            <view class="m_t_20"> 
-              <text data-id="{{item.id}}" class="btn" bindtap="cut">-</text>
-              <text class="count">{{item.count}}</text>
-              <text data-id="{{item.id}}" class="btn" bindtap="add">+</text>
+          <view class="left">
+            <view class="f_s_26 info">
+              <text class="tap">「踏青好去处」</text>
+              <text>{{item.info}}</text>
+            </view>
+            <view class="flex quotaInfo">
+              <view class="select f_s_24" bindtap="showTypeChange" data-id="{{item.id}}">豪华大床房</view>
+              <view class="quota f_s_18">限购两份</view>
+            </view>
+            <view class="flex shopInfo">
+              <view class="f_s_24 text-orange m_t_24">￥{{item.moneny}}.00</view>
+              <view class="m_t_20"> 
+                <text data-id="{{item.id}}" class="btn" bindtap="cut">-</text>
+                <text class="count">{{item.count}}</text>
+                <text data-id="{{item.id}}" class="btn" bindtap="add">+</text>
+              </view>
             </view>
           </view>
-        </view>
-    </view>
-  </checkbox-group>
-</view>
+      </view>
+    </checkbox-group>
+  </view>
+</checkbox-group>
+
 <view class="kong">
 <!-- 我是占位元素 -->
 </view>

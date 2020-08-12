@@ -6,6 +6,7 @@ Page({
    */
   data: {
     activeIdx: 4,
+    src:''
   },
 
   /**
@@ -20,6 +21,44 @@ Page({
       url: '/pages/orderList/index',
     })
   },
+  // 视频上传
+  // addVideo(e) {
+  //   this.data.src = ''
+  //   var that = this
+  //   wx.chooseVideo({
+  //     success: function (res) {
+  //       that.setData({
+  //         src: res.tempFilePath,
+  //       })
+  //       console.log(this.data.src)
+  //     }
+  //   })  
+  // },
+  // uploadvideo: function () {
+  //   var src = this.data.src;
+  //   wx.uploadFile({
+  //     url: 'http://172.16.98.36:8080/upanddown/upload2',//服务器接口
+  //     method: 'POST',//这句话好像可以不用
+  //     filePath: src,
+  //     header: {
+  //       'content-type': 'multipart/form-data'
+  //     },
+  //     name: 'files',//服务器定义的Key值
+  //     success: function () {
+  //       console.log('视频上传成功')
+  //     },
+  //     fail: function () {
+  //       console.log('接口调用失败')
+  //     }
+  //   })
+  // },
+  // clear(){
+  //   this.setData({
+  //     src: '',
+  //   })
+  // },
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

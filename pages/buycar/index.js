@@ -15,6 +15,7 @@ Page({
     shopCarList:[{
       name:'库尔勒万达锦华酒店',
       collectInfo: null,
+      checked: false,
       discounts: [{
           name: '通用券 | 全场通用',
           startTime: '2020.05.01',
@@ -37,6 +38,7 @@ Page({
         moneny:80,
         count:1,
         id: 101,
+        checked: false,
         num: 'ASDFGSSFFSSFDS'
       }, {
         src:'../../images/shopcar.jpg',
@@ -45,6 +47,7 @@ Page({
         moneny: 180,
         count: 1,
         id: 102,
+        checked: false,
         num: 'ASDFGSSFFSSFDS'
       }, {
         src: '../../images/meishi.jpg',
@@ -52,23 +55,27 @@ Page({
         moneny: 100,
         count: 1,
         id: 103,
+        checked: false,
         num: 'ASDFGSSVVDDFDS'
       }]
     }, {
         name: '北京万达文华酒店',
         collectInfo: '5.5-5.7满一百减10',
         discounts: null,
+        checked: false,
         children: [{
           src: '../../images/shopcar.jpg',
           info: '豪华河景单卧别墅2晚+双早+主题乐园/雪世界双人门票',
           moneny: 980,
           count: 1,
+          checked: false,
           id: 201
         }, {
           src: '../../images/shopcar.jpg',
           info: '豪华河景单卧别墅2晚+双早+主题乐园/雪世界双人门票',
           moneny: 980,
           count: 1,
+          checked: false,
           id: 202
         }]
       }],
@@ -106,25 +113,91 @@ Page({
       }else{
         return item
       }
-      
     })
     console.log(arr)
     this.setData({ shopCarList: arr})
   },
   // 设置选中状态
-  // setSelectedStatus(data){
-  //   let arr = this.data.shopCarList.map(item => {
-  //     let selectList
-  //     if(data){
-
-  //     }else{
-
-  //     }
-  //   })
-  // },
+  setSelectedStatus(data){
+    let arr = this.data.shopCarList.map(item => {
+      let selectList =[]
+      
+      if(data.length>0){
+        // let checkedNum = 0
+        data.forEach(a => {
+          selectList = item.children && item.children.map(items => {
+            if(a == item.name){
+              console.log(a)
+              item.checked = !item.checked
+              return {...items,checked:true}
+            }else{
+              console.log(a)
+              if (a == items.id) {
+                items.checked = !items.checked
+              }
+            }
+            return items
+          })
+          let selectData = item.children && item.children.map(items => {
+            if (a == item.name) {
+              console.log(a)
+              item.checked = !item.checked
+              return { ...items, checked: true }
+            } else {
+              console.log(a)
+              if (a == items.id) {
+                items.checked = !items.checked
+              }
+            }
+            return items
+          })
+          // if (a == item.name) {
+          //   item.checked = !item.checked
+          //   selectList = item.children && item.children.map(items => {
+          //     return { ...items,checked:true}
+          //   })
+          // } else {
+          //   selectList = item.children && item.children.map(items => {
+          //     if(a == items.id){
+          //       items.checked = !items.checked
+          //     }
+          //     // if (items.checked){
+          //     //   checkedNum = checkedNum+1
+          //     // }else{
+          //     //   checkedNum = checkedNum
+          //     // }
+          //     return { ...items }
+          //   })
+          // }
+          // if (checkedNum>0){
+          //   item.checked = true
+          //   console.log(item.name, checkedNum)
+          // }
+        })
+        
+      }else{
+        item.checked = false
+        selectList = item.children && item.children.map(items => {
+          // if (items.checked) {
+          //   checkedNum = checkedNum + 1
+          // }
+          return { ...items,checked:false}
+        })
+      }
+      return {...item,children:selectList}
+    })
+    console.log(this.data.shopCarList,arr)
+    // this.disShow(arr)
+  },
   // 商品列表选项状态发生改变
-  checkboxChange(e){
-    console.log(e)
+  goodsChange(e){
+    console.log('goods', e.detail.value)
+    this.setSelectedStatus(e.detail.value)
+  },
+  // 单品列表状态变化
+  childrenChange(e) {
+    console.log('children', e.detail.value)
+    this.setSelectedStatus(e.detail.value)
   },
   // 数量减
   cut(e){
