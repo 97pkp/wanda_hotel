@@ -1,6 +1,7 @@
 <!--pages/payOk/index.wxml-->
 <view class="ok_warp">
-  <image src="/images/home_on.png"></image>
+  <!-- <image src="/images/fail.png"></image> -->
+  <image src="/images/success.png"></image>
   <view class="pay_status">支付成功</view>
   <view class="pay_num">订单编号：1154199796</view>
   <view class="pay_btn back_btn" bindtap="backHome">返回首页</view>

@@ -146,7 +146,12 @@
 				{
 					"id": -1,
 					"name": "我的",
-					"pathName": "pages/mine/index",
+          "pathName": "pages/mine/index",
+          "scene": null
+        },{
+					"name": "支付成功",
+					"pathName": "pages/payOk/index",
+					"query": "data = {type:1}",
 					"scene": null
 				}
 			]
