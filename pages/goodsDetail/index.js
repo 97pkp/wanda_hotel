@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    pageType: 1, //0：普通详情  1：拼团详情   2：秒杀详情
-    // 0 拼图   1  普通   2 秒杀
+    pageType: 1, // 0 拼图   1  普通   2 秒杀
+    start: 1, // 0 预告 1 开始
     // 轮播图配置
     swiperConfig: {
       indicatorDots: false,
@@ -72,6 +72,15 @@ Page({
     }else{
       this.setData({'pageType': 1})
     }
+    if(options.start == 0){
+      this.setData({'start': 0})
+    }else if(options.start == 1){
+      this.setData({'start': 1})
+    }
+    // this.setData({
+    //   'pageType': 0,
+    //   'start': 0
+    // })
     this.setData({'featureShowList': this.data.featureList.slice(0,4)})
   },
   /**

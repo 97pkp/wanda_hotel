@@ -21,6 +21,10 @@
   box-sizing: border-box;
   display: inline-block;
 }
+.list_warp_header .img_title image{
+  height: 100%;
+  width: auto;
+}
 .list_warp_header image{
   height: 100%;
 }

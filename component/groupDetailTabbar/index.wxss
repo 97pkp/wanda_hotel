@@ -68,3 +68,7 @@
   font-size: 20rpx;
   line-height: 28rpx;
 }
+
+.no_start{
+  background: #dddddd;
+}

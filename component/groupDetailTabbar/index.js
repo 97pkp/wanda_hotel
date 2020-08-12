@@ -4,7 +4,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    start: {
+      type: Number,
+      value: 1
+    },
   },
 
   /**
@@ -34,12 +37,14 @@ Component({
      * 单独购买
      */
     handleBuyOnce: function(){
+      if(this.data.start===0) return
       this.triggerEvent('handlebuyonce')
     },
     /**
      * 开团购买
      */
     handleBuyGroup: function(){
+      if(this.data.start===0) return
       this.triggerEvent('handlebuygroup')
     }
   },
