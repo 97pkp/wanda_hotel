@@ -144,8 +144,10 @@
 					"scene": null
 				},
 				{
+					"id": -1,
 					"name": "支付成功",
 					"pathName": "pages/payOk/index",
+					"query": "data = {type:1}",
 					"scene": null
 				}
 			]

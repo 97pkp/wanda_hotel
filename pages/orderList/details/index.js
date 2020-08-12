@@ -7,7 +7,7 @@ Page({
    */
   data: {
     isShowQRCode: false,
-    payStatus: 1, // 0待付款   1：待使用    -1： 已取消
+    payStatus: 0, // 0待付款   1：待使用    -1： 已取消
     goodsList: [{
       name: '库尔勒万达锦华酒店',
       collectInfo: null,
@@ -72,20 +72,20 @@ Page({
         num: 'ASDFGSSFFSSFDS'
       }]
     },
-  ],
-  hotelList: [
-    {
-      info: '豪华河景单卧别墅2晚+双早+主题乐园/雪世界双人门票',
-      src: '/images/meishi.jpg',
-      name: '库尔勒万达锦华酒店',
-      startTime: '2020.05.01',
-      endTime: '2020.09.30',
-      moneny: 100,
-      discounts: 400,
-      num: 'ASDFGSSFFSSFDS',
-      count: 1,
-    }
-  ],
+    ],
+    hotelList: [
+      {
+        info: '豪华河景单卧别墅2晚+双早+主题乐园/雪世界双人门票',
+        src: '/images/meishi.jpg',
+        name: '库尔勒万达锦华酒店',
+        startTime: '2020.05.01',
+        endTime: '2020.09.30',
+        moneny: 100,
+        discounts: 400,
+        num: 'ASDFGSSFFSSFDS',
+        count: 1,
+      }
+    ],
   },
 
   /**

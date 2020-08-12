@@ -6,7 +6,7 @@
     <view class="pay_date">剩 23 小时 55 分自动关闭</view>
   </view>
   <view class="pay_state_right">
-    <image mode="heightFix" src="/images/hot_img.png"></image>
+    <image mode="heightFix" src="/images/list_pay.png"></image>
   </view>
 </view>
 <!-- 支付状态-待使用 -->
@@ -15,7 +15,7 @@
     <view class="pay_title">待使用</view>
   </view>
   <view class="pay_state_right">
-    <image mode="heightFix" src="/images/hot_img.png"></image>
+    <image mode="heightFix" src="/images/list_pay.png"></image>
   </view>
 </view>
 <!-- 支付状态-已取消 -->
@@ -24,7 +24,7 @@
     <view class="pay_title">已取消</view>
   </view>
   <view class="pay_state_right">
-    <image mode="heightFix" src="/images/hot_img.png"></image>
+    <image mode="heightFix" src="/images/list_pay.png"></image>
   </view>
 </view>
 
@@ -44,11 +44,11 @@
         <v-bracket></v-bracket>
         <text>{{item.info}}</text>
       </view>
-      <view class="d_x justify-between">
+      <view class="d_x flex-content justify-between">
         <view class="select f_s_24" bindtap="showTypeChange" data-id="{{item.id}}">豪华大床房</view>
         <view class="quota f_s_18">限购两份</view>
       </view>
-      <view class="d_x goodsInfo justify-between">
+      <view class="d_x goodsInfo flex-content justify-between">
         <view class="f_s_24 text-orange m_t_24">￥{{item.moneny}}.00</view>
         <view class="m_t_24"> 
           <text class="f_s_18">X</text>
@@ -90,8 +90,8 @@
       <view bindtap="givePerson">转赠</view>
     </view>
     <view class="order_right">
-      <image bindtap="showQRCode" data-qrData="http://www.baidu.com" src="/images/xyfw.png"></image>
-      <text bindtap="givePerson" class="cuIcon-right text-black"></text>
+      <image bindtap="showQRCode" data-qrData="http://www.baidu.com" src="/images/code.png"></image>
+      <text class="cuIcon-right text-black"></text>
     </view>
   </view>
 </view>
@@ -201,7 +201,7 @@
     <view bindtap="tallKF" data-phoneNum="17865353357">客服电话</view>
   </view>
   <view class="pbone" wx:if="{{payStatus === -1}}">
-    <image mode="heightFix" src="/images/kfyd.png"></image>
+    <image mode="heightFix" src="/images/delete.png"></image>
     <view>删除订单</view>
   </view>
 </view>
