@@ -68,7 +68,7 @@
           <text class="countDownText">{{tapStatus?'距离结束还剩':'距离开始还有'}}</text>
           <text class="countDownTime">20天11时15分30秒</text>
         </view>
-        <view wx:if="{{tapStatus}}" class="goShop {{switchStatus?'pin':''}}" bindtap="goShop">{{switchStatus?'我要拼团':'去抢购'}}</view>
+        <view wx:if="{{tapStatus}}" class="goShop {{switchStatus?'pin':''}}" bindtap="goDetails">{{switchStatus?'我要拼团':'去抢购'}}</view>
         <view wx:else class="lineOrange" bindtap="goDetails">查看详情</view>
       </view>
     </view>

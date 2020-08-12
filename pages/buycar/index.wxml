@@ -116,7 +116,7 @@
               <text class="f_s_50">{{item.moneny}}</text>
             </view>
             <view class="t_center f_s_20">满{{item.discounts}}元可用</view>
-            <!-- <view wx:if="{{!isUse}}" class="btn t_center" bindtap="receive">立即领取</view> -->
+            <view wx:if="{{!isUse}}" class="btn t_center" bindtap="receive">立即领取</view>
           </view>
         </view>
         <!-- 优惠券背景 -->

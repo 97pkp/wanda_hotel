@@ -1,10 +1,10 @@
 <!--pages/orderList/components/use/index.wxml-->
-<view class="goodsList" wx:for="{{goodsList}}" wx:key="index" bindtap="toDetails">
+<view class="goodsList" wx:for="{{goodsList}}" wx:key="index">
   <view class="goodsTitle f_s_26">
     <text class="name">{{item.name}}</text>
-    <text class="cuIcon-right text-black"></text>
+    <!-- <text class="cuIcon-right text-black" bindtap="toDetails"></text> -->
   </view>
-  <view class="flex goodsItem" wx:for="{{item.children}}" wx:key="index">
+  <view class="flex goodsItem" wx:for="{{item.children}}" wx:key="index" bindtap="toDetails">
     <view class="right">
       <image src='{{item.src}}'></image>
     </view>

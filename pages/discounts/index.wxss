@@ -43,7 +43,7 @@
 }
 .couponCollection .title image {
   width: 246rpx;
-  height: 40rpx;
+  height: 38rpx;
 }
 .couponCollection .content {
   /* width: 100%; */
@@ -109,7 +109,7 @@
 }
 .secondKillGroup .title image {
   width: 198rpx;
-  height: 40rpx;
+  height: 38rpx;
 }
 .secondKillGroup .title .active{
   color: #C39664;

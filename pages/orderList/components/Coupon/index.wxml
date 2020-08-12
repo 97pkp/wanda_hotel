@@ -45,10 +45,10 @@
         <text class="cuIcon-right text-black"></text>
       </view> 
     </view>
-    <!-- 已转赠 / 已收到-->
-    <view class="couponListInfo flex justify-between"  wx:if="{{changeValue == 'Transfer' || changeValue == 'received' || changeValue == 'all'}}">
+    <!-- 已转赠-->
+    <view class="couponListInfo flex justify-between"  wx:if="{{changeValue == 'Transfer' || changeValue == 'all'}}">
       <view class="flex">
-        <view class="btn text-center m_r_20" bindtap="showQRCode">验券</view>
+        <!-- <view class="btn text-center m_r_20" bindtap="showQRCode">验券</view> -->
       </view>
       <view class="flex">
         <view class="m_r_20 f_s_24" wx:if="{{item.couponType==1}}">
@@ -56,7 +56,22 @@
             <text> {{item.person}} </text>
             <text class="text-gray">接受</text>
         </view>
-        <view class="m_r_20 f_s_24" wx:else>
+        <image src="/images/QR_codeIcon.svg" class="QR_codeIcon" bindtap="showQRCode"></image>
+        <text class="cuIcon-right text-black"></text>
+      </view> 
+    </view>
+    <!-- 已收到-->
+    <view class="couponListInfo flex justify-between"  wx:if="{{changeValue == 'received' || changeValue == 'all'}}">
+      <view class="flex">
+        <view class="btn text-center m_r_20" bindtap="showQRCode">验券</view>
+      </view>
+      <view class="flex">
+        <!-- <view class="m_r_20 f_s_24" wx:if="{{item.couponType==1}}">
+            <text class="text-gray">{{item.couponTypeStr}}</text>
+            <text> {{item.person}} </text>
+            <text class="text-gray">接受</text>
+        </view> -->
+        <view class="m_r_20 f_s_24">
             <text class="text-gray">来自于 {{item.person}}</text>
         </view>
         <image src="/images/QR_codeIcon.svg" class="QR_codeIcon" bindtap="showQRCode"></image>
