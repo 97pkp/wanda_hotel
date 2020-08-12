@@ -18,7 +18,7 @@ Page({
     // 是否选择默认
     isDefault: true,
     // 是否升序排列
-    isUpOrder: true,
+    isUpOrder: null,
     // 商品类型: 1-全部/2-客房/3-餐饮/4-娱乐
     goodsType: 1, 
     // 搜索弹窗
@@ -163,7 +163,13 @@ Page({
    */
   handlePrice: function(){
     let that = this;
-    that.setData({'isUpOrder': !that.data.isUpOrder})
+    if(that.data.isUpOrder === null){
+      that.setData({'isUpOrder': true})
+    }else if(that.data.isUpOrder === true){
+      that.setData({'isUpOrder': false})
+    }else if(that.data.isUpOrder === false){
+      that.setData({'isUpOrder': null})
+    }
   },
   /**
    * 商品类型切换

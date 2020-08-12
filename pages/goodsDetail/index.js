@@ -48,13 +48,13 @@ Page({
     synopsisType: 1, // 1：订购须知   2：图文详情
     // 特色列表
     featureList: [
-      {name: '官方直销'},
-      {name: '超长有效'},
-      {name: '性价比高'},
-      {name: '限时抢购'},
-      {name: '限时抢购'},
-      {name: '限时抢购'},
-      {name: '限时抢购'}
+      {name: '官方直销', url: '/images/official.png'},
+      {name: '超长有效', url: '/images/time.png'},
+      {name: '性价比高', url: '/images/price.png'},
+      {name: '限时抢购', url: '/images/buy.png'},
+      {name: '限时抢购', url: '/images/buy.png'},
+      {name: '限时抢购', url: '/images/buy.png'},
+      {name: '限时抢购', url: '/images/buy.png'}
     ],
     // 要显示的特色列表
     featureShowList: []

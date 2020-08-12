@@ -10,7 +10,7 @@
 			</block>
 		</swiper>
 		<view class="swiper_search">
-			<image src="/images/home_on.png"></image>
+			<image src="/images/share.png"></image>
 		</view>
 		<view class="swiper_num">
 			<text class="num_active">{{imgList.length ? current + 1 : 0}}</text>
@@ -80,9 +80,11 @@
 					<view class="tip">限购{{maxNum}}件</view>
 				</view>
 				<view class="price_right counter">
-					<view class="cut option_btn" bindtap="cutNum" >-</view>
+					<!-- <view class="cut option_btn" bindtap="cutNum" >-</view> -->
+					<image mode="widthFix" src="/images/minus.png" bindtap="cutNum"></image>
 					<view class="num">{{buyNum}}</view>
-					<view class="add option_btn" bindtap="addNum">+</view>
+					<image mode="widthFix" src="/images/plus.png" bindtap="addNum"></image>
+					<!-- <view class="add option_btn" bindtap="addNum">+</view> -->
 				</view>
 			</view>
 		</view>
@@ -98,11 +100,13 @@
 
 
 			<view wx:for="{{featureShowList}}" wx:key="index">
-				<image src="/images/mshd.png"></image>
+				<image src="{{item.url}}"></image>
 				<view>{{item.name}}</view>
 			</view>
 			<view bindtap="showMoreFeature">
-				<view>···</view>
+				<view class="more_btn">
+					<image mode="widthFix" src="/images/more.png"></image>
+				</view>
 			</view>
 		</view>
 	</view>

@@ -42,11 +42,10 @@ swiper{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
 }
 .swiper_search image{
-  width: 60%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper_num{
@@ -210,17 +209,21 @@ swiper{
   display: flex;
   align-items: center;
 }
+.counter image{
+  width: 52rpx;
+  height: 52rpx;
+}
 .counter .option_btn{
   width: 52rpx;
   height: 52rpx;
-  border-radius: 50%;
+  /* border-radius: 50%;
   background: #E7E7E7;
   color: #ffffff;
   font-size: 50rpx;
   font-weight: bolder;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 .counter .num{
   min-width: 105rpx;
@@ -255,6 +258,9 @@ swiper{
   color: #7E7E7E;
   font-size: 24rpx;
   line-height: 36rpx;
+}
+.feature .more_btn{
+  width: 36rpx;
 }
 
 .synopsis{

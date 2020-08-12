@@ -16,7 +16,7 @@ module.exports = [
   {
     "pagePath": "pages/bloc/index",
     "text": "集团",
-    "iconPath": "/images/home_on.png",
+    "iconPath": "/images/home.png",
     "selectedIconPath": "/images/home_on.png",
     "auth": 0
   },

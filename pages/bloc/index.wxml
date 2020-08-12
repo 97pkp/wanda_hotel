@@ -13,7 +13,7 @@
     <view class="swiper_search" bindtap="toHotel">
       <image src="/images/search.png"></image>
     </view>
-    <view class="hotel_name">北京万达文化酒店</view>
+    <view class="hotel_name">北京万达文华酒店</view>
   </view>
   <!-- 广告位1 -->
   <view class="banner">
