@@ -81,21 +81,23 @@ Page({
       url: 'discountslist/index'
     })
   },
-  goShop(e) {
-    let type = 1
-    if (this.data.tapStatus){
-      type = this.data.switchStatus? 0 : 2
-    }else{
-      type = 1
-    }
-    wx.navigateTo({
-      url: `/pages/buyNow/index?type=${type}`
-    })
-  },
+  // goShop(e) {
+  //   let type = 1
+  //   if (this.data.tapStatus){
+  //     type = this.data.switchStatus? 0 : 2
+  //   }else{
+  //     type = 1
+  //   }
+  //   wx.navigateTo({
+  //     url: `/pages/buyNow/index?type=${type}`
+  //   })
+  // },
   goDetails(e) {
     let type = this.data.switchStatus ? 0 : 2
+    let start = this.data.tapStatus ? 0 : 1
+    console.log(start)
     wx.navigateTo({
-      url: `/pages/goodsDetail/index?type=${type}`
+      url: `/pages/goodsDetail/index?type=${type}&start=${start}`
     })
   },
   receive() {

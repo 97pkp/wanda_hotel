@@ -1,6 +1,6 @@
 <!--pages/orderList/compents/payoff/index.wxml-->
-<view class="box" wx:for="{{2}}" wx:key="index" date-value="payoff" bindtap="toDetails">
-  <view class="flex imgBox">
+<view class="box" wx:for="{{2}}" wx:key="index" date-value="payoff">
+  <view class="flex imgBox" bindtap="toDetails">
      <image src="/images/shopcar.jpg" wx:for="{{2}}" wx:key="index"></image>
   </view>
   <view>

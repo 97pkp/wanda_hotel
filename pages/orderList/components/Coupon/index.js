@@ -21,7 +21,7 @@ Component({
       id: 101,
       num: '2561 8956',
       person: '小妹',
-      couponType: 1, // 1 已转赠 0 已使用
+      couponType: 1, // 1 已转赠 0 已使用 2待使用
       couponTypeStr: '正在等待'
     }, {
         name: '库尔勒万达锦华酒店',
@@ -33,7 +33,7 @@ Component({
         id: 101,
         num: '2561 8956',
         person: '小妹',
-        couponType: 1, // 1 已转赠 0 已使用
+        couponType: 1, // 1 已转赠 0 已使用 2待使用
         couponTypeStr: ''
       }, {
         name: '北京万达锦华酒店',
@@ -45,7 +45,7 @@ Component({
         id: 102,
         num: '2561 8957',
         person: '小妹',
-        couponType: 0, // 1 已转赠 0 已使用
+        couponType: 1, // 1 已转赠 0 已使用 2待使用
         couponTypeStr: '正在等待'
       }],
       changeValue: 'all',
