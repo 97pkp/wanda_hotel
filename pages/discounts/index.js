@@ -94,7 +94,7 @@ Page({
   // },
   goDetails(e) {
     let type = this.data.switchStatus ? 0 : 2
-    let start = this.data.tapStatus ? 0 : 1
+    let start = this.data.tapStatus ? 1 : 0
     console.log(start)
     wx.navigateTo({
       url: `/pages/goodsDetail/index?type=${type}&start=${start}`
