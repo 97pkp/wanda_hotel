@@ -10,11 +10,11 @@
       <view>订单</view>
     </view>
   </view>
-  <view bindtap="handleBuyOnce" class="add_car">
+  <view bindtap="handleBuyOnce" class="add_car {{start === 1 ? '':'no_start'}}">
     <view>￥358.00</view>
     <view>单独购买</view>
   </view>
-  <view bindtap="handleBuyGroup" class="to_buy">
+  <view bindtap="handleBuyGroup" class="to_buy {{start === 1 ? '':'no_start'}}">
     <view>￥358.00</view>
     <view>我要开团</view>
   </view>

@@ -50,7 +50,7 @@
 			</view>
 			<view class="hotel">
 				<view class="hotel_name">北京万达文华酒店官方直销</view>
-				<view class="sell_num" wx:if="{{pageType === 0 || pageType === 1}}">已售 <text>300</text></view>
+				<view class="sell_num" wx:if="{{(pageType === 0 && start === 1) || pageType === 1}}">已售 <text>300</text></view>
 			</view>
 			<view class="date">
 				有效期到
@@ -111,7 +111,7 @@
 		</view>
 	</view>
 	<!-- 加入拼团 -->
-	<view class="add_group_warp" wx:if="{{pageType === 0}}">
+	<view class="add_group_warp" wx:if="{{pageType === 0 && start === 1}}">
 		<view class="add_group_title">他们正在拼团，可直接参与</view>
 		<view class="group_item" wx:for="{{2}}" wx:key="index">
 			<view class="user_content">
@@ -222,6 +222,7 @@
 		bindhandleorder="toOrder"
 		bindhandlebuyonce="toBuyOnce"
 		bindhandlebuygroup="toBuyGroup"
+		start="{{start}}"
 		></group-detail-tabbar>
 	<!-- 秒杀商品详情页tabbar -->
 	<seckill-detail-tabbar
