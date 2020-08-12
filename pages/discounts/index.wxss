@@ -41,6 +41,9 @@
 .couponCollection .title .text{
   font-size: 24rpx;
 }
+.couponCollection .title image {
+  height: 40rpx;
+}
 .couponCollection .content {
   /* width: 100%; */
   display: flex;
@@ -52,7 +55,6 @@
   height: 196rpx;
   display: inline-block;
   color: #fff;
-  background: #FFBE2A;
   border-radius: 10rpx;
   margin-right: 20rpx;
   padding:12rpx;
@@ -92,6 +94,9 @@
   font-size: 30rpx;
   padding: 32rpx;
   background: #fff;
+}
+.secondKillGroup .title image {
+  height: 40rpx;
 }
 .secondKillGroup .title .active{
   color: #C39664;
@@ -173,6 +178,22 @@
   color: #fff;
   font-size: 24rpx;
   background: #CC9C67;
+  border-radius: 6rpx;
+}
+.secondKillItem .right .goShop.pin{
+  background: #DA5353;
+}
+.secondKillItem .right .lineOrange{
+  position:absolute;
+  bottom: 45rpx;
+  right: 32rpx;
+  padding: 0 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #CC9C67;
+  font-size: 24rpx;
+  border:1rpx solid #CC9C67;
   border-radius: 6rpx;
 }
 .kong{

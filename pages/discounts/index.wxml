@@ -6,11 +6,12 @@
 <!-- 领取优惠券 -->
 <view class="couponCollection">
   <view class="title">
-    <view>优惠券领取</view>
+    <!-- <view>优惠券领取</view> -->
+    <image mode="heightFix" src="/images/font_coupon.png"></image>
     <view bindtap="goList">更多</view>
   </view>
   <scroll-view scroll-x class="content">
-    <view class="content_item" wx:for="{{discountsList}}" wx:key="index">
+    <view class="content_item" wx:for="{{discountsList}}" wx:key="index" style="background-image: url('../../images/coupon1_bg.png');background-size: 100% 100%;">
       <view class="left">
         <view class="center">
           <text>￥</text>
@@ -32,7 +33,7 @@
 <!-- 秒杀拼团 -->
 <view class="secondKillGroup">
   <view class="title">
-    <view>秒杀拼团</view>
+    <image mode="heightFix" src="/images/font_seckill.png"></image>
     <view>
     <text data-value="{{true}}" bindtap="switchChange" class="btn {{switchStatus?'active':''}}">拼团</text>
     <text>|</text>
@@ -40,8 +41,8 @@
     </view>
   </view>
   <view class="tabChange">
-    <view data-value="{{true}}" class="btn {{tapStatus?'active':''}}" bindtap="tapChange">{{switchStatus?'已开团':'已开抢'}}</view>
-    <view data-value="{{false}}" class="btn {{tapStatus?'':'active'}}" bindtap="tapChange">预告</view>
+    <view data-value="{{true}}" class="btn {{tapStatus?'active':''}}" bindtap="tapChange">{{switchStatus?'已开团':'抢购中'}}</view>
+    <view data-value="{{false}}" class="btn {{tapStatus?'':'active'}}" bindtap="tapChange">{{switchStatus?'预告':'即将开抢'}}</view>
   </view>
   <view class="secondKillList">
     <view wx:for="{{secondKillList}}" wx:key="index" class="secondKillItem">
@@ -51,7 +52,7 @@
       <view class="right">
         <view class="info"><v-bracket text="万达特惠"></v-bracket>{{item.info}}</view>
         <!-- 进度条 -->
-        <view class="flex">
+        <view class="flex" wx:if="{{tapStatus}}">
           <view class="cu-progress round xs">
             <view class="bg-orange" style="width:{{item.stock}}%"></view>
           </view>
@@ -66,8 +67,8 @@
           <text class="countDownText">{{tapStatus?'距离结束还剩':'距离开始还有'}}</text>
           <text class="countDownTime">20天11时15分30秒</text>
         </view>
-        <view wx:if="{{tapStatus}}" class="goShop" bindtap="goShop">去抢购</view>
-        <view wx:else class="goShop" bindtap="goDetails">查看详情</view>
+        <view wx:if="{{tapStatus}}" class="goShop {{switchStatus?'pin':''}}" bindtap="goShop">{{switchStatus?'我要拼团':'去抢购'}}</view>
+        <view wx:else class="lineOrange" bindtap="goDetails">{{switchStatus?'开团提醒':'我要预约'}}</view>
       </view>
     </view>
   </view>

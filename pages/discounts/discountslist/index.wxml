@@ -29,7 +29,7 @@
         </view>
         <image src="/images/coupon_bg_big.png" class="imgbg"></image>
       </view>
-      <image wx:if="{{isUse}}" src="/images/invalid.png" class="invalid"></image>
+      <image wx:if="{{isUse}}" src="/images/{{item.isUse?'invalid':'chapter-use'}}.png" class="invalid"></image>
   </view>
 </view>
 <!-- 模态框 -->

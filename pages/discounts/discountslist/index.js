@@ -15,21 +15,24 @@ Page({
       endTime:'2020.09.30',
       moneny:80,
       discounts: 300,
-      num: 'ASDFGSSFFSSFDS'
+      num: 'ASDFGSSFFSSFDS',
+      isUse: true
     },{
         name: '同用券 | 全场通用',
         startTime: '2020.05.01',
         endTime: '2020.09.30',
         moneny: 80,
         discounts: 300,
-        num: 'ASDFGSSFFSSFDS'
+        num: 'ASDFGSSFFSSFDS',
+        isUse: true
     },{
       name: '店铺券 | 北京万达文华酒店',
       startTime: '2020.05.01',
       endTime: '2020.09.30',
       moneny: 80,
       discounts: 300,
-      num: 'ASDFGSSFFSSFDS'
+      num: 'ASDFGSSFFSSFDS',
+      isUse: false
     }]
   },
 

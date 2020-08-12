@@ -39,7 +39,7 @@
     <view class="headGroup flex m_b_24">
       <view wx:for="{{headGroup}}" wx:key="index" class="head">
         <image src="{{item.src}}" wx:if="{{item.src}}"></image>
-        <view class="text-gray text-center noImg" wx:else>?</view>
+        <view class="text-gray text-center noImg" style="background-image: url('../../images/group.png');background-size: 100% 100%;" wx:else></view>
         <text class="role bg_orange" wx:if="{{index==0}}">团长</text>
         <text class="status" wx:if="{{item.isPayoff&&item.isPayoff==1}}">待支付</text>
       </view>
