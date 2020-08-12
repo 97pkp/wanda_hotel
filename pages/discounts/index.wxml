@@ -11,7 +11,7 @@
     <view bindtap="goList">更多</view>
   </view>
   <scroll-view scroll-x class="content">
-    <view class="content_item" wx:for="{{discountsList}}" wx:key="index" style="background-image: url('../../images/coupon1_bg.png');background-size: 100% 100%;">
+    <view class="content_item" wx:for="{{discountsList}}" wx:key="index">
       <view class="left">
         <view class="center">
           <text>￥</text>
@@ -27,6 +27,7 @@
         <view>领</view>
         <view>取</view>
       </view>
+      <image src="../../images/coupon1_bg.png" class="img"></image>
     </view>
   </scroll-view>
 </view>
@@ -68,7 +69,7 @@
           <text class="countDownTime">20天11时15分30秒</text>
         </view>
         <view wx:if="{{tapStatus}}" class="goShop {{switchStatus?'pin':''}}" bindtap="goShop">{{switchStatus?'我要拼团':'去抢购'}}</view>
-        <view wx:else class="lineOrange" bindtap="goDetails">{{switchStatus?'开团提醒':'我要预约'}}</view>
+        <view wx:else class="lineOrange" bindtap="goDetails">查看详情</view>
       </view>
     </view>
   </view>
