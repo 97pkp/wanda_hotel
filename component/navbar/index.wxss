@@ -43,13 +43,13 @@
 
 .tabbar-item:nth-child(3){
   position: relative;
-  bottom: 90rpx;
+  bottom: 70rpx;
   height:150rpx;
   flex: 0.7;
 }
 
 .tabbar-item:nth-child(3) .tabbar-item-icon{
-  height: 100rpx;
+  height: 116rpx;
   background: #fff;
   border-radius: 50%;
   /* border-top: solid 1px gray; */

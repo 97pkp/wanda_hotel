@@ -1,6 +1,7 @@
 /* pages/goodsDetail/index.wxss */
 page{
   background: #F0F0F0;
+  overflow-x: hidden;
 }
 .clear_float:after{
   content: '';
