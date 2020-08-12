@@ -42,6 +42,7 @@
   font-size: 24rpx;
 }
 .couponCollection .title image {
+  width: 246rpx;
   height: 40rpx;
 }
 .couponCollection .content {
@@ -66,6 +67,8 @@
   margin-right: 32rpx;
 }
 .couponCollection .content .content_item .left{
+  position: absolute;
+  z-index: 1;
   width: 222rpx;
 }
 .money{
@@ -80,11 +83,20 @@
 .couponCollection .content .content_item .right{
   position: absolute;
   top: 50%;
+  z-index: 1;
   right: 17rpx;
   margin-top: -76rpx;
   width: 24rpx;
   height: 132rpx;
   writing-mode:lr-tb;
+}
+.couponCollection .content .content_item .img{
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 0;
+  width:100%;
+  height: 100%;
 }
 
 /* 秒杀拼团 */
@@ -96,6 +108,7 @@
   background: #fff;
 }
 .secondKillGroup .title image {
+  width: 198rpx;
   height: 40rpx;
 }
 .secondKillGroup .title .active{
