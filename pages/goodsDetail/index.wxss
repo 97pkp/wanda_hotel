@@ -583,6 +583,13 @@ swiper{
   align-items: center;
   justify-content: flex-start;
 }
+.seckill_info_warp2{
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-bottom: 20rpx;
+}
 .seckill_info_right{
   display: flex;
   flex-direction: column;
@@ -613,6 +620,8 @@ swiper{
   line-height: 28rpx;
   color: #ffffff;
   text-decoration: line-through;
+}
+.seckill_info_right .margin_price{
   margin-bottom: 13rpx;
 }
 .seckill_num view{

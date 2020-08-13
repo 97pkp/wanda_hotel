@@ -14,7 +14,7 @@
       <view>购物车</view>
     </view>
   </view>
-  <view class="to_buy" bindtap="toBuy">
+  <view class="to_buy {{start === 1 ? '':'no_start'}}" bindtap="toBuy">
     立即购买
   </view>
 </view>

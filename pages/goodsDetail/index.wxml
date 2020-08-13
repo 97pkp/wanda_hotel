@@ -19,9 +19,9 @@
 	</view>
 	<!-- 秒杀进度 -->
 	<view class="seckill_warp" wx:if="{{pageType === 2}}">
-		<view class="seckill_info_warp">
+		<view class="seckill_info_warp" wx:if="{{start === 1}}">
 			<text class="now_price">￥980<text class="small_text">.00</text></text>
-			<view class="seckill_info_right">
+			<view class="seckill_info_right" wx:if="{{start===1}}">
 				<view class="old_price">￥980.00</view>
 				<view class="seckill_num">
 					<view>已售 40 份</view>
@@ -29,8 +29,14 @@
 				</view>
 			</view>
 		</view>
+		<view class="seckill_info_warp2" wx:if="{{start === 0}}">
+			<text class="now_price">￥980<text class="small_text">.00</text></text>
+			<view class="seckill_info_right" wx:if="{{start===0}}">
+				<view class="old_price">￥980.00</view>
+			</view>
+		</view>
 		<view class="seckill_date_warp">
-			<view class="seckill_date_text">距离结束还剩</view>
+			<view class="seckill_date_text">距离{{start===1?'结束':'开始'}}还剩</view>
 			<view class="time_warp">
 				<view>{{timeData.day}}</view>天
 				<view>{{timeData.hour}}</view>时
@@ -231,5 +237,6 @@
 		bindhandleorder="toOrder"
 		bindhandlebuycar="toBuyCar"
 		bindtobuy="toBuy"
+		start="{{start}}"
 		></seckill-detail-tabbar>
 </view>

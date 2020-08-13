@@ -51,3 +51,6 @@
   align-items: center;
   justify-content: center;
 }
+.no_start{
+  background: #dddddd;
+}

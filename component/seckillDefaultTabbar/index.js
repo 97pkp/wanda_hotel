@@ -4,7 +4,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    start: {
+      type: Number,
+      value: 1
+    },
   },
 
   /**
@@ -40,6 +43,7 @@ Component({
      * 立即购买
      */
     toBuy: function(){
+      if(this.data.start === 0) return
       this.triggerEvent('tobuy')
     }
   }

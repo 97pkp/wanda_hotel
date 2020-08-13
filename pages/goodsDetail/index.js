@@ -76,11 +76,9 @@ Page({
       this.setData({'start': 0})
     }else if(options.start == 1){
       this.setData({'start': 1})
+    }else{
+      this.setData({'start': 1})
     }
-    // this.setData({
-    //   'pageType': 0,
-    //   'start': 0
-    // })
     this.setData({'featureShowList': this.data.featureList.slice(0,4)})
   },
   /**
