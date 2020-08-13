@@ -15,7 +15,7 @@
     <view class="pay_title">待使用</view>
   </view>
   <view class="pay_state_right">
-    <image mode="heightFix" src="/images/list_pay.png"></image>
+    <image mode="heightFix" src="/images/list_use.png"></image>
   </view>
 </view>
 <!-- 支付状态-已取消 -->
@@ -24,7 +24,7 @@
     <view class="pay_title">已取消</view>
   </view>
   <view class="pay_state_right">
-    <image mode="heightFix" src="/images/list_pay.png"></image>
+    <image mode="heightFix" src="/images/list_cancel.png"></image>
   </view>
 </view>
 
