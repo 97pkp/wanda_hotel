@@ -9,7 +9,7 @@
       <view class="search_btn" bindtap="handleSearch">搜索</view>
     </view>
     <view class="hotel_search_list">
-      <view bindtap="searchToHotel" data-item="{{item}}" wx:for="{{searchHotelList}}" wx:key="index">{{item}}</view>
+      <view bindtap="searchToHotel" data-item="{{item}}" wx:for="{{searchHotelList}}" wx:key="index">{{item.storeName}}</view>
     </view>
     <view class="search_content">
       <view class="hotel_list">
@@ -23,7 +23,7 @@
               </view>
               <view class="list clear_float">
                 <view bindtap="useHistorySearch" data-text="{{item}}" wx:if="{{searchHistory.length}}" class="tag" wx:for="{{searchHistory}}" wx:key="item">
-                  <text>{{item}}</text>
+                  <text>{{item.storeName}}</text>
                 </view>
                 <view wx:if="{{!searchHistory.length}}" class="no_data">暂无数据</view>
               </view>
@@ -38,16 +38,16 @@
               </view>
             </view>
           </block>
-          <block wx:for="{{list}}" wx:key="index">
-            <view class="padding indexItem-{{list[index]}}" id="indexes-{{list[index]}}" data-index="{{list[index]}}">{{list[index]}}</view>
+          <block wx:for="{{codeArr}}" wx:key="index">
+            <view class="padding indexItem-{{codeArr[index]}}" id="indexes-{{codeArr[index]}}" data-index="{{codeArr[index]}}">{{item}}</view>
             <view class="cu-list menu-avatar no-padding">
-              <van-cell wx:for="{{2}}" wx:key="index" bindtap="toHotel" title="酒店" />
+              <van-cell wx:for="{{hotelObj[item]}}" wx:key="index" wx:for-item="items" bindtap="toHotel" title="{{items.storeName}}" />
             </view>
           </block>
         </scroll-view>
         <view class="indexBar" style="height:calc(100vh - 350rpx)">
           <view class="indexBar-box" bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
-            <view class="indexBar-item {{listCur === list[index]?'active_cur':''}}" wx:for="{{list}}"  wx:key="index" id="{{index}}" bindtouchstart="getCur" bindtouchend="setCur">{{list[index]}}</view>
+            <view class="indexBar-item {{listCur === codeArr[index]?'active_cur':''}}" wx:for="{{codeArr}}"  wx:key="index" id="{{item}}" bindtouchstart="getCur" bindtouchend="setCur">{{item}}</view>
           </view>
         </view>
       </view>

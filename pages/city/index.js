@@ -1,5 +1,9 @@
 const app = getApp();
 const {filterText} = require('../../utils/check.js')
+import apiSetting from '../../http/apiSetting.js'
+import $http from '../../http/http.js'
+import fileUrl from '../../http/fileServeUrl.js'
+
 Page({
   data: {
     activeIdx: 0,
@@ -10,7 +14,9 @@ Page({
     inputValue: '',
     // 历史查询
     searchHistory: [],
-    searchHotelList: []
+    searchHotelList: [],
+    codeArr: [],
+    hotelObj: {}
   },
   onLoad() {
     let list = [];
@@ -22,6 +28,7 @@ Page({
       listCur: list[0]
     })
     this.setData({'searchHistory': wx.getStorageSync('searchArr' || [] )})
+    this.getHotelList()
   },
   onShow() {
     this.setData({
@@ -46,7 +53,7 @@ Page({
   getCur(e) {
     this.setData({
       hidden: false,
-      listCur: this.data.list[e.target.id],
+      listCur: e.target.id,
     })
   },
 
@@ -65,7 +72,7 @@ Page({
     if (y > offsettop) {
       let num = parseInt((y - offsettop) / 14);
       this.setData({
-        listCur: that.data.list[num]
+        listCur: that.data.codeArr[num]
       })
     };
   },
@@ -119,7 +126,8 @@ Page({
     //   data: searchArr
     // })
     // this.setData({'searchHistory': searchArr})
-    this.setData({'searchHotelList': ['aa酒店', 'bb酒店','cc酒店']})
+    // this.setData({'searchHotelList': ['aa酒店', 'bb酒店','cc酒店']})
+    this.getHotelList('search')
   },
   /**
    * 查看酒店
@@ -156,11 +164,18 @@ Page({
     // this.setData({'inputValue': e.currentTarget.dataset.text})
     let item =  e.currentTarget.dataset.text
     let searchArr = wx.getStorageSync('searchArr') || []
-    if(searchArr.indexOf(item) === -1){
-      searchArr.unshift(item)
-    }else{
-      searchArr.splice(searchArr.indexOf(item), 1); 
-      searchArr.unshift(item)
+    for(let i=0;i<searchArr.length;i++) {
+      if(searchArr[i].id === item.id){
+        searchArr.splice(i, 1);         
+        searchArr.unshift(item)
+        break
+      }else {
+        if(i === searchArr.length-1){
+          searchArr.unshift(item)
+          console.log(searchArr)
+          break
+        }
+      }
     }
     if(searchArr.length>=6){
       searchArr.length = 6;
@@ -180,10 +195,22 @@ Page({
   searchToHotel: function(e) {
     let item = e.currentTarget.dataset.item
     let searchArr = wx.getStorageSync('searchArr') || []
-    if(searchArr.indexOf(item) === -1){
-      searchArr.unshift(item)
+    if(searchArr.length>0){
+      for(let i=0;i<searchArr.length;i++) {
+        if(searchArr[i].id === item.id){
+          searchArr.splice(i, 1);         
+          searchArr.unshift(item)
+          break
+        }else {
+          console.log(i,searchArr.length-1)
+          if(i === searchArr.length-1){
+            searchArr.unshift(item)
+            console.log(searchArr)
+            break
+          }
+        }
+      }
     }else{
-      searchArr.splice(searchArr.indexOf(item), 1); 
       searchArr.unshift(item)
     }
     if(searchArr.length>=6){
@@ -198,5 +225,39 @@ Page({
     wx.navigateTo({
       url: '/pages/hotel/index',
     })
+  },
+  /**
+   * 获取酒店列表
+   */
+  getHotelList: function(type) {
+    let that = this;
+    $http(apiSetting.getHotelList, {
+      storeName: that.data.inputValue
+    }).then((res) => {
+      let list = res.data.list
+      let obj = {}
+      let codeArr = []
+      for(let i=0;i<list.length;i++) {
+        if(obj[list[i].firstLetter]) {
+          obj[list[i].firstLetter].push(list[i])
+        }else{
+          obj[list[i].firstLetter] = []
+          obj[list[i].firstLetter].push(list[i])
+        }
+        if(codeArr.indexOf(list[i].firstLetter)===-1) {
+          codeArr.push(list[i].firstLetter)
+        }
+      }
+      if(type === 'search') {
+        this.setData({'searchHotelList': list})
+      }else{
+        that.setData({
+          codeArr: codeArr,
+          hotelObj: obj
+        })
+      }
+    }, (error) => {
+      console.log(error)
+    });
   }
 });
