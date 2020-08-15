@@ -4,9 +4,12 @@
     <view class="search_box">
       <view class="search_warp search_warp_model">
         <image mode="widthFix" style="width: 28rpx;" src="/images/search_gray.png"></image>
-        <input value="{{inputValue}}" bindinput="valueChange" focus="{{true}}" placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入酒店名称"></input>
+        <input value="{{inputValue}}" maxlength="{{15}}" confirm-type="search" bindinput="valueChange" focus="{{true}}" placeholder-style="color: #C3C3C3;font-size: 28rpx;" placeholder="请输入酒店名称"></input>
       </view>
       <view class="search_btn" bindtap="handleSearch">搜索</view>
+    </view>
+    <view class="hotel_search_list">
+      <view bindtap="searchToHotel" data-item="{{item}}" wx:for="{{searchHotelList}}" wx:key="index">{{item}}</view>
     </view>
     <view class="search_content">
       <view class="hotel_list">

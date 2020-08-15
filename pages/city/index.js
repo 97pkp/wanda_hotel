@@ -1,4 +1,5 @@
 const app = getApp();
+const {filterText} = require('../../utils/check.js')
 Page({
   data: {
     activeIdx: 0,
@@ -8,7 +9,8 @@ Page({
     // 文本框值
     inputValue: '',
     // 历史查询
-    searchHistory: []
+    searchHistory: [],
+    searchHotelList: []
   },
   onLoad() {
     let list = [];
@@ -20,6 +22,12 @@ Page({
       listCur: list[0]
     })
     this.setData({'searchHistory': wx.getStorageSync('searchArr' || [] )})
+  },
+  onShow() {
+    this.setData({
+      'inputValue': '',
+      'searchHotelList': []
+    })
   },
   onReady() {
     let that = this;
@@ -95,22 +103,23 @@ Page({
    * 搜索
    */
   handleSearch: function(){
-    let searchArr = wx.getStorageSync('searchArr') || []
-    if(this.data.inputValue === '') return
-    if(searchArr.indexOf(this.data.inputValue) === -1){
-      searchArr.unshift(this.data.inputValue)
-    }else{
-      searchArr.splice(searchArr.indexOf(this.data.inputValue), 1); 
-      searchArr.unshift(this.data.inputValue)
-    }
-    if(searchArr.length>=6){
-      searchArr.length = 6;
-    }
-    wx.setStorage({
-      key:"searchArr",
-      data: searchArr
-    })
-    this.setData({'searchHistory': searchArr})
+    // let searchArr = wx.getStorageSync('searchArr') || []
+    // if(this.data.inputValue === '') return
+    // if(searchArr.indexOf(this.data.inputValue) === -1){
+    //   searchArr.unshift(this.data.inputValue)
+    // }else{
+    //   searchArr.splice(searchArr.indexOf(this.data.inputValue), 1); 
+    //   searchArr.unshift(this.data.inputValue)
+    // }
+    // if(searchArr.length>=6){
+    //   searchArr.length = 6;
+    // }
+    // wx.setStorage({
+    //   key:"searchArr",
+    //   data: searchArr
+    // })
+    // this.setData({'searchHistory': searchArr})
+    this.setData({'searchHotelList': ['aa酒店', 'bb酒店','cc酒店']})
   },
   /**
    * 查看酒店
@@ -125,7 +134,7 @@ Page({
    */
   valueChange: function(e){
     this.setData({
-      inputValue:e.detail.value
+      inputValue: filterText(e.detail.value)
     })    
   },
   /**
@@ -144,6 +153,50 @@ Page({
    * 点击历史
    */
   useHistorySearch: function(e){
-    this.setData({'inputValue': e.currentTarget.dataset.text})
+    // this.setData({'inputValue': e.currentTarget.dataset.text})
+    let item =  e.currentTarget.dataset.text
+    let searchArr = wx.getStorageSync('searchArr') || []
+    if(searchArr.indexOf(item) === -1){
+      searchArr.unshift(item)
+    }else{
+      searchArr.splice(searchArr.indexOf(item), 1); 
+      searchArr.unshift(item)
+    }
+    if(searchArr.length>=6){
+      searchArr.length = 6;
+    }
+    wx.setStorage({
+      key:"searchArr",
+      data: searchArr
+    })
+    this.setData({'searchHistory': searchArr})
+    wx.navigateTo({
+      url: '/pages/hotel/index',
+    })
+  },
+  /**
+   * 点击搜索酒店
+   */
+  searchToHotel: function(e) {
+    let item = e.currentTarget.dataset.item
+    let searchArr = wx.getStorageSync('searchArr') || []
+    if(searchArr.indexOf(item) === -1){
+      searchArr.unshift(item)
+    }else{
+      searchArr.splice(searchArr.indexOf(item), 1); 
+      searchArr.unshift(item)
+    }
+    if(searchArr.length>=6){
+      searchArr.length = 6;
+    }
+    wx.setStorage({
+      key:"searchArr",
+      data: searchArr
+    })
+    this.setData({'searchHistory': searchArr})
+    this.setData({'searchHotelList': []})
+    wx.navigateTo({
+      url: '/pages/hotel/index',
+    })
   }
 });

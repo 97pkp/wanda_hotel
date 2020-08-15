@@ -18,7 +18,7 @@ Page({
       interval: 2000,
       duration: 500
     },
-    imgList: ['https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2255995795,3233541672&fm=26&gp=0.jpg'],
+    imgList: ['https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2255995795,3233541672&fm=26&gp=0.jpg','../../images/img.png'],
     bannerImg: '../../images/img.png',
     optionBtnImg: [
       {url: '../../images/kfyd.png', name: '客房预订'},

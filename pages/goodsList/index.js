@@ -1,4 +1,6 @@
 // pages/goodsList/index.js
+const {filterText} = require('../../utils/check.js')
+
 Page({
 
   /**
@@ -102,7 +104,7 @@ Page({
    */
   valueChange: function(e){
     this.setData({
-      inputValue:e.detail.value
+      inputValue: filterText(e.detail.value)
     })    
   },
   /**
