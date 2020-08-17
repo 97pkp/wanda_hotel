@@ -15,7 +15,7 @@ let $httpServer = function(opts, data) {
       header: {
         'content-type': 'application/json',
         // 'vx-zhwx-token': token
-        'X-Litemall-Admin-Token': '1e563b7e-e027-43b5-8eb7-038a83c2ec2f'
+        'X-Litemall-Admin-Token': '82caa0cc-7f78-4e32-a009-7639d5c21e87'
       },
       method: opts.method,
       success(res) {
