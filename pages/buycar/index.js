@@ -15,7 +15,7 @@ Page({
     shopCarList:[{
       name:'库尔勒万达锦华酒店',
       collectInfo: null,
-      checked: false,
+      // checked: false,
       discounts: [{
           name: '通用券 | 全场通用',
           startTime: '2020.05.01',
@@ -117,87 +117,66 @@ Page({
     console.log(arr)
     this.setData({ shopCarList: arr})
   },
-  // 设置选中状态
-  setSelectedStatus(data){
-    let arr = this.data.shopCarList.map(item => {
-      let selectList =[]
-      
-      if(data.length>0){
-        // let checkedNum = 0
-        data.forEach(a => {
-          selectList = item.children && item.children.map(items => {
-            if(a == item.name){
-              console.log(a)
-              item.checked = !item.checked
-              return {...items,checked:true}
-            }else{
-              console.log(a)
-              if (a == items.id) {
-                items.checked = !items.checked
-              }
-            }
-            return items
-          })
-          let selectData = item.children && item.children.map(items => {
-            if (a == item.name) {
-              console.log(a)
-              item.checked = !item.checked
-              return { ...items, checked: true }
-            } else {
-              console.log(a)
-              if (a == items.id) {
-                items.checked = !items.checked
-              }
-            }
-            return items
-          })
-          // if (a == item.name) {
-          //   item.checked = !item.checked
-          //   selectList = item.children && item.children.map(items => {
-          //     return { ...items,checked:true}
-          //   })
-          // } else {
-          //   selectList = item.children && item.children.map(items => {
-          //     if(a == items.id){
-          //       items.checked = !items.checked
-          //     }
-          //     // if (items.checked){
-          //     //   checkedNum = checkedNum+1
-          //     // }else{
-          //     //   checkedNum = checkedNum
-          //     // }
-          //     return { ...items }
-          //   })
-          // }
-          // if (checkedNum>0){
-          //   item.checked = true
-          //   console.log(item.name, checkedNum)
-          // }
-        })
-        
-      }else{
-        item.checked = false
-        selectList = item.children && item.children.map(items => {
-          // if (items.checked) {
-          //   checkedNum = checkedNum + 1
-          // }
-          return { ...items,checked:false}
-        })
-      }
-      return {...item,children:selectList}
-    })
-    console.log(this.data.shopCarList,arr)
-    // this.disShow(arr)
-  },
   // 商品列表选项状态发生改变
   goodsChange(e){
-    console.log('goods', e.detail.value)
-    this.setSelectedStatus(e.detail.value)
+    
   },
-  // 单品列表状态变化
+  // // 单品列表状态变化
   childrenChange(e) {
-    console.log('children', e.detail.value)
-    this.setSelectedStatus(e.detail.value)
+    console.log(e.currentTarget.dataset.index, e.detail.value)
+    let arr = this.data.shopCarList
+    let index = e.currentTarget.dataset.index
+    let dataLength = e.detail.value.length
+    let itemLength = this.data.shopCarList[index].children.length
+    if (dataLength == itemLength){
+      arr[index].checked = true
+      arr[index].children = arr[index].children.map(item => {
+        return { ...item, checked: true }
+      })
+      this.setData({
+        shopCarList: arr
+      })
+    }else{
+      // arr[index].checked = false
+      // arr[index].children = arr[index].children.map(item => {
+      //   if(item.id == )
+      //   return { ...item, checked: }
+      // })
+      // this.setData({
+      //   shopCarList: arr
+      // })
+    }
+    if (dataLength == 0){
+      arr[index].checked = false
+      arr[index].children = arr[index].children.map(item => {
+        return { ...item, checked: false }
+      })
+      this.setData({
+        shopCarList: arr
+      })
+    }
+    
+  },
+  // 商品点击
+  goodsClick(e){
+    let { checked,index } = e.currentTarget.dataset
+    let arr = this.data.shopCarList
+    if(!arr[index].checked){
+      // console.log('1')
+      arr[index].checked = true
+      arr[index].children = arr[index].children.map(item =>{
+        return {...item, checked:true}
+      })
+    }else{
+      arr[index].checked = false
+      arr[index].children = arr[index].children.map(item => {
+        return { ...item, checked: false }
+      })
+    }
+    console.log(arr)
+    this.setData({
+      shopCarList:arr
+    })
   },
   // 数量减
   cut(e){

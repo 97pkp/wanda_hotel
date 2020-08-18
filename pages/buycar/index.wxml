@@ -3,7 +3,7 @@
 <checkbox-group bindchange="goodsChange">
   <view class="shopCarList" wx:for="{{shopCarList}}" wx:key="index">
     <view class="shopCarTitle f_s_26">
-      <checkbox value="{{item.name}}" class="round orange selectAll"/>
+      <checkbox data-checked="{{item.checked}}" data-index="{{index}}" value="{{item.name}}" class="round orange selectAll" checked="{{item.checked}}"  bindtap="goodsClick"/>
       <text class="name">{{item.name}}</text>
       <text class="cuIcon-right text-black"></text>
       <view class="discounts f_s_20 text-orange" 
@@ -18,9 +18,9 @@
         <text class="cuIcon-right text-yellow"></text>
       </view>
     </view>
-    <checkbox-group bindchange="childrenChange">
+    <checkbox-group data-index="{{index}}" bindchange="childrenChange">
       <view class="flex shopCarItem" wx:for="{{item.children}}" wx:key="index">
-          <checkbox value="{{item.id}}" class="round orange check"/>
+          <checkbox value="{{item.id}}" class="round orange check" checked="{{item.checked}}" />
           <view class="right">
             <image src='{{item.src}}'></image>
           </view>
