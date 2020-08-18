@@ -3,7 +3,8 @@ page{
   padding-bottom: 110rpx;
 }
 swiper{
-  height: 350rpx;
+  /* height: 350rpx; */
+  height: 400rpx;
 }
 .swiper_img {
   width: 100%;

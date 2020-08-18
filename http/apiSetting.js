@@ -1,8 +1,13 @@
+// const city = require('./apis/city')
+import city from './apis/city'
+import apiTest from './apis/test'
+
+console.log(city)
 const serviceModule = {
-  getHotelList: {
-    url: '/admin/store/storeList',
-    method: 'get'
-  } 
+  ...apiTest, // 测试
+  ...city, // 城市
+  
+
 }
 
 const ApiSetting = { ...serviceModule

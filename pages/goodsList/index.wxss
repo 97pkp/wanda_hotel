@@ -12,7 +12,8 @@ page{
   clear: both;
 }
 swiper{
-  height: 350rpx;
+  /* height: 350rpx; */
+  height: 400rpx;
 }
 .swiper_img {
   width: 100%;
