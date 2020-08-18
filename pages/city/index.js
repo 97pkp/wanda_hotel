@@ -127,6 +127,16 @@ Page({
     // })
     // this.setData({'searchHistory': searchArr})
     // this.setData({'searchHotelList': ['aa酒店', 'bb酒店','cc酒店']})
+
+    $http(apiSetting.getOpenid, {
+      wuOpenid: '1'
+    }).then((res) => {
+      let that = this
+      console.log(res)
+    }, (error) => {
+      console.log(error)
+    });
+    return
     this.getHotelList('search')
   },
   /**

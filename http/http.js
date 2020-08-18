@@ -2,7 +2,8 @@
 // const url = 'https://qmyx.coli688.com/zhwx-api'
 
 // 测试地址
-const url = 'http://47.104.134.167:8083'
+// const url = 'http://47.104.134.167:8083'
+const url = 'http://47.104.134.167:8082'
 
 
 let $httpServer = function(opts, data) {
